@@ -1,7 +1,6 @@
 @import "../resets.css";
-
+@import "../roots.css";
 /* compositions */
-
 /* utilities */
 .container {
 	max-width: 95%;
@@ -11,6 +10,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
 }
 
 .gap-2 {
