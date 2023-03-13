@@ -1,0 +1,24 @@
+@import "../resets.css";
+
+/* compositions */
+
+/* utilities */
+.container {
+	max-width: 95%;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.gap-2 {
+	gap: 2rem;
+}
+/* block */
+.main__header {
+	text-align: center;
+}
+
+/* exception */
