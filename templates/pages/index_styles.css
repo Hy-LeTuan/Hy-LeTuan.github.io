@@ -1,6 +1,11 @@
-@import "../resets.css";
 @import "../roots.css";
+@import "../resets.css";
 /* compositions */
+.main {
+	font-family: var(--ff);
+	color: var(--clr-primary-100);
+}
+
 /* utilities */
 .container {
 	max-width: 95%;
@@ -26,6 +31,7 @@
 /* block */
 .main__header {
 	text-align: center;
+	background-image: url(../media/main_header.jpg);
 }
 
 /* exception */
