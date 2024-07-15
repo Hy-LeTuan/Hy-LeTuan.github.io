@@ -11,10 +11,26 @@ export default {
 				warning: "#F6AE2D",
 				alert: "#DA303E",
 				success: "#15D599",
+				border: {
+					secondary: "rgba(255, 255, 255, 0.25)",
+					translucent: {
+						black: "rgba(0, 0, 0, 0.15)",
+						secondary: "rgba(255, 255, 255, 0.25)",
+					},
+				},
 			},
 			fontFamily: {
-				"heading-font": ["'Anton SC'", "sans-serif"],
+				"heading-font": ["'Anton'", "sans-serif"],
 				"body-font": ["'Libre Baskerville'", "sans-serif"],
+			},
+			borderWidth: {
+				0: "0.5px",
+				1: "1px",
+			},
+			boxShadow: {
+				xs: "0 0 2px 1px rgba(0, 0, 0, 0.25)",
+				nav: "0px 8px 8px 0px rgba(0, 0, 0, 0.25)",
+				scroll: "0px 2px 4px 0px rgba(0, 0, 0, 0.25)",
 			},
 		},
 	},
