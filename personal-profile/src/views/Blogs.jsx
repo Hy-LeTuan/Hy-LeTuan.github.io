@@ -13,7 +13,7 @@ function Blogs() {
 				</div>
 			</section>
 			<section className="mt-10">
-				<div className="flex flex-col gap-6 justify-center items-center mb-10">
+				<div className="flex flex-col gap-6 justify-center items-center">
 					<h2 className="text-2xl font-heading-font text-black">
 						Categories
 					</h2>
@@ -25,101 +25,108 @@ function Blogs() {
 						<div className="bg-neutral w-9 h-9 rounded-full"></div>
 					</div>
 				</div>
-				<div className="w-full p-2 bg-primary relative overflow-hidden mb-10">
+				<div className="w-full p-2 bg-primary relative overflow-hidden mt-10 mb-10">
 					<h2 className="text-2xl font-heading-font text-white text-center">
 						Blogs & Articles
 					</h2>
 					{SquareAnimation(6)}
 				</div>
-				<div className="main-section">
-					<div className="card">
-						<div className="card-body-single-column justify-center gap-8">
-							<div className="blog-card">
-								<div className="w-full h-96 bg-neutral"></div>
-								<div className="blog-card-body">
-									<h2 className="text-2xl font-heading-font text-white text-center">
-										Blog title right here
-									</h2>
-									<p className="text-left font-body-font text-white text-xs">
-										Blog body, this is where all the
-										contents will sit. How do i know deal
-										with the imbalances? I’m not too sure,
-										but I can set a height limit, then
-										anything after the height limit can be
-										an overlay and expanded on top. It would
-										be awesome to be able to accomplish
-										something like that.
-									</p>
-								</div>
-								<div className="flex w-full justify-between px-6 items-center mb-4">
-									<div className="flex items-center justify-center gap-4">
-										<div className="h-8 w-8 bg-neutral rounded-full"></div>
-										<h6 className="text-base font-heading-font text-white">
-											Author
-										</h6>
-									</div>
-									<h6 className="text-base font-heading-font text-white">
-										15/07/2024
-									</h6>
-								</div>
+				<div className="main-section mb-8">
+					<div className="card-holder">
+						<div className="blog-card">
+							<div className="w-full h-96 bg-neutral"></div>
+							<div className="blog-card-body">
+								<h2 className="text-2xl font-heading-font text-white text-center">
+									Blog title right here
+								</h2>
+								<p className="text-left font-body-font text-white text-xs">
+									Blog body, this is where all the contents
+									will sit. How do i know deal with the
+									imbalances? I’m not too sure, but I can set
+									a height limit, then anything after the
+									height limit can be an overlay and expanded
+									on top. It would be awesome to be able to
+									accomplish something like that.
+								</p>
 							</div>
-							<div className="blog-card">
-								<div className="w-full h-96 bg-neutral"></div>
-								<div className="blog-card-body">
-									<h2 className="text-2xl font-heading-font text-white text-center">
-										Blog title right here
-									</h2>
-									<p className="text-left font-body-font text-white text-xs">
-										Blog body, this is where all the
-										contents will sit. How do i know deal
-										with the imbalances? I’m not too sure,
-										but I can set a height limit, then
-										anything after the height limit can be
-										an overlay and expanded on top. It would
-										be awesome to be able to accomplish
-										something like that.
-									</p>
-								</div>
-								<div className="flex w-full justify-between px-6 items-center mb-4">
-									<div className="flex items-center justify-center gap-4">
-										<div className="h-8 w-8 bg-neutral rounded-full"></div>
-										<h6 className="text-base font-heading-font text-white">
-											Author
-										</h6>
-									</div>
-									<h6 className="text-base font-heading-font text-white">
-										15/07/2024
+							<div className="flex w-full justify-between px-6 items-center mb-4">
+								<h6 className="text-sm font-heading-font text-white">
+									15/07/2024
+								</h6>
+								<button className="btn btn-card-footer gap-2">
+									<h6 className="text-sm font-heading-font text-white">
+										Read more
 									</h6>
-								</div>
+									<img
+										src="./src/assets/expand.svg"
+										alt="expand icon"
+										className="text-white w-4 h-4"
+									/>
+								</button>
 							</div>
-							<div className="blog-card">
-								<div className="w-full h-96 bg-neutral"></div>
-								<div className="blog-card-body">
-									<h2 className="text-2xl font-heading-font text-white text-center">
-										Blog title right here
-									</h2>
-									<p className="text-left font-body-font text-white text-xs">
-										Blog body, this is where all the
-										contents will sit. How do i know deal
-										with the imbalances? I’m not too sure,
-										but I can set a height limit, then
-										anything after the height limit can be
-										an overlay and expanded on top. It would
-										be awesome to be able to accomplish
-										something like that.
-									</p>
-								</div>
-								<div className="flex w-full justify-between px-6 items-center mb-4">
-									<div className="flex items-center justify-center gap-4">
-										<div className="h-8 w-8 bg-neutral rounded-full"></div>
-										<h6 className="text-base font-heading-font text-white">
-											Author
-										</h6>
-									</div>
-									<h6 className="text-base font-heading-font text-white">
-										15/07/2024
+						</div>
+						<div className="blog-card">
+							<div className="w-full h-96 bg-neutral"></div>
+							<div className="blog-card-body">
+								<h2 className="text-2xl font-heading-font text-white text-center">
+									Blog title right here
+								</h2>
+								<p className="text-left font-body-font text-white text-xs">
+									Blog body, this is where all the contents
+									will sit. How do i know deal with the
+									imbalances? I’m not too sure, but I can set
+									a height limit, then anything after the
+									height limit can be an overlay and expanded
+									on top. It would be awesome to be able to
+									accomplish something like that.
+								</p>
+							</div>
+							<div className="flex w-full justify-between px-6 items-center mb-4">
+								<h6 className="text-sm font-heading-font text-white">
+									15/07/2024
+								</h6>
+								<button className="btn btn-card-footer gap-2">
+									<h6 className="text-sm font-heading-font text-white">
+										Read more
 									</h6>
-								</div>
+									<img
+										src="./src/assets/expand.svg"
+										alt="expand icon"
+										className="text-white w-4 h-4"
+									/>
+								</button>
+							</div>
+						</div>
+						<div className="blog-card">
+							<div className="w-full h-96 bg-neutral"></div>
+							<div className="blog-card-body">
+								<h2 className="text-2xl font-heading-font text-white text-center">
+									Blog title right here
+								</h2>
+								<p className="text-left font-body-font text-white text-xs">
+									Blog body, this is where all the contents
+									will sit. How do i know deal with the
+									imbalances? I’m not too sure, but I can set
+									a height limit, then anything after the
+									height limit can be an overlay and expanded
+									on top. It would be awesome to be able to
+									accomplish something like that.
+								</p>
+							</div>
+							<div className="flex w-full justify-between px-6 items-center mb-4">
+								<h6 className="text-sm font-heading-font text-white">
+									15/07/2024
+								</h6>
+								<button className="btn btn-card-footer gap-2">
+									<h6 className="text-sm font-heading-font text-white">
+										Read more
+									</h6>
+									<img
+										src="./src/assets/expand.svg"
+										alt="expand icon"
+										className="text-white w-4 h-4"
+									/>
+								</button>
 							</div>
 						</div>
 					</div>

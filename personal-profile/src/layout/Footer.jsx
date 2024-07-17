@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
 	return (
@@ -10,16 +11,20 @@ function Footer() {
 					</h4>
 					<ul className="text-xs font-heading-font text-white list-disc list-inside">
 						<li>
-							<a href="">Github</a>
+							<a href="https://github.com/Hy-LeTua">Github</a>
 						</li>
 						<li>
-							<a href="">Email</a>
+							<a href="mailto:letuanhy1507@gmail.co">Email</a>
 						</li>
 						<li>
-							<a href="">Facebook</a>
+							<a href="https://www.facebook.com/hy.le.148553">
+								Facebook
+							</a>
 						</li>
 						<li>
-							<a href="">Instagram</a>
+							<a href="https://www.youtube.com/@B--LeTuanHy">
+								Youtube
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -29,16 +34,16 @@ function Footer() {
 					</h4>
 					<ul className="text-xs font-heading-font text-white list-disc list-inside">
 						<li>
-							<a href="">Home</a>
+							<Link to={"/"}>Home</Link>
 						</li>
 						<li>
-							<a href="">Portfolio</a>
+							<Link to={"/portfolio"}>Portfolio</Link>
 						</li>
 						<li>
-							<a href="">Roadmap</a>
+							<Link to={"/active"}>Active</Link>
 						</li>
 						<li>
-							<a href="">Blogs</a>
+							<Link to={"/blogs"}>Blogs</Link>
 						</li>
 					</ul>
 				</div>
@@ -48,10 +53,14 @@ function Footer() {
 					</h4>
 					<ul className="text-xs font-heading-font text-white list-disc list-inside">
 						<li>
-							<a href="">Code</a>
+							<a href="https://github.com/Hy-LeTuan/Hy-LeTuan.github.io">
+								Code
+							</a>
 						</li>
 						<li>
-							<a href="">Sketch</a>
+							<a href="https://www.figma.com/design/lW4cexjjTae8wdPYTYhhPI/Personal-website?node-id=0-1&t=aIuyMq7IBc9j8uln-1">
+								Design
+							</a>
 						</li>
 					</ul>
 				</div>

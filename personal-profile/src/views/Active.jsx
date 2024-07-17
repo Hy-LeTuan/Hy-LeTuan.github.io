@@ -13,18 +13,17 @@ function Active() {
 				</div>
 			</section>
 
-			<section className="mt-10">
+			<section className="mt-10 mb-8">
 				<div className="main-section">
-					<div className="card">
-						<div className="card-body-single-column justify-center gap-8">
-							<div className="project-card">
-								<div className="relative z-10 rounded-full w-32 h-32 bg-secondary"></div>
-								<div className="bg-accent rounded-sm py-2 px-4">
-									<h1 className="text-2xl font-heading-font text-white">
-										Project name
-									</h1>
-								</div>
-								<p className="text-sm text-center text-white font-body-font">
+					<div className="card-holder">
+						<div className="project-card">
+							<div className="absolute top-0 left-0 bg-accent w-full h-32"></div>
+							<div className="z-10 rounded-full w-40 h-40 bg-secondary shadow-project mt-10"></div>
+							<div className="project-card-body">
+								<h2 className="text-left text-2xl font-heading-font text-white">
+									Project name
+								</h2>
+								<p className="text-xs text-left text-white font-body-font">
 									This is the place to put in the project
 									description. Describe what it does and who
 									does it help / who does it benefit. Be
@@ -33,27 +32,34 @@ function Active() {
 									make or break your profile brother, be
 									strong and be determined.
 								</p>
-								<div className="project-card-stats">
-									<h2 className="text-xl font-heading-font text-white">
-										Statistics
-									</h2>
-									<ul className="text-left list-disc list-inside font-body-font text-sm text-white">
-										<li>Date started: 15/7/2024</li>
-										<li>No. of collaborators: 12</li>
-										<li>Project length: 100h</li>
-										<li>Project status: Completed</li>
-									</ul>
+								<div className="project-card-footer">
+									<div className="project-card-stats">
+										<h4 className="text-left text-xl font-heading-font text-white">
+											Statistics
+										</h4>
+										<ul className="text-left list-disc list-inside font-body-font text-xs text-white">
+											<li>Date started: 15/7/2024</li>
+											<li>No. of collaborators: 12</li>
+											<li>Project length: 100h</li>
+											<li>Project status: Completed</li>
+										</ul>
+									</div>
+									<button className="btn btn-card-footer">
+										<h6 className="text-sm font-heading-font text-white">
+											Click for details
+										</h6>
+									</button>
 								</div>
 							</div>
-
-							<div className="project-card">
-								<div className="relative z-10 rounded-full w-32 h-32 bg-secondary"></div>
-								<div className="bg-accent rounded-sm py-2 px-4">
-									<h1 className="text-2xl font-heading-font text-white">
-										Project name
-									</h1>
-								</div>
-								<p className="text-sm text-center text-white font-body-font">
+						</div>
+						<div className="project-card">
+							<div className="absolute top-0 left-0 bg-accent w-full h-32"></div>
+							<div className="z-10 rounded-full w-40 h-40 bg-secondary shadow-project mt-10"></div>
+							<div className="project-card-body">
+								<h2 className="text-left text-2xl font-heading-font text-white">
+									Project name
+								</h2>
+								<p className="text-xs text-left text-white font-body-font">
 									This is the place to put in the project
 									description. Describe what it does and who
 									does it help / who does it benefit. Be
@@ -62,27 +68,34 @@ function Active() {
 									make or break your profile brother, be
 									strong and be determined.
 								</p>
-								<div className="project-card-stats">
-									<h2 className="text-xl font-heading-font text-white">
-										Statistics
-									</h2>
-									<ul className="text-left list-disc list-inside font-body-font text-sm text-white">
-										<li>Date started: 15/7/2024</li>
-										<li>No. of collaborators: 12</li>
-										<li>Project length: 100h</li>
-										<li>Project status: Completed</li>
-									</ul>
+								<div className="project-card-footer">
+									<div className="project-card-stats">
+										<h4 className="text-left text-xl font-heading-font text-white">
+											Statistics
+										</h4>
+										<ul className="text-left list-disc list-inside font-body-font text-xs text-white">
+											<li>Date started: 15/7/2024</li>
+											<li>No. of collaborators: 12</li>
+											<li>Project length: 100h</li>
+											<li>Project status: Completed</li>
+										</ul>
+									</div>
+									<button className="btn btn-card-footer">
+										<h6 className="text-sm font-heading-font text-white">
+											Click for details
+										</h6>
+									</button>
 								</div>
 							</div>
-
-							<div className="project-card">
-								<div className="relative z-10 rounded-full w-32 h-32 bg-secondary"></div>
-								<div className="bg-accent rounded-sm py-2 px-4">
-									<h1 className="text-2xl font-heading-font text-white">
-										Project name
-									</h1>
-								</div>
-								<p className="text-sm text-center text-white font-body-font">
+						</div>
+						<div className="project-card">
+							<div className="absolute top-0 left-0 bg-accent w-full h-32"></div>
+							<div className="z-10 rounded-full w-40 h-40 bg-secondary shadow-project mt-10"></div>
+							<div className="project-card-body">
+								<h2 className="text-left text-2xl font-heading-font text-white">
+									Project name
+								</h2>
+								<p className="text-xs text-left text-white font-body-font">
 									This is the place to put in the project
 									description. Describe what it does and who
 									does it help / who does it benefit. Be
@@ -91,16 +104,23 @@ function Active() {
 									make or break your profile brother, be
 									strong and be determined.
 								</p>
-								<div className="project-card-stats">
-									<h2 className="text-xl font-heading-font text-white">
-										Statistics
-									</h2>
-									<ul className="text-left list-disc list-inside font-body-font text-sm text-white">
-										<li>Date started: 15/7/2024</li>
-										<li>No. of collaborators: 12</li>
-										<li>Project length: 100h</li>
-										<li>Project status: Completed</li>
-									</ul>
+								<div className="project-card-footer">
+									<div className="project-card-stats">
+										<h4 className="text-left text-xl font-heading-font text-white">
+											Statistics
+										</h4>
+										<ul className="text-left list-disc list-inside font-body-font text-xs text-white">
+											<li>Date started: 15/7/2024</li>
+											<li>No. of collaborators: 12</li>
+											<li>Project length: 100h</li>
+											<li>Project status: Completed</li>
+										</ul>
+									</div>
+									<button className="btn btn-card-footer">
+										<h6 className="text-sm font-heading-font text-white">
+											Click for details
+										</h6>
+									</button>
 								</div>
 							</div>
 						</div>

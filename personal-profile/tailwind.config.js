@@ -33,6 +33,8 @@ export default {
 				nav: "0px 8px 8px 0px rgba(0, 0, 0, 0.25)",
 				scroll: "0px 2px 4px 0px rgba(0, 0, 0, 0.25)",
 				card: "0px 1px 4px 2px rgba(0, 0, 0, 0.25)",
+				project: "inset 0px 0px 6px 3px rgba(0, 0, 0, 0.25)",
+				projectcard: "0px 0px 6px 4px rgba(0, 0, 0, 0.5)",
 			},
 		},
 	},
