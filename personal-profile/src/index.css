@@ -9,11 +9,11 @@
 	}
 
 	.btn-header {
-		@apply font-heading-font border-border-translucent-black bg-neutral rounded-full border-1 h-5 w-16 text-white p-0 text-xs transition-colors shadow-xs;
+		@apply font-heading-font border-border-translucent-black bg-neutral rounded-full border-1 h-5 w-16 text-white p-0 text-xs transition-colors shadow-xs duration-500;
 	}
 
 	.btn-header-active {
-		@apply font-heading-font border-border-translucent-black bg-accent rounded-full border-1 h-5 w-16 text-white p-0 text-xs transition-colors shadow-xs;
+		@apply font-heading-font border-border-translucent-black bg-accent rounded-full border-1 h-5 w-16 text-white p-0 text-xs transition-colors shadow-xs duration-500;
 	}
 
 	.btn-card-footer {
@@ -52,6 +52,10 @@
 
 	.project-card-footer {
 		@apply flex justify-between items-end w-full;
+	}
+
+	.project-specific-single-part {
+		@apply flex flex-col gap-1 items-start justify-start;
 	}
 
 	.blog-card {

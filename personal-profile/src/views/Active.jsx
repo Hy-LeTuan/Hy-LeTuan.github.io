@@ -8,7 +8,7 @@ function Active() {
 			<section className="relative overflow-hidden clear-both w-full bg-primary text-white font-heading-font">
 				<div className="p-12 flex flex-col gap-6 justify-center items-center overflow-hidden">
 					<h1 className="text-3xl">Active Projects</h1>
-					<MediaHeader />
+					{MediaHeader(".")}
 					{SquareAnimation(null)}
 				</div>
 			</section>

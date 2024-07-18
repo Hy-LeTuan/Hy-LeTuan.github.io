@@ -95,7 +95,6 @@ function SquareAnimation(bubbleCountOveride) {
 	};
 
 	const onWidthChange = () => {
-		console.log("on width change");
 		generateBubbles();
 	};
 

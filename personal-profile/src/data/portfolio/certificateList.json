@@ -1,0 +1,19 @@
+{
+	"certificates": [
+		{
+			"title": "Title for each certificate",
+			"image": null,
+			"description": "Description for what you have done to achieve the certificate"
+		},
+		{
+			"title": "Title for each certificate",
+			"image": null,
+			"description": "Description for what you have done to achieve the certificate"
+		},
+		{
+			"title": "Title for each certificate",
+			"image": null,
+			"description": "Description for what you have done to achieve the certificate"
+		}
+	]
+}

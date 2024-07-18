@@ -7,6 +7,7 @@ import Home from "./views/Home.jsx";
 import Portfolio from "./views/Portfolio.jsx";
 import Active from "./views/Active.jsx";
 import Blogs from "./views/Blogs.jsx";
+import PortfolioSpecific from "./views/PortfolioSpecific.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
 			{
 				path: "/portfolio",
 				element: <Portfolio />,
+			},
+			{
+				path: "/portfolio/:id",
+				element: <PortfolioSpecific />,
 			},
 			{
 				path: "/active",

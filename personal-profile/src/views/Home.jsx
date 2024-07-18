@@ -20,7 +20,7 @@ function Home() {
 							Studet, Developer, Sportster
 						</h4>
 					</div>
-					<MediaHeader />
+					{MediaHeader(".")}
 					{SquareAnimation(null)}
 				</div>
 			</section>
