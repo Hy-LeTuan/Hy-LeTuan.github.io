@@ -8,8 +8,6 @@ function Blogs() {
 	const [blogs, setBlogs] = useState(blogList.blogs);
 	const [categories, setCategories] = useState(categoryList.categories);
 
-	console.log(categories);
-
 	const checkReadButton = (target) => {
 		if (target) {
 			if (target?.scrollHeight > target.clientHeight) {

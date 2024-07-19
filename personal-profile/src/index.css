@@ -59,11 +59,23 @@
 	}
 
 	.blog-card {
-		@apply shadow-xs flex flex-col gap-2 justify-center items-center bg-primary rounded-md shadow-projectcard;
+		@apply flex flex-col gap-2 justify-center items-center bg-primary rounded-md shadow-projectcard;
 	}
 
 	.blog-card-body {
 		@apply flex flex-col gap-4 py-4 px-8;
+	}
+
+	.target-card {
+		@apply shadow-projectcard relative overflow-hidden flex flex-col col-span-1 gap-4 py-4 px-4 justify-center bg-primary rounded-xl;
+	}
+
+	.target-card-footer {
+		@apply flex justify-between items-start;
+	}
+
+	.target-card-footer-col {
+		@apply flex flex-col justify-start items-start gap-2;
 	}
 
 	/* Utilities */

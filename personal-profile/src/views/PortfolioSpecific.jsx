@@ -24,7 +24,7 @@ function PortfolioSpecific() {
 		}
 	};
 
-	// fetch the appropriate logs
+	// fetch the appropriate project details
 	useEffect(() => {
 		fetchProject();
 	}, []);
@@ -127,11 +127,11 @@ function PortfolioSpecific() {
 									</li>
 									<li>
 										Project length:{" "}
-										{project?.statistics?.length}
+										{project?.statistics?.length}h
 									</li>
 									<li>
 										Project status:{" "}
-										{project?.statistics?.length}h
+										{project?.statistics?.status}
 									</li>
 								</ul>
 							</div>

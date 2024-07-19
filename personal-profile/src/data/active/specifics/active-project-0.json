@@ -1,0 +1,40 @@
+{
+	"title": "What the fuck",
+	"image": null,
+	"description": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
+	"technologies": [
+		"React for frontend framework",
+		"Django for backend",
+		"JWT for authentication",
+		"Live database",
+		"Stripe & Paypal integration"
+	],
+	"statistics": {
+		"date": "15/07/2006",
+		"collaborators": 11,
+		"length": 100,
+		"status": "Complete"
+	},
+	"goals_and_aims": [
+		{
+			"title": "Target name",
+			"description": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
+			"deadline": {
+				"duration": "2 weeks",
+				"from": "15/07/2024",
+				"to": "1/8/2024"
+			},
+			"status": "Mostly complete"
+		},
+		{
+			"title": "Target name",
+			"description": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
+			"deadline": {
+				"duration": "2 weeks",
+				"from": "15/07/2024",
+				"to": "1/8/2024"
+			},
+			"status": "Mostly complete"
+		}
+	]
+}

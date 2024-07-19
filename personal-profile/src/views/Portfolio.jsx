@@ -23,7 +23,7 @@ function Portfolio() {
 			<section className="mt-10">
 				<div className="main-section">
 					<div className="shadow-card flex flex-col overflow-hidden">
-						<div className="bg-neutral flex justify-center items-center px-1 py-3">
+						<div className="bg-primary flex justify-center items-center px-1 py-3">
 							<h2 className="font-heading-font text-white text-2xl">
 								Overall Statistics
 							</h2>
