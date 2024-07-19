@@ -1,0 +1,42 @@
+{
+	"title": "What the fuck",
+	"image": null,
+	"description": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
+	"details": "Describe the technologies involved and how it helped in achieving our purpose. This way we can get a deeper grasp of the technical details while also setting up for the difficulties and triumphs down the line.",
+	"technologies": [
+		"React for frontend framework",
+		"Django for backend",
+		"JWT for authentication",
+		"Live database",
+		"Stripe & Paypal integration"
+	],
+	"statistics": {
+		"date": "15/07/2006",
+		"collaborators": 11,
+		"length": 100,
+		"status": "Complete"
+	},
+	"contributions": [
+		"This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
+		"This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined."
+	],
+	"diff_and_solutions": [
+		{
+			"difficulty": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
+			"solution": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined."
+		},
+		{
+			"difficulty": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
+			"solution": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined."
+		},
+		{
+			"difficulty": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
+			"solution": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined."
+		}
+	],
+	"showcase": [
+		{
+			"content": ""
+		}
+	]
+}

@@ -1,23 +1,33 @@
 import MediaHeader from "../layout/MediaHeader";
 import SquareAnimation from "../layout/SquareAnimation";
+import SectionBanner from "../layout/SectionBanner";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 function PortfolioSpecific() {
+	const [project, setProject] = useState({});
 	const params = useParams();
 
-	// fs.readFile("./path", "utf-8", (error, jsonString) => {
-	// 	if (error) {
-	// 		console.log(error);
-	// 	} else {
-	// 		try {
-	// 			const data = JSON.parse(jsonString);
-	// 			console.log(data.address);
-	// 		} catch (e) {
-	// 			console.log(e);
-	// 		}
-	// 	}
-	// });
+	const fetchProject = async () => {
+		try {
+			const response = await fetch(
+				`../src/data/portfolio/specifics/project-${params.id}.json`
+			);
+			try {
+				const data = await response.json();
+				setProject(data);
+			} catch (e) {
+				console.log(`JSON error: ${e}`);
+			}
+		} catch (e) {
+			console.log(`Fetch error: ${e}`);
+		}
+	};
+
+	// fetch the appropriate logs
+	useEffect(() => {
+		fetchProject();
+	}, []);
 
 	return (
 		<>
@@ -33,7 +43,7 @@ function PortfolioSpecific() {
 					<div className="w-full flex flex-col justify-center items-center gap-8">
 						<div className="rounded-full w-44 h-44 bg-gray-300 shadow-project mt-10"></div>
 						<h2 className="font-heading-font text-2xl">
-							Project title: Project title
+							Project title: {project?.title}
 						</h2>
 					</div>
 				</div>
@@ -54,13 +64,7 @@ function PortfolioSpecific() {
 									/>
 								</div>
 								<p className="text-left font-body-font text-black text-xs">
-									This is the place to put in the project
-									description. Describe what it does and who
-									does it help / who does it benefit. Be
-									descriptive and pray to god that the Caltech
-									admissions will read it. This can really
-									make or break your profile brother, be
-									strong and be determined.
+									{project?.description}
 								</p>
 							</div>
 							<div className="project-specific-single-part">
@@ -75,11 +79,7 @@ function PortfolioSpecific() {
 									/>
 								</div>
 								<p className="text-left font-body-font text-black text-xs">
-									Describe the technologies involved and how
-									it helped in achieving our purpose. This way
-									we can get a deeper grasp of the technical
-									details while also setting up for the
-									difficulties and triumphs down the line.
+									{project?.details}
 								</p>
 							</div>
 							<div className="project-specific-single-part">
@@ -94,11 +94,11 @@ function PortfolioSpecific() {
 									/>
 								</div>
 								<ul className="flex flex-col gap-1 font-body-font text-xs text-left text-black list-disc list-inside marker:text-accent">
-									<li>React for frontend framework </li>
-									<li>Django for backend </li>
-									<li>JWT for authentication </li>
-									<li>Live database </li>
-									<li>Stripe & Paypal integration</li>
+									{project?.technologies?.map(
+										(tech, index) => (
+											<li key={index}>{tech}</li>
+										)
+									)}
 								</ul>
 							</div>
 						</div>
@@ -117,11 +117,22 @@ function PortfolioSpecific() {
 									/>
 								</div>
 								<ul className="flex flex-col gap-1 font-body-font text-xs text-left text-black list-disc list-inside marker:text-accent">
-									<li>Date started: 10/10/2024</li>
-									<li>Number of collaborators: 12</li>
-									<li>JWT for authentication </li>
-									<li>Project length: 100 hours</li>
-									<li>Project status: Finished</li>
+									<li>
+										Date started:{" "}
+										{project?.statistics?.date}
+									</li>
+									<li>
+										Number of collaborators:{" "}
+										{project?.statistics?.collaborators}
+									</li>
+									<li>
+										Project length:{" "}
+										{project?.statistics?.length}
+									</li>
+									<li>
+										Project status:{" "}
+										{project?.statistics?.length}h
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -160,6 +171,69 @@ function PortfolioSpecific() {
 							</div>
 						</div>
 					</div>
+					<div>
+						<div className="card">
+							<div className="card-body-single-column gap-4">
+								<div className="project-specific-single-part">
+									<div className="flex items-center gap-2">
+										<h5 className="font-heading-font text-black text-base text-left">
+											Difficulties & Struggles
+										</h5>
+										<img
+											className="w-5 h-5"
+											src="../src/assets/error_icon.svg"
+											alt="Description icon"
+										/>
+									</div>
+									<ul className="flex flex-col gap-1 font-body-font text-xs text-left text-black list-disc list-inside marker:text-accent">
+										{project?.diff_and_solutions?.map(
+											(pair, index) => (
+												<li
+													key={index}
+													className="text-left font-body-font text-black text-xs">
+													{pair.difficulty}
+												</li>
+											)
+										)}
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div className="card bg-primary mb-0">
+							<div className="card-body-single-column gap-4">
+								<div className="project-specific-single-part">
+									<div className="flex items-center gap-2">
+										<h5 className="font-heading-font text-white text-base text-left">
+											Solutions
+										</h5>
+										<img
+											className="w-5 h-5"
+											src="../src/assets/checkmark.svg"
+											alt="Description icon"
+										/>
+									</div>
+									<ul className="flex flex-col gap-1 font-body-font text-xs text-left text-black list-disc list-inside marker:text-white">
+										{project?.diff_and_solutions?.map(
+											(pair, index) => (
+												<li
+													className="text-left font-body-font text-white text-xs"
+													key={index}>
+													{pair.solution}
+												</li>
+											)
+										)}
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			{SectionBanner(5, "Project showcase")}
+			<section>
+				<div className="main-section">
+					<div className="card w-65 h-32"></div>
+					<div className="card w-65 h-32"></div>
 				</div>
 			</section>
 		</>

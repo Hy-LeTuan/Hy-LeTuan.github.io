@@ -8,28 +8,28 @@ function MediaHeader(relativity = ".") {
 			<a href="https://github.com/Hy-LeTuan">
 				<img
 					src={`${relativity}/src/assets/github.svg`}
-					alt=""
+					alt="github link"
 					className="w-8 h-8"
 				/>
 			</a>
 			<a href="mailto:letuanhy1507@gmail.com">
 				<img
 					src={`${relativity}/src/assets/email.svg`}
-					alt=""
+					alt="email link"
 					className="w-8 h-8"
 				/>
 			</a>
 			<a href="https://www.facebook.com/hy.le.148553/">
 				<img
 					src={`${relativity}/src/assets/facebook.svg`}
-					alt=""
+					alt="facebook link"
 					className="w-8 h-8"
 				/>
 			</a>
 			<a href="https://www.youtube.com/@B--LeTuanHy">
 				<img
 					src={`${relativity}/src/assets/youtube.svg`}
-					alt=""
+					alt="youtube link"
 					className="w-8 h-8"
 				/>
 			</a>
