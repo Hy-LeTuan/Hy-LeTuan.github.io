@@ -17,7 +17,7 @@
 	}
 
 	.btn-card-footer {
-		@apply bg-accent px-2 py-1 rounded-xl;
+		@apply bg-accent px-2 py-1 rounded-xl lg:px-3;
 	}
 
 	/* Cards */
@@ -39,19 +39,19 @@
 	}
 
 	.project-card {
-		@apply shadow-projectcard relative overflow-hidden flex flex-col col-span-1 gap-4 pb-4 justify-center items-center bg-primary rounded-xl;
+		@apply shadow-projectcard relative overflow-hidden flex flex-col col-span-1 gap-4 pb-4 justify-center items-center bg-primary rounded-xl lg:col-span-1 lg:gap-6;
 	}
 
 	.project-card-body {
-		@apply flex flex-col w-full px-4 gap-4 items-start;
+		@apply flex flex-col w-full px-4 gap-4 items-start lg:gap-6 lg:px-8 lg:items-center lg:justify-center;
 	}
 
 	.project-card-stats {
-		@apply flex flex-col gap-2 justify-center items-start;
+		@apply flex flex-col gap-2 justify-center items-start lg:gap-4 lg:items-center;
 	}
 
 	.project-card-footer {
-		@apply flex justify-between items-end w-full;
+		@apply flex justify-between items-end w-full lg:flex-col lg:justify-center lg:items-center lg:gap-6;
 	}
 
 	.project-specific-single-part {
@@ -81,7 +81,7 @@
 	/* Utilities */
 
 	.main-section {
-		@apply grid grid-cols-1 px-6 lg:grid-cols-2 lg:gap-x-8;
+		@apply grid grid-cols-1 px-6 lg:grid-cols-2 lg:gap-x-8 lg:px-12;
 	}
 
 	.row {
@@ -93,11 +93,11 @@
 	}
 
 	.card-holder {
-		@apply flex flex-col gap-10;
+		@apply flex flex-col gap-10 lg:col-span-2 lg:grid lg:grid-cols-2 lg:place-items-center;
 	}
 
 	.section-banner {
-		@apply w-full p-2 bg-primary relative overflow-hidden mt-10 mb-10 lg:mt-14 lg:mb-14;
+		@apply w-full p-2 bg-primary relative overflow-hidden mt-10 mb-10 lg:mt-16 lg:mb-16;
 	}
 }
 

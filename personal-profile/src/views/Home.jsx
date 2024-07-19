@@ -11,7 +11,7 @@ function Home() {
 	return (
 		<>
 			<section className="relative overflow-hidden clear-both w-full bg-primary text-white font-heading-font">
-				<div className="p-12 flex flex-col gap-6 xl:gap-10 justify-center items-center overflow-hidden">
+				<div className="p-12 flex flex-col gap-6 xl:gap-10 justify-center items-center overflow-hidden lg:p-24">
 					<div className="relative z-10 rounded-full w-32 h-32 lg:w-48 lg:h-48 xl:w-64 xl:h-64 bg-secondary"></div>
 					<div
 						id="biography"
@@ -80,26 +80,26 @@ function Home() {
 								How about some statistics?
 							</h2>
 							<div className="statistic-row">
-								<h4 className="text-base text-accent lg:text-2xl">
+								<h4 className="text-base text-accent lg:text-xl">
 									{lineStat}
 								</h4>
-								<h4 className="text-base text-white lg:text-2xl">
+								<h4 className="text-base text-white lg:text-xl">
 									Lines of code written this past year
 								</h4>
 							</div>
 							<div className="statistic-row">
-								<h4 className="text-base text-accent lg:text-2xl">
+								<h4 className="text-base text-accent lg:text-xl">
 									{dayStat}
 								</h4>
-								<h4 className="text-base text-white lg:text-2xl">
+								<h4 className="text-base text-white lg:text-xl">
 									Days of continuous programming
 								</h4>
 							</div>
 							<div className="statistic-row">
-								<h4 className="text-base text-accent lg:text-2xl">
+								<h4 className="text-base text-accent lg:text-xl">
 									{bugStat}
 								</h4>
-								<h4 className="text-base text-white lg:text-2xl">
+								<h4 className="text-base text-white lg:text-xl">
 									Bugs encountered and resolved
 								</h4>
 							</div>
