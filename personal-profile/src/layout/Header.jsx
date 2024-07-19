@@ -20,44 +20,49 @@ function Header() {
 
 	return (
 		<nav className={`relative z-10 w-full p-2 bg-primary ${shadowStyle}`}>
-			<div className="flex justify-between items-center px-6">
-				<Link
-					to={"/"}
-					className={
-						isActiveLink(location.pathname, "/") &&
-						location.pathname.length == 1
-							? "btn btn-header-active"
-							: "btn btn-header"
-					}>
-					Home
-				</Link>
-				<Link
-					to={"/portfolio"}
-					className={
-						isActiveLink(location.pathname, "/portfolio")
-							? "btn btn-header-active"
-							: "btn btn-header"
-					}>
-					Portfolio
-				</Link>
-				<Link
-					to={"/active"}
-					className={
-						isActiveLink(location.pathname, "/active")
-							? "btn btn-header-active"
-							: "btn btn-header"
-					}>
-					Active
-				</Link>
-				<Link
-					to={"/blogs"}
-					className={
-						isActiveLink(location.pathname, "/blogs")
-							? "btn btn-header-active"
-							: "btn btn-header"
-					}>
-					Blogs
-				</Link>
+			<div className="m-0 p-0 lg:px-6 lg:flex lg:justify-between lg:items-center">
+				<h5 className="hidden lg:block font-heading-font text-white text-xl">
+					Le Tuan Hy
+				</h5>
+				<div className="flex justify-between items-center px-6 lg:px-0 lg:gap-8">
+					<Link
+						to={"/"}
+						className={
+							isActiveLink(location.pathname, "/") &&
+							location.pathname.length == 1
+								? "btn btn-header-active"
+								: "btn btn-header"
+						}>
+						Home
+					</Link>
+					<Link
+						to={"/portfolio"}
+						className={
+							isActiveLink(location.pathname, "/portfolio")
+								? "btn btn-header-active"
+								: "btn btn-header"
+						}>
+						Portfolio
+					</Link>
+					<Link
+						to={"/active"}
+						className={
+							isActiveLink(location.pathname, "/active")
+								? "btn btn-header-active"
+								: "btn btn-header"
+						}>
+						Active
+					</Link>
+					<Link
+						to={"/blogs"}
+						className={
+							isActiveLink(location.pathname, "/blogs")
+								? "btn btn-header-active"
+								: "btn btn-header"
+						}>
+						Blogs
+					</Link>
+				</div>
 			</div>
 		</nav>
 	);

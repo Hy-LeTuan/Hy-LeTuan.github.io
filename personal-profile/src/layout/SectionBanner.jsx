@@ -4,7 +4,7 @@ import SquareAnimation from "./SquareAnimation";
 function SectionBanner(bubbleCount, bannerTitle) {
 	return (
 		<div className="section-banner">
-			<h2 className="text-2xl font-heading-font text-white text-center">
+			<h2 className="text-2xl font-heading-font text-white text-center lg:text-4xl">
 				{bannerTitle}
 			</h2>
 			{SquareAnimation(bubbleCount)}

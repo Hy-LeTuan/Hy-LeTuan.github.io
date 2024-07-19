@@ -25,7 +25,7 @@ function Blogs() {
 
 		const img = await event.target.closest("button").querySelector("img");
 
-		target.classList.toggle("line-clamp-4");
+		target.classList.toggle("line-clamp-5");
 		img.classList.toggle("-rotate-90");
 	};
 
@@ -73,7 +73,7 @@ function Blogs() {
 									</h2>
 									<p
 										id={`blog-content-${index}`}
-										className="text-left font-body-font text-white text-xs line-clamp-4 transition-all duration-1000">
+										className="text-left font-body-font text-white text-xs line-clamp-5 transition-all duration-1000">
 										{blog.content}
 									</p>
 								</div>
