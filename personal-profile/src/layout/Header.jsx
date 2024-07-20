@@ -21,7 +21,7 @@ function Header() {
 	return (
 		<nav className={`relative z-10 w-full p-2 bg-primary ${shadowStyle}`}>
 			<div className="m-0 p-0 lg:px-6 lg:flex lg:justify-between lg:items-center">
-				<h5 className="hidden lg:block font-heading-font text-white text-xl">
+				<h5 className="hidden lg:block font-heading-font text-white lg:text-xl xl:text-2xl">
 					Le Tuan Hy
 				</h5>
 				<div className="flex justify-between items-center px-6 lg:px-0 lg:gap-8">

@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 function Footer() {
 	return (
 		<footer className="overflow-hidden clear-both w-full bg-primary text-white">
-			<div className="flex justify-between items-top py-1 px-6">
+			<div className="flex justify-between items-top py-1 px-6 xl:px-24">
 				<div className="flex flex-col gap-1">
-					<h4 className="text-base font-heading-font text-white lg:text-2xl">
+					<h4 className="text-base font-heading-font text-white lg:text-2xl xl:text-4xl">
 						Contact me
 					</h4>
-					<ul className="text-xs font-heading-font text-white list-disc list-inside lg:text-base">
+					<ul className="text-xs font-body-font text-white list-disc list-inside lg:text-base xl:text-lg">
 						<li>
 							<a href="https://github.com/Hy-LeTua">Github</a>
 						</li>
@@ -29,10 +29,10 @@ function Footer() {
 					</ul>
 				</div>
 				<div className="flex flex-col gap-1">
-					<h4 className="text-base font-heading-font text-white lg:text-2xl">
+					<h4 className="text-base font-heading-font text-white lg:text-2xl xl:text-4xl">
 						Sitemap
 					</h4>
-					<ul className="text-xs font-heading-font text-white list-disc list-inside lg:text-base">
+					<ul className="text-xs font-body-font text-white list-disc list-inside lg:text-base xl:text-lg">
 						<li>
 							<Link to={"/"}>Home</Link>
 						</li>
@@ -48,10 +48,10 @@ function Footer() {
 					</ul>
 				</div>
 				<div className="flex flex-col gap-1">
-					<h4 className="text-base font-heading-font text-white lg:text-2xl">
+					<h4 className="text-base font-heading-font text-white lg:text-2xl xl:text-4xl">
 						Source Code
 					</h4>
-					<ul className="text-xs font-heading-font text-white list-disc list-inside lg:text-base">
+					<ul className="text-xs font-body-font text-white list-disc list-inside lg:text-base xl:text-lg">
 						<li>
 							<a href="https://github.com/Hy-LeTuan/Hy-LeTuan.github.io">
 								Code

@@ -9,21 +9,21 @@
 	}
 
 	.btn-header {
-		@apply font-heading-font border-border-translucent-black bg-neutral rounded-full border-1 h-5 w-16 lg:h-6 lg:w-20 text-white p-0 text-xs lg:text-base transition-colors shadow-xs duration-500;
+		@apply font-heading-font border-border-translucent-black bg-neutral rounded-full border-1 h-5 w-16 lg:h-6 lg:w-20 text-white p-0 text-xs lg:text-base transition-colors shadow-xs duration-500 xl:w-28 xl:h-8 xl:text-xl;
 	}
 
 	.btn-header-active {
-		@apply font-heading-font border-border-translucent-black  bg-accent rounded-full border-1 h-5 w-16  text-white p-0 text-xs lg:text-base lg:border-0 lg:h-6 lg:w-20 transition-colors shadow-xs duration-500;
+		@apply font-heading-font border-border-translucent-black  bg-accent rounded-full border-1 h-5 w-16  text-white p-0 text-xs lg:text-base lg:border-0 lg:h-6 lg:w-20 transition-colors shadow-xs duration-500 xl:text-xl xl:w-28 xl:h-8;
 	}
 
 	.btn-card-footer {
-		@apply bg-accent px-2 py-1 rounded-xl lg:px-3;
+		@apply bg-accent px-2 py-1 rounded-xl lg:px-3 xl:px-5 xl:py-1;
 	}
 
 	/* Cards */
 
 	.card {
-		@apply shadow-card px-4 py-4 col-span-1 mb-8 lg:p-5;
+		@apply shadow-card px-4 py-4 col-span-1 mb-8 lg:p-5 xl:shadow-none;
 	}
 
 	.card-split-title {
@@ -35,15 +35,15 @@
 	}
 
 	.card-header {
-		@apply font-heading-font text-accent text-2xl lg:text-3xl;
+		@apply font-heading-font text-accent text-2xl lg:text-3xl xl:text-5xl;
 	}
 
 	.project-card {
-		@apply shadow-projectcard relative overflow-hidden flex flex-col col-span-1 gap-4 pb-4 justify-center items-center bg-primary rounded-xl max-w-lg lg:col-span-1 lg:gap-6 lg:pb-8;
+		@apply shadow-projectcard relative overflow-hidden flex flex-col col-span-1 gap-4 pb-4 justify-center items-center bg-primary rounded-xl  lg:col-span-1 lg:gap-6 lg:pb-8 xl:gap-10;
 	}
 
 	.project-card-body {
-		@apply flex flex-col w-full px-4 gap-4 items-start lg:gap-6 lg:px-8 lg:items-center lg:justify-center;
+		@apply flex flex-col w-full px-4 gap-4 items-start lg:gap-6 lg:px-8 lg:items-center lg:justify-center xl:px-12 xl:gap-8;
 	}
 
 	.project-card-stats {
@@ -81,7 +81,7 @@
 	/* Utilities */
 
 	.main-section {
-		@apply grid grid-cols-1 px-8 place-items-stretch lg:grid-cols-2 lg:gap-x-8 lg:px-12;
+		@apply grid grid-cols-1 px-8 place-items-stretch lg:grid-cols-2 lg:gap-x-8 lg:px-12 xl:px-16;
 	}
 
 	.row {
@@ -89,15 +89,15 @@
 	}
 
 	.statistic-row {
-		@apply flex justify-between items-center bg-primary text-white rounded-md px-4 py-1 font-heading-font;
+		@apply flex justify-between items-center bg-primary text-white rounded-md px-4 py-1 font-heading-font xl:py-2 xl:px-6;
 	}
 
 	.card-holder {
-		@apply flex flex-col gap-10 lg:col-span-2 lg:grid lg:grid-cols-2 lg:place-items-center lg:gap-20;
+		@apply flex flex-col gap-10 lg:col-span-2 lg:grid lg:grid-cols-2 lg:place-items-stretch lg:gap-20;
 	}
 
 	.section-banner {
-		@apply w-full p-2 bg-primary relative overflow-hidden mt-10 mb-10 lg:mt-16 lg:mb-16;
+		@apply w-full p-2 bg-primary relative overflow-hidden mt-10 mb-10 lg:mt-16 lg:mb-16 xl:mt-24 xl:mb-24;
 	}
 }
 
