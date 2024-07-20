@@ -23,7 +23,7 @@
 	/* Cards */
 
 	.card {
-		@apply shadow-card px-4 py-4 col-span-1 mb-8 lg:shadow-none;
+		@apply shadow-card px-4 py-4 col-span-1 mb-8 lg:p-5;
 	}
 
 	.card-split-title {
@@ -35,11 +35,11 @@
 	}
 
 	.card-header {
-		@apply font-heading-font text-accent text-2xl lg:text-4xl;
+		@apply font-heading-font text-accent text-2xl lg:text-3xl;
 	}
 
 	.project-card {
-		@apply shadow-projectcard relative overflow-hidden flex flex-col col-span-1 gap-4 pb-4 justify-center items-center bg-primary rounded-xl lg:col-span-1 lg:gap-6;
+		@apply shadow-projectcard relative overflow-hidden flex flex-col col-span-1 gap-4 pb-4 justify-center items-center bg-primary rounded-xl max-w-lg lg:col-span-1 lg:gap-6 lg:pb-8;
 	}
 
 	.project-card-body {
@@ -55,15 +55,15 @@
 	}
 
 	.project-specific-single-part {
-		@apply flex flex-col gap-1 items-start justify-start;
+		@apply flex flex-col gap-1 items-start justify-start lg:gap-2;
 	}
 
 	.blog-card {
-		@apply flex flex-col gap-2 justify-center items-center bg-primary rounded-md shadow-projectcard;
+		@apply flex flex-col gap-2 justify-center items-center bg-primary rounded-md shadow-projectcard lg:gap-4;
 	}
 
 	.blog-card-body {
-		@apply flex flex-col gap-4 py-4 px-8;
+		@apply flex flex-col gap-4 py-4 px-8 lg:gap-5;
 	}
 
 	.target-card {
@@ -81,7 +81,7 @@
 	/* Utilities */
 
 	.main-section {
-		@apply grid grid-cols-1 px-6 lg:grid-cols-2 lg:gap-x-8 lg:px-12;
+		@apply grid grid-cols-1 px-8 place-items-stretch lg:grid-cols-2 lg:gap-x-8 lg:px-12;
 	}
 
 	.row {
@@ -93,7 +93,7 @@
 	}
 
 	.card-holder {
-		@apply flex flex-col gap-10 lg:col-span-2 lg:grid lg:grid-cols-2 lg:place-items-center;
+		@apply flex flex-col gap-10 lg:col-span-2 lg:grid lg:grid-cols-2 lg:place-items-center lg:gap-20;
 	}
 
 	.section-banner {

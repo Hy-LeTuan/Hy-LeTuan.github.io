@@ -22,29 +22,37 @@ function Portfolio() {
 					{SquareAnimation(null)}
 				</div>
 			</section>
-			<section className="mt-10">
+			<section className="mt-10 lg:mt-16">
 				<div className="main-section">
-					<div className="shadow-card flex flex-col overflow-hidden">
-						<div className="bg-primary flex justify-center items-center px-1 py-3">
-							<h2 className="font-heading-font text-white text-2xl">
+					<div className="shadow-card flex flex-col overflow-hidden lg:flex-row lg:col-span-2 lg:shadow-none">
+						<div className="bg-primary flex justify-center items-center px-1 py-3 lg:flex-grow">
+							<h2 className="font-heading-font text-white text-2xl lg:text-4xl">
 								Overall Statistics
 							</h2>
 						</div>
-						<div className="flex flex-col gap-6 px-6 py-6">
-							<div className="row font-heading-font text-white bg-accent">
-								<h3 className="text-xl">Total Projects</h3>
-								<h3 className="text-xl">{stats.total}</h3>
+						<div className="flex flex-col gap-6 px-6 py-6 lg:flex-grow lg:py-0">
+							<div className="row font-heading-font text-white bg-accent lg:py-3">
+								<h3 className="text-xl lg:text-2xl">
+									Total Projects
+								</h3>
+								<h3 className="text-xl lg:text-2xl">
+									{stats.total}
+								</h3>
 							</div>
-							<div className="row font-heading-font text-white bg-success">
-								<h3 className="text-xl">Finished Projects</h3>
-								<h3 className="text-xl">{stats.finished}</h3>
+							<div className="row font-heading-font text-white bg-success lg:py-3">
+								<h3 className="text-xl lg:text-2xl">
+									Finished Projects
+								</h3>
+								<h3 className="text-xl lg:text-2xl">
+									{stats.finished}
+								</h3>
 							</div>
 						</div>
 					</div>
 				</div>
 				{SectionBanner(6, "My projects")}
 				<div className="main-section">
-					<div className="card-holder lg:gap-20">
+					<div className="card-holder">
 						{projects?.map((project, index) => (
 							<div className="project-card" key={index}>
 								<div className="absolute top-0 left-0 bg-accent w-full h-32"></div>
@@ -99,7 +107,7 @@ function Portfolio() {
 				</div>
 
 				{SectionBanner(6, "My certificates")}
-				<div className="main-section lg:mb-12">
+				<div className="main-section lg:mb-14">
 					<div className="card-holder gap-1 lg:gap-x-20">
 						{certs?.map((cert, index) => (
 							<div className="card lg:shadow-card" key={index}>
