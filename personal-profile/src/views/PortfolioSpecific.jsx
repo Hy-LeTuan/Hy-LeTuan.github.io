@@ -33,34 +33,30 @@ function PortfolioSpecific() {
 		<>
 			<section className="relative overflow-hidden clear-both w-full bg-primary text-white font-heading-font">
 				<div className="p-12 flex flex-col gap-6 justify-center items-center overflow-hidden lg:p-24">
-					<h1 className="text-3xl lg:text-5xl">
-						Portfolio Presentation
-					</h1>
+					<h1 className="text-3xl lg:text-5xl">Project Details</h1>
 					{MediaHeader("..")}
 					{SquareAnimation(null)}
 				</div>
 			</section>
-			<section className="mt-10 lg:mt-16">
+			<section className="mt-7 lg:mt-16">
 				<div className="main-section">
-					<div className="w-full flex flex-col justify-center items-center gap-8 lg:col-span-2">
+					<div className="w-full flex flex-col justify-center items-center gap-4 lg:col-span-2">
 						<div className="rounded-full w-52 h-52 bg-gray-300 shadow-project mt-10"></div>
-						<h2 className="font-heading-font text-2xl lg:text-4xl">
-							Project title: {project?.title}
-						</h2>
+						<h1 className="">Project title: {project?.title}</h1>
 					</div>
 				</div>
 			</section>
-			<section className="mt-10 lg:mt-16">
+			<section className="mt-0 lg:mt-16">
 				<div className="main-section">
-					<div className="card lg:row-span-2">
-						<div className="card-body-single-column gap-4">
+					<div className="project-specific-card lg:row-span-2">
+						<div className="card-body-single-column">
 							<div className="project-specific-single-part">
 								<div className="flex items-center gap-2">
-									<h5 className="font-heading-font text-black text-base text-left lg:text-xl">
+									<h4 className="text-left lg:text-xl">
 										Project description
-									</h5>
+									</h4>
 									<img
-										className="w-5 h-5 lg:w-6 lg:h-6"
+										className="project-specific-card-icon"
 										src="../src/assets/description.svg"
 										alt="Description icon"
 									/>
@@ -71,11 +67,11 @@ function PortfolioSpecific() {
 							</div>
 							<div className="project-specific-single-part">
 								<div className="flex items-center gap-2">
-									<h5 className="font-heading-font text-black text-base text-left lg:text-xl">
+									<h4 className="text-black text-left">
 										Project details
-									</h5>
+									</h4>
 									<img
-										className="w-5 h-5 lg:w-6 lg:h-6"
+										className="project-specific-card-icon"
 										src="../src/assets/description.svg"
 										alt="Description icon"
 									/>
@@ -86,16 +82,16 @@ function PortfolioSpecific() {
 							</div>
 							<div className="project-specific-single-part">
 								<div className="flex items-center gap-2">
-									<h5 className="font-heading-font text-black text-base text-left lg:text-xl">
+									<h4 className="text-black text-left">
 										Technologies involved
-									</h5>
+									</h4>
 									<img
-										className="w-5 h-5 lg:w-6 lg:h-6"
+										className="project-specific-card-icon"
 										src="../src/assets/list_heart.svg"
 										alt="Description icon"
 									/>
 								</div>
-								<ul className="flex flex-col gap-1 font-body-font text-xs text-left text-black list-disc list-inside marker:text-accent lg:text-sm lg:gap-2">
+								<ul className="flex flex-col gap-1 text-left text-black lg:text-sm lg:gap-2">
 									{project?.technologies?.map(
 										(tech, index) => (
 											<li key={index}>{tech}</li>
@@ -105,20 +101,20 @@ function PortfolioSpecific() {
 							</div>
 						</div>
 					</div>
-					<div className="card">
-						<div className="card-body-single-column gap-4">
+					<div className="project-specific-card">
+						<div className="card-body-single-column">
 							<div className="project-specific-single-part">
 								<div className="flex items-center gap-2">
-									<h5 className="font-heading-font text-black text-base text-left lg:text-xl">
+									<h4 className="text-black text-left">
 										Project statistics
-									</h5>
+									</h4>
 									<img
 										className="w-5 h-5 lg:w-6 lg:h-6"
 										src="../src/assets/statistics.svg"
 										alt="Description icon"
 									/>
 								</div>
-								<ul className="flex flex-col gap-1 font-body-font text-xs text-left text-black list-disc list-inside marker:text-accent lg:text-sm lg:gap-2">
+								<ul className="flex flex-col gap-1 text-left text-black  lg:text-sm lg:gap-2">
 									<li>
 										Date started:{" "}
 										{project?.statistics?.date}
@@ -139,13 +135,13 @@ function PortfolioSpecific() {
 							</div>
 						</div>
 					</div>
-					<div className="card">
+					<div className="project-specific-card">
 						<div className="card-body-single-column gap-4">
 							<div className="project-specific-single-part">
 								<div className="flex items-center gap-2">
-									<h5 className="font-heading-font text-black text-base text-left lg:text-xl">
+									<h4 className="text-black text-left">
 										My contributions
-									</h5>
+									</h4>
 									<img
 										className="w-5 h-5 lg:w-6 lg:h-6"
 										src="../src/assets/description.svg"
@@ -173,21 +169,21 @@ function PortfolioSpecific() {
 							</div>
 						</div>
 					</div>
-					<div className="lg:col-span-2 lg:flex lg:flex-row lg:gap-8 lg:items-stretch">
-						<div className="card lg:col-span-1 lg:mb-0 lg:flex-grow">
+					<div className="flex flex-col gap-9 lg:col-span-2 lg:flex lg:flex-row lg:items-stretch">
+						<div className="project-specific-card lg:col-span-1 lg:mb-0 lg:flex-grow">
 							<div className="card-body-single-column gap-4">
 								<div className="project-specific-single-part">
 									<div className="flex items-center gap-2">
-										<h5 className="font-heading-font text-black text-base text-left lg:text-xl">
+										<h4 className="text-black text-left lg:text-xl">
 											Difficulties & Struggles
-										</h5>
+										</h4>
 										<img
 											className="w-5 h-5 lg:w-6 lg:h-6"
 											src="../src/assets/error_icon.svg"
 											alt="Description icon"
 										/>
 									</div>
-									<ul className="flex flex-col gap-1 font-body-font text-xs text-left text-black list-disc list-inside marker:text-accent lg:text-sm lg:gap-2">
+									<ul className="flex flex-col gap-3 text-left text-black  lg:text-sm lg:gap-2">
 										{project?.diff_and_solutions?.map(
 											(pair, index) => (
 												<li
@@ -201,20 +197,20 @@ function PortfolioSpecific() {
 								</div>
 							</div>
 						</div>
-						<div className="card bg-primary mb-0 lg:col-span-1 lg:flex-grow">
+						<div className="project-specific-card bg-primary mb-0 lg:col-span-1 lg:flex-grow">
 							<div className="card-body-single-column gap-4">
 								<div className="project-specific-single-part">
 									<div className="flex items-center gap-2">
-										<h5 className="font-heading-font text-white text-base text-left lg:text-xl">
+										<h4 className="text-white text-left">
 											Solutions
-										</h5>
+										</h4>
 										<img
 											className="w-5 h-5 lg:w-6 lg:h-6"
 											src="../src/assets/checkmark.svg"
 											alt="Description icon"
 										/>
 									</div>
-									<ul className="flex flex-col gap-1 font-body-font text-xs text-left text-black list-disc list-inside marker:text-white lg:text-sm lg:gap-2">
+									<ul className="flex flex-col gap-3 text-left text-black marker:text-white lg:text-sm lg:gap-2">
 										{project?.diff_and_solutions?.map(
 											(pair, index) => (
 												<li
@@ -232,7 +228,7 @@ function PortfolioSpecific() {
 				</div>
 			</section>
 			{SectionBanner(5, "Project showcase")}
-			<section className="lg:mb-6">
+			<section className="mt-7">
 				<div className="main-section">
 					<div className="card w-65 h-32"></div>
 					<div className="card w-65 h-32"></div>

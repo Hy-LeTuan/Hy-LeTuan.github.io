@@ -10,47 +10,44 @@ function Home() {
 
 	return (
 		<>
-			<section className="relative overflow-hidden clear-both w-full bg-primary text-white font-heading-font">
-				<div className="p-12 flex flex-col gap-6 xl:gap-12 justify-center items-center overflow-hidden lg:p-24 xl:p-32">
+			<section className="relative overflow-hidden clear-both w-full bg-primary">
+				<div className="main-banner">
 					<div className="relative z-10 rounded-full w-32 h-32 lg:w-48 lg:h-48 xl:w-64 xl:h-64 bg-secondary"></div>
-					<div
-						id="biography"
-						className="relative z-10 flex flex-col gap-0 lg:gap-2 xl:gap-4">
-						<h1 className="text-3xl lg:text-5xl xl:text-7xl">
-							Hey, I'm Le Tuan Hy
-						</h1>
-						<h4 className="text-xl lg:text-2xl xl:text-4xl">
-							Studet, Developer, Sportstes
-						</h4>
+					<div className="biography">
+						<h1 className="display">Hey, I'm Le Tuan Hy</h1>
+						<h4>Studet, Developer, Sportstes</h4>
 					</div>
+					<hr className="banner-hr" />
 					{MediaHeader(".")}
 					{SquareAnimation(null)}
 				</div>
 			</section>
-			<section className="mt-10 lg:mt-16 xl:mt-24">
+			<section className="mt-7 lg:mt-16 xl:mt-24">
 				<div className="main-section">
 					<div className="card">
-						<div className="card-body-single-column gap-1 text-left xl:gap-4">
-							<h2 className="card-header">Hello there!</h2>
-							<p className="text-xs font-body-font lg:text-sm lg:mt-2 xl:text-lg">
-								My name is Le Tuan Hy and I’m a student from
-								Vietnam. I’m currently working towards
-								fulfilling my dream of being a computer science
-								researcher and engineer. Apart from programming,
-								I also love designing website, making 3D assets
-								and play sports.
-							</p>
+						<div className="card-body-single-column">
+							<div className="hello-cluster">
+								<h1 className="card-header">Hello there!</h1>
+								<p className="tetx-black">
+									My name is Le Tuan Hy and I’m a student from
+									Vietnam. I’m currently working towards
+									fulfilling my dream of being a computer
+									science researcher and engineer. Apart from
+									programming, I also love designing website,
+									making 3D assets and play sports.
+								</p>
+							</div>
 						</div>
 					</div>
 					<div className="card-split-title lg:card lg:col-start-1 lg:mb-0">
 						<div className="grid grid-cols-4 auto-cols-max place-items lg:flex lg:flex-col lg:p-0 lg:gap-1 xl:gap-4">
 							<div className="col-span-1 flex items-center justify-center bg-accent lg:bg-transparent lg:justify-start lg:items-start">
-								<h2 className="card-header font-heading-font text-white lg:text-accent lg:text-left">
+								<h1 className="card-header text-white">
 									About this site
-								</h2>
+								</h1>
 							</div>
-							<div className="col-span-3 ml-4 text-left py-4 overflow-hidden flex justify-center items-center lg:justify-start lg:items-start lg:text-left lg:ml-0 lg:mt-2 lg:p-0">
-								<ul className="list-disc list-inside font-body-font text-xs marker:text-accent lg:text-sm lg:text-left xl:text-lg xl:flex xl:flex-col xl:gap-2">
+							<div className="col-span-3 ml-4 text-left py-2 overflow-hidden flex justify-center items-center lg:justify-start lg:items-start lg:text-left lg:ml-0 lg:mt-2 lg:p-0">
+								<ul className="font-body-font lg:text-sm lg:text-left xl:text-lg xl:flex xl:flex-col xl:gap-2">
 									<li className="mb-2">
 										The Homepage is all about my journey of
 										becoming an engineer.
@@ -75,31 +72,25 @@ function Home() {
 						</div>
 					</div>
 					<div className="card lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:mb-0">
-						<div className="card-body-single-column gap-4 text-left lg:gap-10">
-							<h2 className="card-header xl:text-black">
+						<div className="card-body-single-column text-left lg:gap-10">
+							<h1 className="card-header text-accent">
 								How about some statistics?
-							</h2>
+							</h1>
 							<div className="statistic-row">
-								<h4 className="text-base text-accent lg:text-xl xl:text-2xl">
-									{lineStat}
-								</h4>
-								<h4 className="text-base text-white lg:text-xl xl:text-2xl">
+								<h4 className=" text-accent ">{lineStat}</h4>
+								<h4 className="text-white">
 									Lines of code written this past year
 								</h4>
 							</div>
 							<div className="statistic-row">
-								<h4 className="text-base text-accent lg:text-xl xl:text-2xl">
-									{dayStat}
-								</h4>
-								<h4 className="text-base text-white lg:text-xl xl:text-2xl">
+								<h4 className="text-accent">{dayStat}</h4>
+								<h4 className="text-white">
 									Days of continuous programming
 								</h4>
 							</div>
 							<div className="statistic-row">
-								<h4 className="text-base text-accent lg:text-xl xl:text-2xl">
-									{bugStat}
-								</h4>
-								<h4 className="text-base text-white lg:text-xl xl:text-2xl">
+								<h4 className="text-accent">{bugStat}</h4>
+								<h4 className="text-white">
 									Bugs encountered and resolved
 								</h4>
 							</div>
@@ -112,56 +103,50 @@ function Home() {
 				</div>
 				<div className="main-section lg:mb-12 xl:mb-20">
 					<div className="card lg:col-span-2">
-						<div className="flex flex-col gap-4 justify-center text-center lg:grid lg:grid-cols-3 lg:gap-y-4">
-							<h2 className="card-header lg:hidden">
+						<div className="card-body-single-column lg:grid lg:grid-cols-3 lg:gap-y-4">
+							<h1 className="card-header lg:hidden">
 								Journey Checkpoints
-							</h2>
-							<div className="flex flex-col xl:gap-2 lg:col-span-1">
-								<div className="flex flex-row gap-1 items-center xl:gap-2">
+							</h1>
+							<div className="flex flex-col items-start gap-1 xl:gap-2 lg:col-span-1">
+								<div className="flex flex-row gap-2 items-center xl:gap-2">
 									<img
 										src="./src/assets/mark_location.svg"
 										alt="location mark"
-										className="w-6 h-6 xl:h-9 xl:w-9"
+										className="location-icon"
 									/>
-									<h4 className="text-left text-base font-heading-font lg:text-2xl xl:text-4xl">
-										How it started
-									</h4>
+									<h4>How it started</h4>
 								</div>
-								<p className="text-xs text-left lg:text-sm xl:text-lg">
+								<p className="text-left">
 									I picked up programming as a hobby to relax
 									in high school. The first language I ever
 									learnt was Python! What the hell
 								</p>
 							</div>
-							<div className="flex flex-col xl:gap-2 lg:col-span-1">
-								<div className="flex flex-row gap-1 items-center xl:gap-2">
+							<div className="flex flex-col items-start gap-1 xl:gap-2 lg:col-span-1">
+								<div className="flex flex-row gap-2 items-center xl:gap-2">
 									<img
 										src="./src/assets/mark_location.svg"
 										alt="location mark"
-										className="w-6 h-6 xl:h-9 xl:w-9"
+										className="location-icon"
 									/>
-									<h4 className="text-left text-base font-heading-font lg:text-2xl xl:text-4xl">
-										How it started
-									</h4>
+									<h4>How it started</h4>
 								</div>
-								<p className="text-xs text-left lg:text-sm xl:text-lg">
+								<p className="text-left">
 									I picked up programming as a hobby to relax
 									in high school. The first language I ever
 									learnt was Python! What the hell
 								</p>
 							</div>
-							<div className="flex flex-col xl:gap-2 lg:col-span-1">
-								<div className="flex flex-row gap-1 items-center xl:gap-2">
+							<div className="flex flex-col items-start gap-1 xl:gap-2 lg:col-span-1">
+								<div className="flex flex-row gap-2 items-center xl:gap-2">
 									<img
 										src="./src/assets/mark_location.svg"
 										alt="location mark"
-										className="w-6 h-6 xl:h-9 xl:w-9"
+										className="location-icon"
 									/>
-									<h4 className="text-left text-base font-heading-font lg:text-2xl xl:text-4xl">
-										How it started
-									</h4>
+									<h4>How it started</h4>
 								</div>
-								<p className="text-xs text-left lg:text-sm xl:text-lg">
+								<p className="text-left">
 									I picked up programming as a hobby to relax
 									in high school. The first language I ever
 									learnt was Python! What the hell

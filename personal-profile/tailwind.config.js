@@ -9,6 +9,7 @@ export default {
 				accent: "#FF7F11",
 				pink: "#e52e71",
 				neutral: "#272A2E",
+				blueGray: "#6C90B6",
 				warning: "#F6AE2D",
 				alert: "#DA303E",
 				success: "#15D599",
@@ -35,6 +36,11 @@ export default {
 				card: "0px 1px 4px 2px rgba(0, 0, 0, 0.25)",
 				project: "inset 0px 0px 6px 3px rgba(0, 0, 0, 0.25)",
 				projectcard: "0px 0px 6px 4px rgba(0, 0, 0, 0.5)",
+				"certificate-card": "3px 3px 4px 0px rgba(240, 95, 35, 0.5)",
+			},
+			backgroundImage: {
+				"wave-pattern":
+					"url('./src/assets/background/wave_pattern.svg')",
 			},
 		},
 	},

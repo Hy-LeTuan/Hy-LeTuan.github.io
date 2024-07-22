@@ -33,74 +33,76 @@ function Blogs() {
 	return (
 		<>
 			<section className="relative overflow-hidden clear-both w-full bg-primary text-white font-heading-font">
-				<div className="p-12 flex flex-col gap-6 justify-center items-center overflow-hidden lg:p-24">
-					<h1 className="text-3xl lg:text-5xl">Technology Blogs</h1>
+				<div className="main-banner">
+					<h1 className="display">Technology Blogs & More</h1>
+					<hr className="banner-hr" />
 					{MediaHeader(".")}
 					{SquareAnimation(null)}
 				</div>
 			</section>
-			<section className="mt-10 lg:mt-16">
-				<div className="flex flex-col gap-6 justify-center items-center lg:gap-8">
-					<h2 className="text-2xl font-heading-font text-black lg:text-4xl">
-						Available Categories
-					</h2>
-					<div className="flex flex-wrap gap-6 px-4 justify-between items-start lg:gap-10">
-						{categories?.map((cat, index) => (
-							<div
-								className="flex flex-col items-center justify-center gap-2"
-								key={index}>
-								<div className="bg-neutral w-9 h-9 rounded-full lg:w-12 lg:h-12"></div>
-								<h6 className="text-black font-heading-font text-sm lg:text-base">
-									{cat.title}
-								</h6>
-							</div>
-						))}
+			<section className="mt-7 lg:mt-16">
+				<div className="main-section">
+					<div className="flex flex-col gap-6 justify-center items-center lg:gap-8">
+						<h1 className="text-black">Available Categories</h1>
+						<div className="flex flex-wrap gap-6 px-4 justify-between items-start lg:gap-10">
+							{categories?.map((cat, index) => (
+								<div
+									className="flex flex-col items-center justify-center gap-2"
+									key={index}>
+									<div className="bg-neutral w-9 h-9 rounded-full lg:w-12 lg:h-12"></div>
+									<h5 className="text-black lg:text-base">
+										{cat.title}
+									</h5>
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
-				{SectionBanner(5, "Blogs & Articles")}
-				<div className="main-section mb-8 lg:mb-14">
-					<div className="card-holder">
-						{blogs?.map((blog, index) => (
-							<div className="blog-card" key={index}>
-								<div className="w-full h-96 bg-neutral"></div>
-								<div className="blog-card-body">
-									<h2 className="text-2xl font-heading-font text-white text-center lg:text-4xl">
-										{blog.title}
-									</h2>
-									<p
-										id={`blog-content-${index}`}
-										className="text-left font-body-font text-white text-xs line-clamp-5 transition-all duration-1000 lg:line-clamp-8 lg:text-sm">
-										{blog.content}
-									</p>
-								</div>
-								<div className="flex w-full justify-between px-6 items-center mb-4">
-									<h6 className="text-sm font-heading-font text-white lg:text-base">
-										{blog.date}
-									</h6>
-									{checkReadButton(
-										document.querySelector(
-											`p[id="blog-content-${index}"]`
-										)
-									) && (
-										<button
-											className="btn btn-card-footer gap-2"
-											onClick={(event) =>
-												showMoreContentOnClick(event)
-											}>
-											<h6 className="text-sm font-heading-font text-white lg:text-base">
-												Read more
-											</h6>
-											<img
-												src="./src/assets/expand.svg"
-												alt="expand icon"
-												className="text-white w-4 h-4 -rotate-90 transition-all duration-300"
-											/>
-										</button>
-									)}
-								</div>
+			</section>
+			{SectionBanner(5, "Blogs & Articles")}
+			<section className="mt-7">
+				<div className="main-section">
+					{blogs?.map((blog, index) => (
+						<div className="blog-card" key={index}>
+							<div className="w-full h-96 bg-neutral"></div>
+							<div className="blog-card-body">
+								<h1 className="text-white text-left">
+									{blog.title}
+								</h1>
+								<p
+									id={`blog-content-${index}`}
+									className="text-left font-body-font text-white text-xs line-clamp-5 transition-all duration-1000 lg:line-clamp-8 lg:text-sm">
+									{blog.content}
+								</p>
 							</div>
-						))}
-					</div>
+							<div className="flex w-full justify-between px-6 items-center mb-4">
+								<h6 className="text-sm font-heading-font text-white lg:text-base">
+									{blog.date}
+								</h6>
+								{checkReadButton(
+									document.querySelector(
+										`p[id="blog-content-${index}"]`
+									)
+								) && (
+									<button
+										className="btn btn-blog-read-more"
+										type="button"
+										onClick={(event) =>
+											showMoreContentOnClick(event)
+										}>
+										<h6 className="text-sm font-heading-font text-white lg:text-base">
+											Read more
+										</h6>
+										<img
+											src="./src/assets/expand.svg"
+											alt="expand icon"
+											className="text-white w-4 h-4 -rotate-90 transition-all duration-300"
+										/>
+									</button>
+								)}
+							</div>
+						</div>
+					))}
 				</div>
 			</section>
 		</>
