@@ -36,7 +36,10 @@ export default {
 				card: "0px 1px 4px 2px rgba(0, 0, 0, 0.25)",
 				project: "inset 0px 0px 6px 3px rgba(0, 0, 0, 0.25)",
 				projectcard: "0px 0px 6px 4px rgba(0, 0, 0, 0.5)",
-				"certificate-card": "3px 3px 4px 0px rgba(240, 95, 35, 0.5)",
+				"certificate-card": "0px 0px 4px 2px rgba(240, 95, 35, 0.5)",
+				"header-button": "0px 0px 2px 1px rgba(0, 0, 0, 0.25)",
+				"active-header-button":
+					"0px 0px 2px 1px rgba(255, 255, 255, 0.15)",
 			},
 			backgroundImage: {
 				"wave-pattern":

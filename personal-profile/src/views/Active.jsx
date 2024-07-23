@@ -11,20 +11,20 @@ function Active() {
 		<>
 			<section className="relative overflow-hidden clear-both w-full bg-primary">
 				<div className="main-banner">
-					<h1 className="display">Active projects</h1>
+					<h1 className="display">Current Active Projects</h1>
 					<hr className="banner-hr" />
 					{MediaHeader(".")}
 					{SquareAnimation(null)}
 				</div>
 			</section>
 
-			<section className="mt-7 lg:mt-16 xl:mt-24">
-				<div className="main-section">
+			<section className="section-container">
+				<div className="main-section place-items-center">
 					{projects?.map((project, index) => (
 						<div className="project-card" key={index}>
 							<div className="project-card-body">
 								<div className="w-full flex justify-center items-center">
-									<div className="rounded-full w-40 h-40 bg-secondary shadow-project xl:w-52 xl:h-52 xl:mt-20"></div>
+									<div className="rounded-full w-32 h-32 bg-secondary shadow-project"></div>
 								</div>
 								<div className="flex flex-col gap-1">
 									<h1 className="text-left text-white lg:text-4xl lg:text-center xl:text-5xl">
@@ -62,7 +62,7 @@ function Active() {
 									type="button">
 									<Link to={`/active/${index}`}>
 										<h5 className="text-white lg:text-base xl:text-xl">
-											Details heres
+											Details here
 										</h5>
 									</Link>
 								</button>

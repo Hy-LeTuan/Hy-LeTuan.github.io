@@ -22,13 +22,13 @@ function Home() {
 					{SquareAnimation(null)}
 				</div>
 			</section>
-			<section className="mt-7 lg:mt-16 xl:mt-24">
+			<section className="section-container">
 				<div className="main-section">
 					<div className="card">
 						<div className="card-body-single-column">
-							<div className="hello-cluster">
+							<div className="normal-card-cluster">
 								<h1 className="card-header">Hello there!</h1>
-								<p className="tetx-black">
+								<p className="text-black">
 									My name is Le Tuan Hy and I’m a student from
 									Vietnam. I’m currently working towards
 									fulfilling my dream of being a computer
@@ -39,40 +39,47 @@ function Home() {
 							</div>
 						</div>
 					</div>
-					<div className="card-split-title lg:card lg:col-start-1 lg:mb-0">
-						<div className="grid grid-cols-4 auto-cols-max place-items lg:flex lg:flex-col lg:p-0 lg:gap-1 xl:gap-4">
-							<div className="col-span-1 flex items-center justify-center bg-accent lg:bg-transparent lg:justify-start lg:items-start">
+					<div className="card-split-title md:col-start-1 md:card">
+						<div className="grid grid-cols-4 auto-cols-max place-items md:card-body-single-column">
+							<div className="col-span-1 flex items-center justify-center bg-accent md:hidden">
 								<h1 className="card-header text-white">
 									About this site
 								</h1>
 							</div>
-							<div className="col-span-3 ml-4 text-left py-2 overflow-hidden flex justify-center items-center lg:justify-start lg:items-start lg:text-left lg:ml-0 lg:mt-2 lg:p-0">
-								<ul className="font-body-font lg:text-sm lg:text-left xl:text-lg xl:flex xl:flex-col xl:gap-2">
-									<li className="mb-2">
-										The Homepage is all about my journey of
-										becoming an engineer.
-									</li>
-									<li className="mb-2">
-										The Active Project page will contain
-										live progression trackings of the
-										projects that I’m currently working on.
-									</li>
-									<li className="mb-2">
-										The Portfolio page will be a showcase of
-										my completed projects.
-									</li>
-									<li className="">
-										The Blogs page will contain blogs about
-										technological topics and solutions to
-										problems that you can find on LeetCode,
-										Codeforces ...
-									</li>
-								</ul>
+
+							<div className="hidden md:normal-card-cluster">
+								<h1 className="card-header text-accent">
+									About this site
+								</h1>
+								<div className="col-span-3 ml-4 text-left py-2 overflow-hidden flex justify-center items-center md:grid-cols-none md:p-0 md:m-0">
+									<ul className="font-body-font">
+										<li className="mb-2">
+											The Homepage is all about my journey
+											of becoming an engineer.
+										</li>
+										<li className="mb-2">
+											The Active Project page will contain
+											live progression trackings of the
+											projects that I’m currently working
+											on.
+										</li>
+										<li className="mb-2">
+											The Portfolio page will be a
+											showcase of my completed projects.
+										</li>
+										<li className="">
+											The Blogs page will contain blogs
+											about technological topics and
+											solutions to problems that you can
+											find on LeetCode, Codeforces ...
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div className="card lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:mb-0">
-						<div className="card-body-single-column text-left lg:gap-10">
+					<div className="card md:row-span-2 md:col-start-2 md:row-start-1">
+						<div className="card-body-single-column text-left">
 							<h1 className="card-header text-accent">
 								How about some statistics?
 							</h1>
@@ -94,20 +101,22 @@ function Home() {
 									Bugs encountered and resolved
 								</h4>
 							</div>
-							<div className="bg-primary w-full h-32 lg:h-36"></div>
+							<div className="bg-primary w-full h-32 md:flex-grow md:h-48"></div>
 						</div>
 					</div>
 				</div>
-				<div className="hidden lg:m-0 lg:p-0 lg:block">
-					{SectionBanner(10, "Journey Checkpoint")}
-				</div>
-				<div className="main-section lg:mb-12 xl:mb-20">
-					<div className="card lg:col-span-2">
-						<div className="card-body-single-column lg:grid lg:grid-cols-3 lg:gap-y-4">
-							<h1 className="card-header lg:hidden">
+			</section>
+			<div className="hidden md:block p-0">
+				{SectionBanner(10, "Journey Checkpoint")}
+			</div>
+			<section className="section-container">
+				<div className="main-section">
+					<div className="card md:col-span-2">
+						<div className="card-body-single-column md:!grid md:!grid-cols-3">
+							<h1 className="card-header md:hidden">
 								Journey Checkpoints
 							</h1>
-							<div className="flex flex-col items-start gap-1 xl:gap-2 lg:col-span-1">
+							<div className="flex flex-col items-start gap-1 md:!col-span-1">
 								<div className="flex flex-row gap-2 items-center xl:gap-2">
 									<img
 										src="./src/assets/mark_location.svg"
@@ -122,7 +131,7 @@ function Home() {
 									learnt was Python! What the hell
 								</p>
 							</div>
-							<div className="flex flex-col items-start gap-1 xl:gap-2 lg:col-span-1">
+							<div className="flex flex-col items-start gap-1 md:!col-span-1">
 								<div className="flex flex-row gap-2 items-center xl:gap-2">
 									<img
 										src="./src/assets/mark_location.svg"
@@ -137,7 +146,7 @@ function Home() {
 									learnt was Python! What the hell
 								</p>
 							</div>
-							<div className="flex flex-col items-start gap-1 xl:gap-2 lg:col-span-1">
+							<div className="flex flex-col items-start gap-1 md:!col-span-1">
 								<div className="flex flex-row gap-2 items-center xl:gap-2">
 									<img
 										src="./src/assets/mark_location.svg"

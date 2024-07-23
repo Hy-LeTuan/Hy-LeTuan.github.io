@@ -19,12 +19,12 @@ function Header() {
 	};
 
 	return (
-		<nav className={`relative z-10 w-full p-2 bg-primary ${shadowStyle}`}>
-			<div className="m-0 p-0 lg:px-6 lg:flex lg:justify-between lg:items-center">
-				<h5 className="hidden lg:block font-heading-font text-white lg:text-xl xl:text-2xl">
-					Le Tuan Hy
-				</h5>
-				<div className="flex justify-between items-center px-6 lg:px-0 lg:gap-8">
+		<nav className={`relative z-10 w-full bg-primary ${shadowStyle}`}>
+			<div className="m-0 p-0 md:flex md:justify-between md:items-center md:px-6 md:py-2">
+				<h6 className="hidden text-white md:block">Le Tuan Hy</h6>
+
+				{/* Button container */}
+				<div className="flex justify-between items-center px-6 py-1 md:p-0 md:justify-center md:gap-10">
 					<Link
 						to={"/"}
 						className={
@@ -33,7 +33,7 @@ function Header() {
 								? "btn btn-header-active"
 								: "btn btn-header"
 						}>
-						Home
+						<h6>Home</h6>
 					</Link>
 					<Link
 						to={"/portfolio"}
@@ -42,7 +42,7 @@ function Header() {
 								? "btn btn-header-active"
 								: "btn btn-header"
 						}>
-						Portfolio
+						<h6>Profile</h6>
 					</Link>
 					<Link
 						to={"/active"}
@@ -51,7 +51,7 @@ function Header() {
 								? "btn btn-header-active"
 								: "btn btn-header"
 						}>
-						Active
+						<h6>Active</h6>
 					</Link>
 					<Link
 						to={"/blogs"}
@@ -60,7 +60,7 @@ function Header() {
 								? "btn btn-header-active"
 								: "btn btn-header"
 						}>
-						Blogs
+						<h6>Blogs</h6>
 					</Link>
 				</div>
 			</div>

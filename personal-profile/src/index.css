@@ -74,11 +74,11 @@
 	}
 
 	.btn-header {
-		@apply font-heading-font border-border-translucent-black bg-neutral rounded-full border-1 h-5 w-16 lg:h-6 lg:w-20 text-white p-0 text-xs lg:text-base transition-colors shadow-xs duration-500 xl:w-28 xl:h-8 xl:text-xl;
+		@apply font-heading-font border-border-translucent-black bg-neutral rounded-full border-1 h-5 w-16 text-white p-0 transition-colors shadow-header-button duration-300;
 	}
 
 	.btn-header-active {
-		@apply font-heading-font border-border-translucent-black  bg-accent rounded-full border-1 h-5 w-16  text-white p-0 text-xs lg:text-base lg:border-0 lg:h-6 lg:w-20 transition-colors shadow-xs duration-500 xl:text-xl xl:w-28 xl:h-8;
+		@apply font-heading-font border-border-translucent-black bg-accent rounded-full border-1 h-5 w-16 text-white p-0 transition-colors shadow-active-header-button duration-300;
 	}
 
 	.btn-card-footer {
@@ -91,11 +91,11 @@
 
 	/* Cards */
 	.card-full-width-banner {
-		@apply shadow-card col-span-1 flex flex-col overflow-hidden gap-4 pb-2;
+		@apply shadow-card col-span-1 flex flex-col overflow-hidden gap-4 pb-2 md:pb-3;
 	}
 
 	.card {
-		@apply shadow-card px-3 py-2 col-span-1 lg:p-5 xl:shadow-none;
+		@apply shadow-card px-3 py-2 col-span-1 md:px-3 md:py-3;
 	}
 
 	.project-specific-card {
@@ -103,7 +103,7 @@
 	}
 
 	.certificate-card {
-		@apply shadow-certificate-card px-3 py-2 col-span-1 lg:p-5 xl:shadow-none;
+		@apply shadow-certificate-card px-3 py-2 col-span-1 md:max-w-96;
 	}
 
 	.card-split-title {
@@ -111,7 +111,7 @@
 	}
 
 	.card-body-single-column {
-		@apply flex flex-col gap-4 text-left xl:gap-4;
+		@apply flex flex-col gap-4 text-left md:gap-5;
 	}
 
 	.card-header {
@@ -119,7 +119,7 @@
 	}
 
 	.project-card {
-		@apply shadow-md shadow-gray-500 overflow-hidden rounded-md col-span-1 px-6 py-6 bg-wave-pattern bg-no-repeat bg-cover lg:col-span-1 lg:gap-6 lg:pb-8 xl:gap-10;
+		@apply shadow-md shadow-gray-500 overflow-hidden rounded-md col-span-1 px-6 py-6 bg-wave-pattern bg-no-repeat bg-cover md:max-w-96;
 	}
 
 	.project-card-body {
@@ -161,7 +161,7 @@
 	/* Utilities */
 
 	.main-section {
-		@apply grid grid-cols-1 p-6 gap-9 place-items-stretch lg:grid-cols-2 lg:gap-x-8 lg:px-12 xl:px-16;
+		@apply grid grid-cols-1 p-6 gap-9 place-items-stretch md:py-7 md:px-9 md:gap-y-8 md:grid-cols-2 md:gap-x-5;
 	}
 
 	.row {
@@ -177,15 +177,19 @@
 	}
 
 	.section-banner {
-		@apply w-full bg-primary relative overflow-hidden mt-7 flex justify-center items-center py-3;
+		@apply w-full bg-primary relative overflow-hidden mt-7 flex justify-center items-center py-3 md:mt-8;
 	}
 
 	.banner-hr {
 		@apply text-white bg-white w-1/2 text-center;
 	}
 
+	.section-container {
+		@apply mt-7 md:mt-8;
+	}
+
 	/* Cluster */
-	.hello-cluster {
+	.normal-card-cluster {
 		@apply flex flex-col gap-1;
 	}
 }

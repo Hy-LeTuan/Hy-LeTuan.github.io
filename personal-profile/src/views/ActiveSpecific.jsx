@@ -34,7 +34,7 @@ function ActiveSpecific() {
 			<section className="relative overflow-hidden clear-both w-full bg-primary text-white">
 				<div className="p-12 flex flex-col gap-6 justify-center items-center overflow-hidden lg:p-24">
 					<h1 className="text-3xl lg:text-5xl">
-						Active Project Details
+						Live Progression On Project
 					</h1>
 					{MediaHeader("..")}
 					{SquareAnimation(null)}

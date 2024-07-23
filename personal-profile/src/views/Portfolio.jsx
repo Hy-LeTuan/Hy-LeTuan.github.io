@@ -21,18 +21,18 @@ function Portfolio() {
 					{SquareAnimation(null)}
 				</div>
 			</section>
-			<section className="mt-7 lg:mt-16 xl:mt-24">
-				<div className="main-section">
-					<div className="card-full-width-banner lg:flex-row lg:col-span-2 lg:shadow-none">
+			<section className="section-container">
+				<div className="main-section md:flex md:w-full md:justify-center md:items-center">
+					<div className="card-full-width-banner md:w-2/3">
 						<div className="bg-primary flex justify-center items-center py-1 px-4 lg:flex-grow">
 							<h1 className="text-white">Overall Statistics</h1>
 						</div>
-						<div className="flex flex-col gap-4 px-3 py-0 lg:flex-grow lg:py-0">
-							<div className="row font-heading-font text-white bg-accent lg:py-3 xl:py-4">
+						<div className="flex flex-col gap-4 px-3 py-0">
+							<div className="row font-heading-font text-white bg-alert md:px-3 md:py-1">
 								<h4 className="">Total Projects</h4>
 								<h4 className="">{stats.total}</h4>
 							</div>
-							<div className="row font-heading-font text-white bg-success lg:py-3 xl:py-4">
+							<div className="row font-heading-font text-white bg-success md:px-3 md:py-1">
 								<h4>Finished Projects</h4>
 								<h4>{stats.finished}</h4>
 							</div>
@@ -42,13 +42,13 @@ function Portfolio() {
 			</section>
 
 			{SectionBanner(6, "My projects")}
-			<section className="mt-7">
-				<div className="main-section">
+			<section className="section-container">
+				<div className="main-section place-items-center">
 					{projects?.map((project, index) => (
 						<div className="project-card" key={index}>
 							<div className="project-card-body">
 								<div className="w-full flex justify-center items-center">
-									<div className="rounded-full w-40 h-40 bg-secondary shadow-project xl:w-52 xl:h-52 xl:mt-20"></div>
+									<div className="rounded-full w-32 h-32 bg-secondary shadow-project"></div>
 								</div>
 								<div className="flex flex-col gap-1">
 									<h1 className="text-left text-white lg:text-4xl lg:text-center xl:text-5xl">
@@ -86,7 +86,7 @@ function Portfolio() {
 									type="button">
 									<Link to={`/portfolio/${index}`}>
 										<h5 className="text-white lg:text-base xl:text-xl">
-											Details heres
+											Details here
 										</h5>
 									</Link>
 								</button>
@@ -98,7 +98,7 @@ function Portfolio() {
 
 			{SectionBanner(6, "My certificates")}
 			<section className="mt-7">
-				<div className="main-section">
+				<div className="main-section place-items-center">
 					{certs?.map((cert, index) => (
 						<div className="certificate-card relative" key={index}>
 							<div className="card-body-single-column justify-center gap-4">

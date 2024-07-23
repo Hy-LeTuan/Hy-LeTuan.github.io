@@ -34,7 +34,7 @@ function Blogs() {
 		<>
 			<section className="relative overflow-hidden clear-both w-full bg-primary text-white font-heading-font">
 				<div className="main-banner">
-					<h1 className="display">Technology Blogs & More</h1>
+					<h1 className="display">Blog Posts</h1>
 					<hr className="banner-hr" />
 					{MediaHeader(".")}
 					{SquareAnimation(null)}
@@ -71,26 +71,24 @@ function Blogs() {
 								</h1>
 								<p
 									id={`blog-content-${index}`}
-									className="text-left font-body-font text-white text-xs line-clamp-5 transition-all duration-1000 lg:line-clamp-8 lg:text-sm">
+									className="text-left text-white line-clamp-5 transition-all duration-1000">
 									{blog.content}
 								</p>
 							</div>
 							<div className="flex w-full justify-between px-6 items-center mb-4">
-								<h6 className="text-sm font-heading-font text-white lg:text-base">
-									{blog.date}
-								</h6>
+								<h6 className="text-white">{blog.date}</h6>
 								{checkReadButton(
 									document.querySelector(
 										`p[id="blog-content-${index}"]`
 									)
-								) && (
+								) ? (
 									<button
 										className="btn btn-blog-read-more"
 										type="button"
 										onClick={(event) =>
 											showMoreContentOnClick(event)
 										}>
-										<h6 className="text-sm font-heading-font text-white lg:text-base">
+										<h6 className="text-white">
 											Read more
 										</h6>
 										<img
@@ -98,6 +96,14 @@ function Blogs() {
 											alt="expand icon"
 											className="text-white w-4 h-4 -rotate-90 transition-all duration-300"
 										/>
+									</button>
+								) : (
+									<button
+										className="btn btn-blog-read-more"
+										type="button">
+										<h6 className="text-white">
+											End of content
+										</h6>
 									</button>
 								)}
 							</div>
