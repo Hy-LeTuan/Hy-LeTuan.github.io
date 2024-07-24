@@ -20,6 +20,7 @@ export default {
 						secondary: "rgba(255, 255, 255, 0.25)",
 					},
 				},
+				"light-blue": "#FAFCFF",
 			},
 			fontFamily: {
 				"heading-font": ["'Anton'", "sans-serif"],

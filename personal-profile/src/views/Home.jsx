@@ -101,7 +101,7 @@ function Home() {
 									Bugs encountered and resolved
 								</h4>
 							</div>
-							<div className="bg-primary w-full h-32 md:flex-grow md:h-48"></div>
+							<div className="bg-primary w-full h-32 md:flex-grow md:h-48 lg:h-72"></div>
 						</div>
 					</div>
 				</div>

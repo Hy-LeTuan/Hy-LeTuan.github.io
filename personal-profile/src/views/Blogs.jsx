@@ -40,19 +40,17 @@ function Blogs() {
 					{SquareAnimation(null)}
 				</div>
 			</section>
-			<section className="mt-7 lg:mt-16">
+			<section className="section-container">
 				<div className="main-section">
-					<div className="flex flex-col gap-6 justify-center items-center lg:gap-8">
+					<div className="flex flex-col gap-6 justify-center items-center md:col-span-2">
 						<h1 className="text-black">Available Categories</h1>
-						<div className="flex flex-wrap gap-6 px-4 justify-between items-start lg:gap-10">
+						<div className="flex flex-wrap gap-6 px-4 justify-between items-start md:gap-8">
 							{categories?.map((cat, index) => (
 								<div
 									className="flex flex-col items-center justify-center gap-2"
 									key={index}>
 									<div className="bg-neutral w-9 h-9 rounded-full lg:w-12 lg:h-12"></div>
-									<h5 className="text-black lg:text-base">
-										{cat.title}
-									</h5>
+									<h6 className="text-black">{cat.title}</h6>
 								</div>
 							))}
 						</div>
@@ -60,8 +58,8 @@ function Blogs() {
 				</div>
 			</section>
 			{SectionBanner(5, "Blogs & Articles")}
-			<section className="mt-7">
-				<div className="main-section">
+			<section className="section-container">
+				<div className="main-section place-items-center">
 					{blogs?.map((blog, index) => (
 						<div className="blog-card" key={index}>
 							<div className="w-full h-96 bg-neutral"></div>
@@ -71,11 +69,11 @@ function Blogs() {
 								</h1>
 								<p
 									id={`blog-content-${index}`}
-									className="text-left text-white line-clamp-5 transition-all duration-1000">
+									className="text-left text-white line-clamp-4 transition-all duration-1000">
 									{blog.content}
 								</p>
 							</div>
-							<div className="flex w-full justify-between px-6 items-center mb-4">
+							<div className="flex w-full justify-between px-8 items-center mb-4">
 								<h6 className="text-white">{blog.date}</h6>
 								{checkReadButton(
 									document.querySelector(

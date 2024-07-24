@@ -22,8 +22,8 @@ function Portfolio() {
 				</div>
 			</section>
 			<section className="section-container">
-				<div className="main-section md:flex md:w-full md:justify-center md:items-center">
-					<div className="card-full-width-banner md:w-2/3">
+				<div className="main-section place-items-center md:flex md:w-full md:justify-center md:items-center">
+					<div className="card-full-width-banner">
 						<div className="bg-primary flex justify-center items-center py-1 px-4 lg:flex-grow">
 							<h1 className="text-white">Overall Statistics</h1>
 						</div>
