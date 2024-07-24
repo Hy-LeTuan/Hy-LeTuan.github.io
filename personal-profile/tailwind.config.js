@@ -34,7 +34,7 @@ export default {
 				xs: "0 0 2px 1px rgba(0, 0, 0, 0.25)",
 				nav: "0px 8px 8px 0px rgba(0, 0, 0, 0.25)",
 				scroll: "0px 2px 4px 0px rgba(0, 0, 0, 0.25)",
-				card: "0px 1px 4px 2px rgba(0, 0, 0, 0.25)",
+				card: "0px 0px 4px 2px rgba(0, 0, 0, 0.2)",
 				project: "inset 0px 0px 6px 3px rgba(0, 0, 0, 0.25)",
 				projectcard: "0px 0px 6px 4px rgba(0, 0, 0, 0.5)",
 				"certificate-card": "0px 0px 4px 2px rgba(240, 95, 35, 0.5)",
@@ -44,7 +44,25 @@ export default {
 			},
 			backgroundImage: {
 				"wave-pattern":
-					"url('./src/assets/background/wave_pattern.svg')",
+					"url('/src/assets/background/wave_pattern.svg')",
+				"rainbow-pattern":
+					"url('./src/assets/background/rainbow_pattern.svg')",
+				"stripe-pattern":
+					"url('./src/assets/background/stripe_pattern.svg')",
+				"stripe-pattern-reverse":
+					"url('./src/assets/background/stripe_pattern_reverse.svg')",
+				"stripe-pattern-reverse-dark":
+					"url('/src/assets/background/stripe_pattern_reverse_dark.svg')",
+				"rainbow-pattern-reverse-dark-gray":
+					"url('/src/assets/background/rainbow_pattern_reverse_dark_gray.svg')",
+				"rainbow-pattern-reverse-light":
+					"url('/src/assets/background/rainbow_pattern_reverse_light.svg')",
+				"rainbow-pattern-opposite":
+					"url('/src/assets/background/rainbow_pattern_matching_opposite.svg')",
+				"rainbow-pattern-opposite-total":
+					"url('/src/assets/background/rainbow_pattern_matching_opposite_total.svg')",
+				"rainbow-pattern-opposite-total-dark":
+					"url('/src/assets/background/rainbow_pattern_matching_opposite_total_dark.svg')",
 			},
 		},
 	},

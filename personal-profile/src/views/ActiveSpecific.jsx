@@ -6,6 +6,8 @@ import { useParams } from "react-router-dom";
 
 function ActiveSpecific() {
 	const [activeProject, setActiveProject] = useState({});
+	const [doubleCol, setDoubleCol] = useState(false);
+
 	const params = useParams();
 
 	const fetchActiveProject = async () => {
@@ -24,9 +26,27 @@ function ActiveSpecific() {
 		}
 	};
 
-	// fetch the appropriate active project details
+	const checkScreenSize = () => {
+		const width = window.innerWidth;
+
+		if (width < 768) {
+			setDoubleCol(false);
+		} else {
+			setDoubleCol(true);
+		}
+
+		console.log(doubleCol);
+	};
+
 	useEffect(() => {
 		fetchActiveProject();
+
+		checkScreenSize();
+		window.addEventListener("resize", checkScreenSize);
+
+		return () => {
+			window.removeEventListener("resize", checkScreenSize);
+		};
 	}, []);
 
 	return (
@@ -41,7 +61,7 @@ function ActiveSpecific() {
 			</section>
 			<section className="section-container">
 				<div className="main-section">
-					<div className="w-full flex flex-col justify-center items-center gap-4 md:col-span-2">
+					<div className="w-full flex flex-col justify-center items-center gap-4 md:col-span-2 lg:gap-6 xl:gap-8">
 						<div className="rounded-full w-52 h-52 bg-gray-300 shadow-project"></div>
 						<h1 className="">
 							Project title: {activeProject?.title}
@@ -86,7 +106,7 @@ function ActiveSpecific() {
 									)}
 								</ul>
 							</div>
-							<div className="w-full h-60 bg-primary lg:h-60 lg:w-2/3 lg:flex-grow md:hidden"></div>
+							<div className="w-full h-60 bg-primary md:hidden"></div>
 						</div>
 					</div>
 					<div className="project-specific-card">
@@ -128,14 +148,14 @@ function ActiveSpecific() {
 					</div>
 					<div className="hidden md:block project-specific-card shadow-xs col-span-2">
 						<div className="card-body-single-column">
-							<div className="w-full h-60 bg-primary lg:h-60 lg:w-2/3 lg:flex-grow"></div>
+							<div className="w-full h-60 bg-primary"></div>
 						</div>
 					</div>
 				</div>
 			</section>
 			{SectionBanner(5, "Goals & Aims")}
 			<section className="section-container">
-				<div className="main-section">
+				<div className="main-section place-items-center">
 					{activeProject?.goals_and_aims?.map((target, index) => (
 						<div className="target-card" key={index}>
 							<div className="flex flex-col gap-2">

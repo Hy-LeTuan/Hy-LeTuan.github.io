@@ -24,7 +24,7 @@ function Home() {
 			</section>
 			<section className="section-container">
 				<div className="main-section">
-					<div className="card">
+					<div className="card xl:shadow-none">
 						<div className="card-body-single-column">
 							<div className="normal-card-cluster">
 								<h1 className="card-header">Hello there!</h1>
@@ -39,19 +39,19 @@ function Home() {
 							</div>
 						</div>
 					</div>
-					<div className="card-split-title md:col-start-1 md:card">
-						<div className="grid grid-cols-4 auto-cols-max place-items md:card-body-single-column">
+					<div className="card-split-title md:col-start-1 md:card xl:shadow-none">
+						<div className="grid grid-cols-4 auto-cols-max place-items md:card-body-single-column md:grid-cols-none">
 							<div className="col-span-1 flex items-center justify-center bg-accent md:hidden">
 								<h1 className="card-header text-white">
 									About this site
 								</h1>
 							</div>
 
-							<div className="hidden md:normal-card-cluster">
-								<h1 className="card-header text-accent">
+							<div className="col-span-3 ml-4 text-left py-2 overflow-hidden flex justify-center items-center md:normal-card-cluster md:grid-cols-none md:justify-start md:items-start md:p-0 md:m-0">
+								<h1 className="hidden md:block md:card-header md:text-accent md:text-left">
 									About this site
 								</h1>
-								<div className="col-span-3 ml-4 text-left py-2 overflow-hidden flex justify-center items-center md:grid-cols-none md:p-0 md:m-0">
+								<div className="md:p-0 md:m-0">
 									<ul className="font-body-font">
 										<li className="mb-2">
 											The Homepage is all about my journey
@@ -78,7 +78,7 @@ function Home() {
 							</div>
 						</div>
 					</div>
-					<div className="card md:row-span-2 md:col-start-2 md:row-start-1">
+					<div className="card md:row-span-2 md:col-start-2 md:row-start-1 xl:shadow-none">
 						<div className="card-body-single-column text-left">
 							<h1 className="card-header text-accent">
 								How about some statistics?
@@ -101,21 +101,16 @@ function Home() {
 									Bugs encountered and resolved
 								</h4>
 							</div>
-							<div className="bg-primary w-full h-32 md:flex-grow md:h-48 lg:h-72"></div>
+							<div className="bg-primary w-full h-32 md:flex-grow md:h-48 lg:h-80"></div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<div className="hidden md:block p-0">
-				{SectionBanner(10, "Journey Checkpoint")}
-			</div>
+			{SectionBanner(10, "Journey Checkpoint")}
 			<section className="section-container">
 				<div className="main-section">
-					<div className="card md:col-span-2">
+					<div className="card md:col-span-2 xl:bg-transparent xl:shadow-none">
 						<div className="card-body-single-column md:!grid md:!grid-cols-3">
-							<h1 className="card-header md:hidden">
-								Journey Checkpoints
-							</h1>
 							<div className="flex flex-col items-start gap-1 md:!col-span-1">
 								<div className="flex flex-row gap-2 items-center xl:gap-2">
 									<img

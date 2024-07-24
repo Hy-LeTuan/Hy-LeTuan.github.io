@@ -42,7 +42,7 @@ function Blogs() {
 			</section>
 			<section className="section-container">
 				<div className="main-section">
-					<div className="flex flex-col gap-6 justify-center items-center md:col-span-2">
+					<div className="flex flex-col gap-6 justify-center items-center md:col-span-2 lg:gap-8">
 						<h1 className="text-black">Available Categories</h1>
 						<div className="flex flex-wrap gap-6 px-4 justify-between items-start md:gap-8">
 							{categories?.map((cat, index) => (
@@ -69,12 +69,12 @@ function Blogs() {
 								</h1>
 								<p
 									id={`blog-content-${index}`}
-									className="text-left text-white line-clamp-4 transition-all duration-1000">
+									className="text-left text-white line-clamp-5 transition-all duration-1000">
 									{blog.content}
 								</p>
 							</div>
 							<div className="flex w-full justify-between px-8 items-center mb-4">
-								<h6 className="text-white">{blog.date}</h6>
+								<h4 className="text-white">{blog.date}</h4>
 								{checkReadButton(
 									document.querySelector(
 										`p[id="blog-content-${index}"]`
@@ -86,9 +86,9 @@ function Blogs() {
 										onClick={(event) =>
 											showMoreContentOnClick(event)
 										}>
-										<h6 className="text-white">
+										<h4 className="text-white">
 											Read more
-										</h6>
+										</h4>
 										<img
 											src="./src/assets/expand.svg"
 											alt="expand icon"
@@ -99,9 +99,9 @@ function Blogs() {
 									<button
 										className="btn btn-blog-read-more"
 										type="button">
-										<h6 className="text-white">
+										<h4 className="text-white">
 											End of content
-										</h6>
+										</h4>
 									</button>
 								)}
 							</div>

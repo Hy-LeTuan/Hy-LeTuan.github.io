@@ -11,6 +11,29 @@ function Portfolio() {
 	const [stats, setStats] = useState(projectList.statistics);
 	const [certs, setCerts] = useState(certificateList.certificates);
 
+	const [doubleCol, setDoubleCol] = useState(false);
+
+	const checkScreenSize = () => {
+		const width = window.innerWidth;
+
+		if (width < 768) {
+			setDoubleCol(false);
+		} else {
+			setDoubleCol(true);
+		}
+
+		console.log(doubleCol);
+	};
+
+	useEffect(() => {
+		checkScreenSize();
+		window.addEventListener("resize", checkScreenSize);
+
+		return () => {
+			window.removeEventListener("resize", checkScreenSize);
+		};
+	}, []);
+
 	return (
 		<>
 			<section className="relative overflow-hidden clear-both w-full bg-primary text-white font-heading-font">
@@ -24,15 +47,15 @@ function Portfolio() {
 			<section className="section-container">
 				<div className="main-section place-items-center md:flex md:w-full md:justify-center md:items-center">
 					<div className="card-full-width-banner">
-						<div className="bg-primary flex justify-center items-center py-1 px-4 lg:flex-grow">
+						<div className="bg-primary flex justify-center items-center py-1 px-4 lg:py-2">
 							<h1 className="text-white">Overall Statistics</h1>
 						</div>
 						<div className="flex flex-col gap-4 px-3 py-0">
-							<div className="row font-heading-font text-white bg-alert md:px-3 md:py-1">
+							<div className="row font-heading-font text-white bg-alert md:px-3 md:py-1 lg:px-4 lg:py-2">
 								<h4 className="">Total Projects</h4>
 								<h4 className="">{stats.total}</h4>
 							</div>
-							<div className="row font-heading-font text-white bg-success md:px-3 md:py-1">
+							<div className="row font-heading-font text-white bg-success md:px-3 md:py-1 lg:px-4 lg:py-2">
 								<h4>Finished Projects</h4>
 								<h4>{stats.finished}</h4>
 							</div>
@@ -45,24 +68,32 @@ function Portfolio() {
 			<section className="section-container">
 				<div className="main-section place-items-center">
 					{projects?.map((project, index) => (
-						<div className="project-card" key={index}>
+						<div
+							className={
+								doubleCol
+									? index % 2 === 0
+										? "project-card place-self-end"
+										: "project-card place-self-start"
+									: "project-card"
+							}
+							key={index}>
 							<div className="project-card-body">
 								<div className="w-full flex justify-center items-center">
 									<div className="rounded-full w-32 h-32 bg-secondary shadow-project"></div>
 								</div>
-								<div className="flex flex-col gap-1">
-									<h1 className="text-left text-white lg:text-4xl lg:text-center xl:text-5xl">
+								<div className="flex flex-col gap-1 lg:gap-3">
+									<h1 className="text-left text-white">
 										{project.title}
 									</h1>
-									<p className="text-left text-white line-clamp-3 lg:text-sm lg:text-center xl:text-lg">
+									<p className="text-left text-white line-clamp-3">
 										{project.description}
 									</p>
 								</div>
 								<div className="project-card-stats">
-									<h4 className="text-left text-white lg:text-2xl lg:text-center xl:text-4xl">
+									<h4 className="text-left text-white">
 										Statistics
 									</h4>
-									<ul className="text-left text-white lg:text-sm lg:flex lg:flex-col lg:gap-2 xl:text-lg">
+									<ul className="text-left text-white">
 										<li>
 											Date started:{" "}
 											{project.statistics?.date}
@@ -85,7 +116,7 @@ function Portfolio() {
 									className="btn btn-card-footer"
 									type="button">
 									<Link to={`/portfolio/${index}`}>
-										<h5 className="text-white lg:text-base xl:text-xl">
+										<h5 className="text-white">
 											Details here
 										</h5>
 									</Link>
@@ -96,18 +127,26 @@ function Portfolio() {
 				</div>
 			</section>
 
-			{SectionBanner(6, "My certificates")}
-			<section className="mt-7">
+			{SectionBanner(6, "Earned Certificates")}
+			<section className="section-container">
 				<div className="main-section place-items-center">
 					{certs?.map((cert, index) => (
-						<div className="certificate-card relative" key={index}>
-							<div className="card-body-single-column justify-center gap-4">
-								<div className="w-full h-40 bg-neutral xl:h-48"></div>
+						<div
+							className={
+								doubleCol
+									? index % 2 === 0
+										? "certificate-card relative place-self-end"
+										: "certificate-card relative place-self-start"
+									: "certificate-card relative"
+							}
+							key={index}>
+							<div className="w-full h-40 bg-neutral xl:h-48"></div>
+							<div className="card-body-single-column px-4">
 								<div className="flex flex-col gap-1">
-									<h1 className="text-black text-left lg:text-4xl xl:text-2xl xl:text-center">
+									<h2 className="text-black text-left">
 										{cert.title}
-									</h1>
-									<p className="text-black text-left lg:text-sm xl:text-lg xl:text-center">
+									</h2>
+									<p className="text-black text-left">
 										{cert.description}
 									</p>
 								</div>

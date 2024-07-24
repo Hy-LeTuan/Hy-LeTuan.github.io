@@ -4,6 +4,9 @@
 
 @layer base {
 	body {
+		/* @apply bg-stripe-pattern-reverse-dark bg-auto bg-repeat-y; */
+		/* @apply bg-rainbow-pattern-opposite bg-auto bg-repeat-y; */
+		/* @apply bg-rainbow-pattern-opposite-total bg-auto bg-repeat-y; */
 		@apply bg-light-blue;
 	}
 
@@ -52,7 +55,7 @@
 
 	/* Banners */
 	.main-banner {
-		@apply text-white py-10 flex flex-col gap-4 justify-center items-center overflow-hidden lg:py-12 lg:gap-5;
+		@apply text-white py-10 flex flex-col gap-4 justify-center items-center overflow-hidden lg:py-12 lg:gap-5 xl:py-14;
 	}
 
 	.biography {
@@ -61,7 +64,7 @@
 
 	/* Icon */
 	.media-icon {
-		@apply w-6 h-6 lg:w-7 lg:h-7;
+		@apply w-6 h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8;
 	}
 
 	.location-icon {
@@ -95,23 +98,23 @@
 
 	/* Cards */
 	.card-full-width-banner {
-		@apply shadow-card col-span-1 flex flex-col overflow-hidden gap-4 pb-2 w-1/2 md:pb-3  md:w-2/3;
+		@apply shadow-card col-span-1 flex flex-col bg-white overflow-hidden gap-4 pb-2 w-1/2 md:pb-3 md:w-2/3 lg:pb-4 xl:w-1/2;
 	}
 
 	.card {
-		@apply shadow-card px-3 py-2 col-span-1 md:px-3 md:py-3;
+		@apply shadow-card px-3 py-2 col-span-1 bg-white md:px-3 md:py-3 lg:px-4 lg:py-4;
 	}
 
 	.project-specific-card {
-		@apply bg-white shadow-card px-3 py-2 col-span-1 md:px-3 md:py-3;
+		@apply shadow-card bg-white px-3 py-2 col-span-1 md:px-3 md:py-3 lg:px-4 lg:py-4 xl:px-5 border-1 border-gray-300;
 	}
 
 	.certificate-card {
-		@apply shadow-certificate-card px-3 py-2 col-span-1 md:max-w-96;
+		@apply shadow-certificate-card bg-white col-span-1 max-w-80 flex flex-col gap-4 pb-2 md:max-w-96 lg:pb-4 xl:max-w-md;
 	}
 
 	.card-split-title {
-		@apply shadow-card pr-3 col-span-1;
+		@apply shadow-card bg-white pr-3 col-span-1;
 	}
 
 	.card-body-single-column {
@@ -123,15 +126,15 @@
 	}
 
 	.project-card {
-		@apply shadow-md shadow-gray-500 overflow-hidden rounded-md col-span-1 px-6 py-6 bg-wave-pattern bg-no-repeat bg-cover max-w-80 md:max-w-96;
+		@apply shadow-md shadow-gray-500 overflow-hidden rounded-md col-span-1 px-6 py-6 bg-wave-pattern bg-no-repeat bg-cover max-w-80 md:max-w-96 xl:max-w-md;
 	}
 
 	.project-card-body {
-		@apply flex flex-col w-full gap-4 items-start lg:gap-6 lg:px-8 lg:items-center lg:justify-center xl:px-12 xl:gap-8;
+		@apply flex flex-col w-full gap-4 items-start lg:gap-6;
 	}
 
 	.project-card-stats {
-		@apply flex flex-col gap-1 justify-center items-start lg:gap-4 lg:items-center;
+		@apply flex flex-col gap-1 justify-center items-start lg:gap-2;
 	}
 
 	.project-card-footer {
@@ -143,15 +146,15 @@
 	}
 
 	.blog-card {
-		@apply flex flex-col gap-2 justify-center items-center bg-primary rounded-md shadow-projectcard max-w-80 md:max-w-96 max-h-96 md:max-h-[500px];
+		@apply flex flex-col gap-2 justify-center items-center bg-primary rounded-md shadow-projectcard max-w-80 md:max-w-96 xl:max-w-md xl:gap-4;
 	}
 
 	.blog-card-body {
-		@apply flex flex-col gap-4 py-4 px-8;
+		@apply flex flex-col gap-2 py-4 px-8;
 	}
 
 	.target-card {
-		@apply shadow-card relative overflow-hidden flex flex-col col-span-1 gap-4 py-4 px-4 justify-center bg-primary rounded-xl md:gap-6;
+		@apply shadow-card relative overflow-hidden flex flex-col col-span-1 gap-4 py-4 px-4 justify-center bg-primary rounded-xl md:gap-6 lg:px-6 lg:py-6 max-w-80 md:max-w-96 xl:max-w-md;
 	}
 
 	.target-card-footer {
@@ -165,7 +168,7 @@
 	/* Utilities */
 
 	.main-section {
-		@apply grid grid-cols-1 p-6 gap-9 place-items-stretch md:py-7 md:px-9 md:gap-y-8 md:grid-cols-2 md:gap-x-5 lg:px-12 lg:py-9 lg:gap-y-10;
+		@apply grid grid-cols-1 p-6 gap-9 place-items-stretch md:py-7 md:px-9 md:gap-y-8 md:grid-cols-2 md:gap-x-8 lg:px-12 lg:py-9 lg:gap-y-12 lg:gap-x-10 xl:gap-y-16 xl:px-20;
 	}
 
 	.row {
@@ -181,7 +184,7 @@
 	}
 
 	.section-banner {
-		@apply w-full bg-primary relative overflow-hidden mt-7 flex justify-center items-center py-3 md:mt-8 lg:py-6 lg:mt-9;
+		@apply w-full bg-primary relative overflow-hidden mt-7 flex justify-center items-center py-3 md:mt-8 lg:py-6 lg:mt-9 xl:py-8;
 	}
 
 	.banner-hr {
@@ -189,12 +192,12 @@
 	}
 
 	.section-container {
-		@apply mt-7 md:mt-8 lg:mt-9;
+		@apply mt-7 md:mt-8 lg:mt-9 xl:mt-10;
 	}
 
 	/* Cluster */
 	.normal-card-cluster {
-		@apply flex flex-col gap-1;
+		@apply flex flex-col gap-1 lg:gap-2;
 	}
 }
 
