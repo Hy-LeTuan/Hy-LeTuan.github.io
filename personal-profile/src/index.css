@@ -4,9 +4,6 @@
 
 @layer base {
 	body {
-		/* @apply bg-stripe-pattern-reverse-dark bg-auto bg-repeat-y; */
-		/* @apply bg-rainbow-pattern-opposite bg-auto bg-repeat-y; */
-		/* @apply bg-rainbow-pattern-opposite-total bg-auto bg-repeat-y; */
 		@apply bg-light-blue;
 	}
 
@@ -102,11 +99,11 @@
 	}
 
 	.card {
-		@apply shadow-card px-3 py-2 col-span-1 bg-white md:px-3 md:py-3 lg:px-4 lg:py-4;
+		@apply px-3 py-2 col-span-1 bg-white shadow-gray-500 shadow-md md:px-3 md:py-3 lg:px-4 lg:py-4;
 	}
 
 	.project-specific-card {
-		@apply shadow-card bg-white px-3 py-2 col-span-1 md:px-3 md:py-3 lg:px-4 lg:py-4 xl:px-5 border-1 border-gray-300;
+		@apply bg-transparent backdrop-blur-md px-3 py-2 col-span-1 md:px-3 md:py-3 lg:px-4 lg:py-4 xl:px-5 shadow-gray-500 shadow-md;
 	}
 
 	.certificate-card {

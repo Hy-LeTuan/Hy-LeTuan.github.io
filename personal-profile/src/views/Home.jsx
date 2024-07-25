@@ -24,7 +24,7 @@ function Home() {
 			</section>
 			<section className="section-container">
 				<div className="main-section">
-					<div className="card xl:shadow-none">
+					<div className="card">
 						<div className="card-body-single-column">
 							<div className="normal-card-cluster">
 								<h1 className="card-header">Hello there!</h1>
@@ -39,7 +39,7 @@ function Home() {
 							</div>
 						</div>
 					</div>
-					<div className="card-split-title md:col-start-1 md:card xl:shadow-none">
+					<div className="card-split-title md:col-start-1 md:card">
 						<div className="grid grid-cols-4 auto-cols-max place-items md:card-body-single-column md:grid-cols-none">
 							<div className="col-span-1 flex items-center justify-center bg-accent md:hidden">
 								<h1 className="card-header text-white">
@@ -78,7 +78,7 @@ function Home() {
 							</div>
 						</div>
 					</div>
-					<div className="card md:row-span-2 md:col-start-2 md:row-start-1 xl:shadow-none">
+					<div className="card md:row-span-2 md:col-start-2 md:row-start-1">
 						<div className="card-body-single-column text-left">
 							<h1 className="card-header text-accent">
 								How about some statistics?
@@ -109,7 +109,7 @@ function Home() {
 			{SectionBanner(10, "Journey Checkpoint")}
 			<section className="section-container">
 				<div className="main-section">
-					<div className="card md:col-span-2 xl:bg-transparent xl:shadow-none">
+					<div className="card md:col-span-2 xl:bg-transparent">
 						<div className="card-body-single-column md:!grid md:!grid-cols-3">
 							<div className="flex flex-col items-start gap-1 md:!col-span-1">
 								<div className="flex flex-row gap-2 items-center xl:gap-2">

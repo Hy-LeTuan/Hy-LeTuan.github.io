@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
 	return (
-		<div className="m-0 p-0">
+		<div className="m-0 p-0 ">
 			<Header />
 			<main className="text-center">
 				<Outlet />

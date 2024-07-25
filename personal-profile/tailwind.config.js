@@ -63,6 +63,10 @@ export default {
 					"url('/src/assets/background/rainbow_pattern_matching_opposite_total.svg')",
 				"rainbow-pattern-opposite-total-dark":
 					"url('/src/assets/background/rainbow_pattern_matching_opposite_total_dark.svg')",
+				"floating-circle-pattern":
+					"url('/src/assets/background/floating_circle_pattern.svg')",
+				"stripe-pattern-white":
+					"url('/src/assets/background/stripe_pattern_white.svg')",
 			},
 		},
 	},
