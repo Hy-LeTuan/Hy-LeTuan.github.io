@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 
 function Header() {
 	const [shadowStyle, setShadowStyle] = useState("shadow-nav");
@@ -20,11 +21,11 @@ function Header() {
 
 	return (
 		<nav className={`relative z-10 w-full bg-primary ${shadowStyle}`}>
-			<div className="m-0 p-0 md:flex md:justify-between md:items-center md:px-6 md:py-2">
-				<h6 className="hidden text-white md:block">Le Tuan Hy</h6>
+			<div className="flex justify-between items-center px-6 py-2">
+				<h6 className="text-white">Le Tuan Hy</h6>
 
 				{/* Button container */}
-				<div className="flex justify-between items-center px-6 py-1 md:p-0 md:justify-center md:gap-10">
+				{/* <div className="flex justify-between items-center px-6 py-1 md:p-0 md:justify-center md:gap-10">
 					<Link
 						to={"/"}
 						className={
@@ -62,7 +63,32 @@ function Header() {
 						}>
 						<h6>Blogs</h6>
 					</Link>
-				</div>
+				</div> */}
+				<Menu>
+					<MenuButton className="flex flex-col gap-1 group">
+						<img
+							src="/src/assets/burger-menu-top-stripe.svg"
+							alt=""
+							className="w-5 origin-center group-data-[active]:translate-y-full group-data-[active]:rotate-45 transition-all"
+						/>
+						<img
+							src="/src/assets/burger-menu-bottom-stripe.svg"
+							alt=""
+							className="w-5 origin-center group-data-[active]:-translate-y-1 group-data-[active]:-rotate-45 transition-all"
+						/>
+					</MenuButton>
+
+					<MenuItems
+						transition
+						anchor="bottom end"
+						className="w-20 origin-top-right rounded-xl border border-white/5 bg-white/5 p-1 text-white transition duration-100 ease-out [--anchor-gap:10px] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0 z-20">
+						<MenuItem>
+							<button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
+								Edit
+							</button>
+						</MenuItem>
+					</MenuItems>
+				</Menu>
 			</div>
 		</nav>
 	);

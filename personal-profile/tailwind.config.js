@@ -23,8 +23,8 @@ export default {
 				"light-blue": "#FAFCFF",
 			},
 			fontFamily: {
-				"heading-font": ["'Anton'", "sans-serif"],
-				"body-font": ["'Libre Baskerville'", "sans-serif"],
+				"heading-font": ["Montserrat", "sans-serif"],
+				"body-font": ["Inter", "sans-serif"],
 			},
 			borderWidth: {
 				0: "0.5px",

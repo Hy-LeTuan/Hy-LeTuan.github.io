@@ -8,31 +8,31 @@
 	}
 
 	h1 {
-		@apply text-2xl font-heading-font lg:text-3xl;
+		@apply text-3xl font-heading-font font-medium lg:text-3xl;
 	}
 
 	h2 {
-		@apply text-xl font-heading-font lg:text-2xl;
+		@apply text-2xl font-heading-font font-medium lg:text-2xl;
 	}
 
 	h3 {
-		@apply text-lg font-heading-font lg:text-xl;
+		@apply text-xl font-heading-font font-medium lg:text-xl;
 	}
 
 	h4 {
-		@apply text-base font-heading-font lg:text-lg;
+		@apply text-lg font-heading-font font-medium lg:text-lg;
 	}
 
 	h5 {
-		@apply text-sm font-heading-font lg:text-base;
+		@apply text-base font-heading-font font-medium lg:text-base;
 	}
 
 	h6 {
-		@apply text-xs font-heading-font lg:text-sm;
+		@apply text-sm font-heading-font font-medium lg:text-sm;
 	}
 
 	p {
-		@apply text-xs font-body-font lg:text-base;
+		@apply text-sm font-body-font lg:text-base;
 	}
 
 	ul {
@@ -40,14 +40,14 @@
 	}
 
 	li {
-		@apply font-body-font text-xs lg:text-base;
+		@apply font-body-font text-sm lg:text-base;
 	}
 }
 
 @layer components {
 	/* Font size  */
 	.display {
-		@apply text-3xl lg:text-4xl;
+		@apply text-4xl lg:text-4xl;
 	}
 
 	/* Banners */
