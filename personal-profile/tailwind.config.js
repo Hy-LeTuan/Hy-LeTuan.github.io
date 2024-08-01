@@ -8,7 +8,6 @@ export default {
 				secondary: "#FFFFFC",
 				accent: "#FF7F11",
 				pink: "#e52e71",
-				neutral: "#272A2E",
 				blueGray: "#6C90B6",
 				warning: "#F6AE2D",
 				alert: "#DA303E",
@@ -45,28 +44,6 @@ export default {
 			backgroundImage: {
 				"wave-pattern":
 					"url('/src/assets/background/wave_pattern.svg')",
-				"rainbow-pattern":
-					"url('./src/assets/background/rainbow_pattern.svg')",
-				"stripe-pattern":
-					"url('./src/assets/background/stripe_pattern.svg')",
-				"stripe-pattern-reverse":
-					"url('./src/assets/background/stripe_pattern_reverse.svg')",
-				"stripe-pattern-reverse-dark":
-					"url('/src/assets/background/stripe_pattern_reverse_dark.svg')",
-				"rainbow-pattern-reverse-dark-gray":
-					"url('/src/assets/background/rainbow_pattern_reverse_dark_gray.svg')",
-				"rainbow-pattern-reverse-light":
-					"url('/src/assets/background/rainbow_pattern_reverse_light.svg')",
-				"rainbow-pattern-opposite":
-					"url('/src/assets/background/rainbow_pattern_matching_opposite.svg')",
-				"rainbow-pattern-opposite-total":
-					"url('/src/assets/background/rainbow_pattern_matching_opposite_total.svg')",
-				"rainbow-pattern-opposite-total-dark":
-					"url('/src/assets/background/rainbow_pattern_matching_opposite_total_dark.svg')",
-				"floating-circle-pattern":
-					"url('/src/assets/background/floating_circle_pattern.svg')",
-				"stripe-pattern-white":
-					"url('/src/assets/background/stripe_pattern_white.svg')",
 			},
 		},
 	},

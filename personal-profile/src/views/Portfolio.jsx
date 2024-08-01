@@ -5,13 +5,79 @@ import MediaHeader from "../layout/MediaHeader";
 import SectionBanner from "../layout/SectionBanner";
 import projectList from "../data/portfolio/projectList.json";
 import certificateList from "../data/portfolio/certificateList.json";
+import { Bar } from "react-chartjs-2";
+import { Chart } from "chart.js";
+import { data } from "autoprefixer";
 
 function Portfolio() {
-	const [projects, setProjects] = useState(projectList.projects);
-	const [stats, setStats] = useState(projectList.statistics);
-	const [certs, setCerts] = useState(certificateList.certificates);
+	const projects = projectList.projects;
+	const stats = projectList.statistics;
+	const types = projectList.types;
+	const certs = certificateList.certificates;
 
 	const [doubleCol, setDoubleCol] = useState(false);
+
+	// data
+	const typesData = {
+		labels: ["Research", "Commercial", "Hobby"],
+		datasets: [
+			{
+				label: "Project count",
+				data: [types.research, types.commercial, types.hobby],
+				borderColor: "#525252",
+				backgroundColor: "rgba(255, 204, 160, 1)",
+			},
+		],
+	};
+
+	// options
+	const options = {
+		elements: {
+			point: {
+				radius: 3,
+			},
+		},
+		plugins: {
+			legend: {
+				display: true,
+				labels: {
+					font: {
+						family: "Montserrat, sans-serif",
+						size: "12px",
+					},
+				},
+			},
+			title: {
+				display: true,
+				text: "Different types of projects I've contributed",
+				position: "bottom",
+				align: "center",
+				font: {
+					family: "Montserrat, sans-serif",
+					size: 14,
+				},
+				color: "#000",
+			},
+		},
+		scales: {
+			x: {
+				ticks: {
+					font: {
+						family: "Montserrat, sans-serif",
+						size: 12,
+					},
+				},
+			},
+			y: {
+				ticks: {
+					font: {
+						family: "Montserrat, sans-serif",
+						size: 12,
+					},
+				},
+			},
+		},
+	};
 
 	const checkScreenSize = () => {
 		const width = window.innerWidth;
@@ -21,8 +87,6 @@ function Portfolio() {
 		} else {
 			setDoubleCol(true);
 		}
-
-		console.log(doubleCol);
 	};
 
 	useEffect(() => {
@@ -38,33 +102,40 @@ function Portfolio() {
 		<>
 			<section className="relative overflow-hidden clear-both w-full bg-primary text-white font-heading-font">
 				<div className="main-banner">
-					<h1 className="display">Portfolio Presentation</h1>
+					<h1 className="display">My Profile</h1>
 					<hr className="banner-hr" />
 					{MediaHeader(".")}
 					{SquareAnimation(null)}
 				</div>
 			</section>
-			<section className="section-container">
-				<div className="main-section place-items-center md:flex md:w-full md:justify-center md:items-center">
-					<div className="card-full-width-banner">
-						<div className="bg-primary flex justify-center items-center py-1 px-4 lg:py-2">
-							<h1 className="text-white">Overall Statistics</h1>
-						</div>
-						<div className="flex flex-col gap-4 px-3 py-0">
-							<div className="row font-heading-font text-white bg-alert md:px-3 md:py-1 lg:px-4 lg:py-2">
-								<h4 className="">Total Projects</h4>
-								<h4 className="">{stats.total}</h4>
-							</div>
-							<div className="row font-heading-font text-white bg-success md:px-3 md:py-1 lg:px-4 lg:py-2">
-								<h4>Finished Projects</h4>
-								<h4>{stats.finished}</h4>
-							</div>
-						</div>
+			<section className="section-container bg-neutral-100">
+				<div className="flex flex-col w-full gap-3">
+					<h5 className="text-neutral-400">Overall Statistics</h5>
+					<h1>
+						Overview of <br /> project volume
+					</h1>
+				</div>
+				<Bar data={typesData} options={options} className="mt-12" />
+				<div className="border-black border-t-1 mt-7 mb-9"></div>
+				<div className="card py-2 px-4 bg-neutral-100 border-[0.5px] border-black">
+					<div className="card-body-single-column gap-3">
+						<h2>{stats.finished}</h2>
+						<p className="text-neutral-500">
+							Projects that have been finished with stable main
+							functionalities.
+						</p>
+					</div>
+				</div>
+				<div className="card py-2 px-4 bg-primary border-[0.5px] border-black mt-7">
+					<div className="card-body-single-column gap-3">
+						<h2 className="text-white">{stats.finished}</h2>
+						<p className="text-neutral-400">
+							Projects that have been finished with stable main
+							functionalities.
+						</p>
 					</div>
 				</div>
 			</section>
-
-			{SectionBanner(6, "My projects")}
 			<section className="section-container">
 				<div className="main-section place-items-center">
 					{projects?.map((project, index) => (

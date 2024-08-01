@@ -37,5 +37,10 @@
 	"statistics": {
 		"total": 156,
 		"finished": 156
+	},
+	"types": {
+		"research": 14,
+		"commercial": 10,
+		"hobby": 5
 	}
 }

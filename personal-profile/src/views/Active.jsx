@@ -34,7 +34,7 @@ function Active() {
 		<>
 			<section className="relative overflow-hidden clear-both w-full bg-primary">
 				<div className="main-banner">
-					<h1 className="display">Current Active Projects</h1>
+					<h1 className="display">Active Projects</h1>
 					<hr className="banner-hr" />
 					{MediaHeader(".")}
 					{SquareAnimation(null)}

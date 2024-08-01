@@ -1,12 +1,68 @@
 import React, { useState } from "react";
 import SquareAnimation from "../layout/SquareAnimation";
 import MediaHeader from "../layout/MediaHeader";
-import SectionBanner from "../layout/SectionBanner";
+import chartStats from "/src/data/home/stats.json";
+import checkpoint from "/src/data/home/checkpoint.json";
+import { Line } from "react-chartjs-2";
+import { Chart } from "chart.js/auto";
+import {
+	Disclosure,
+	DisclosureButton,
+	DisclosurePanel,
+} from "@headlessui/react";
 
 function Home() {
-	const [lineStat, setLineStat] = useState(1003);
-	const [dayStat, setDayStat] = useState(1003);
-	const [bugStat, setBugStat] = useState(1003);
+	console.log(checkpoint);
+	const options = {
+		elements: {
+			point: {
+				radius: 3,
+			},
+		},
+		plugins: {
+			legend: {
+				display: true,
+				labels: {
+					font: {
+						family: "Montserrat, sans-serif",
+						size: "12px",
+					},
+				},
+			},
+			title: {
+				display: true,
+				text: "Number of CP problems solved",
+				position: "bottom",
+				align: "center",
+				font: {
+					family: "Montserrat, sans-serif",
+					size: 14,
+				},
+				color: "#000",
+				padding: {
+					top: 10,
+				},
+			},
+		},
+		scales: {
+			x: {
+				ticks: {
+					font: {
+						family: "Montserrat, sans-serif",
+						size: 12,
+					},
+				},
+			},
+			y: {
+				ticks: {
+					font: {
+						family: "Montserrat, sans-serif",
+						size: 12,
+					},
+				},
+			},
+		},
+	};
 
 	return (
 		<>
@@ -22,142 +78,166 @@ function Home() {
 					{SquareAnimation(null)}
 				</div>
 			</section>
-			<section className="section-container">
-				<div className="main-section">
-					<div className="card">
-						<div className="card-body-single-column">
-							<div className="normal-card-cluster">
-								<h1 className="card-header">Hello there!</h1>
-								<p className="text-black">
-									My name is Le Tuan Hy and I’m a student from
-									Vietnam. I’m currently working towards
-									fulfilling my dream of being a computer
-									science researcher and engineer. Apart from
-									programming, I also love designing website,
-									making 3D assets and play sports.
-								</p>
-							</div>
+			<section className="section-container bg-white mt-9">
+				<div className="flex flex-col w-full gap-3">
+					<h5 className="text-neutral-400">WELCOME</h5>
+					<h1>
+						Let me <br /> show you around
+					</h1>
+				</div>
+				<div className="main-section mt-9">
+					<div className="card bg-primary">
+						<header className="flex items-center gap-3">
+							<h2 className="text-white text-left">Who am I</h2>
+							<img
+								src="/src/assets/page-icons/question_mark.svg"
+								alt="question mark icon"
+								className="w-6 h-6"
+							/>
+						</header>
+						<div className="card-body-single-column mt-6">
+							<p className="text-white">
+								Hi there, my name is Le Tuan Hy and I’m an
+								undergraduate from Vietnam. I’m currently
+								working towards fulfilling my dream of being a
+								computer scientist and an engineer.
+							</p>
 						</div>
+						<footer className="mt-6">
+							<p className="text-neutral-400 text-xs text-left">
+								Apart from programming, I also love designing
+								websites, play music and sending tennis balls
+								flying.
+							</p>
+						</footer>
 					</div>
-					<div className="card-split-title md:col-start-1 md:card">
-						<div className="grid grid-cols-4 auto-cols-max place-items md:card-body-single-column md:grid-cols-none">
-							<div className="col-span-1 flex items-center justify-center bg-accent md:hidden">
-								<h1 className="card-header text-white">
-									About this site
-								</h1>
-							</div>
-
-							<div className="col-span-3 ml-4 text-left py-2 overflow-hidden flex justify-center items-center md:normal-card-cluster md:grid-cols-none md:justify-start md:items-start md:p-0 md:m-0">
-								<h1 className="hidden md:block md:card-header md:text-accent md:text-left">
-									About this site
-								</h1>
-								<div className="md:p-0 md:m-0">
-									<ul className="font-body-font">
-										<li className="mb-2">
-											The Homepage is all about my journey
-											of becoming an engineer.
-										</li>
-										<li className="mb-2">
-											The Active Project page will contain
-											live progression trackings of the
-											projects that I’m currently working
-											on.
-										</li>
-										<li className="mb-2">
-											The Portfolio page will be a
-											showcase of my completed projects.
-										</li>
-										<li className="">
-											The Blogs page will contain blogs
-											about technological topics and
-											solutions to problems that you can
-											find on LeetCode, Codeforces ...
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="card md:row-span-2 md:col-start-2 md:row-start-1">
-						<div className="card-body-single-column text-left">
-							<h1 className="card-header text-accent">
-								How about some statistics?
-							</h1>
-							<div className="statistic-row">
-								<h4 className=" text-accent ">{lineStat}</h4>
-								<h4 className="text-white">
-									Lines of code written this past year
-								</h4>
-							</div>
-							<div className="statistic-row">
-								<h4 className="text-accent">{dayStat}</h4>
-								<h4 className="text-white">
-									Days of continuous programming
-								</h4>
-							</div>
-							<div className="statistic-row">
-								<h4 className="text-accent">{bugStat}</h4>
-								<h4 className="text-white">
-									Bugs encountered and resolved
-								</h4>
-							</div>
-							<div className="bg-primary w-full h-32 md:flex-grow md:h-48 lg:h-80"></div>
+					<div className="card bg-white border-[0.5px] border-black">
+						<img
+							src="/src/assets/images/aobut_this_site_illustration.png"
+							alt="about this site illustration"
+							className=""
+						/>
+						<header className="mt-6">
+							<h2 className="text-left">About this site</h2>
+						</header>
+						<div className="card-body-single-column mt-6 gap-6">
+							<p className="text-left">
+								This site is my own portfolio page, a page where
+								I can show off my passion and hopefully impress
+								visitors.
+							</p>
+							<ul className="flex flex-col gap-6">
+								<li className="flex gap-3 items-center justify-start">
+									<img
+										src="/src/assets/page-icons/info.svg"
+										alt=""
+										className="h-4 w-4"
+									/>
+									<p>The Homepage is my self introduction.</p>
+								</li>
+								<li className="flex gap-3 items-center justify-start">
+									<img
+										src="/src/assets/page-icons/info.svg"
+										alt=""
+										className="h-4 w-4"
+									/>
+									<p>
+										The Profile page contains my completed
+										projects.
+									</p>
+								</li>
+								<li className="flex gap-3 items-center justify-start">
+									<img
+										src="/src/assets/page-icons/info.svg"
+										alt=""
+										className="h-4 w-4"
+									/>
+									<p>
+										The Active page contains projects I’m
+										currently working on.
+									</p>
+								</li>
+								<li className="flex gap-3 items-center justify-start">
+									<img
+										src="/src/assets/page-icons/info.svg"
+										alt=""
+										className="h-4 w-4"
+									/>
+									<p>
+										The Blogs page has blogs about
+										interesting topics technology topics.
+									</p>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</section>
-			{SectionBanner(10, "Journey Checkpoint")}
-			<section className="section-container">
-				<div className="main-section">
-					<div className="card md:col-span-2 xl:bg-transparent">
-						<div className="card-body-single-column md:!grid md:!grid-cols-3">
-							<div className="flex flex-col items-start gap-1 md:!col-span-1">
-								<div className="flex flex-row gap-2 items-center xl:gap-2">
-									<img
-										src="./src/assets/mark_location.svg"
-										alt="location mark"
-										className="location-icon"
-									/>
-									<h4>How it started</h4>
-								</div>
-								<p className="text-left">
-									I picked up programming as a hobby to relax
-									in high school. The first language I ever
-									learnt was Python! What the hell
-								</p>
-							</div>
-							<div className="flex flex-col items-start gap-1 md:!col-span-1">
-								<div className="flex flex-row gap-2 items-center xl:gap-2">
-									<img
-										src="./src/assets/mark_location.svg"
-										alt="location mark"
-										className="location-icon"
-									/>
-									<h4>How it started</h4>
-								</div>
-								<p className="text-left">
-									I picked up programming as a hobby to relax
-									in high school. The first language I ever
-									learnt was Python! What the hell
-								</p>
-							</div>
-							<div className="flex flex-col items-start gap-1 md:!col-span-1">
-								<div className="flex flex-row gap-2 items-center xl:gap-2">
-									<img
-										src="./src/assets/mark_location.svg"
-										alt="location mark"
-										className="location-icon"
-									/>
-									<h4>How it started</h4>
-								</div>
-								<p className="text-left">
-									I picked up programming as a hobby to relax
-									in high school. The first language I ever
-									learnt was Python! What the hell
-								</p>
-							</div>
+			<section className="section-container bg-neutral-100">
+				<div className="flex flex-col w-full gap-3">
+					<h5 className="text-neutral-400 text-left">
+						Programming Statistics
+					</h5>
+					<h1 className="text-left">
+						How about some coding statistics?
+					</h1>
+				</div>
+				<div className="main-section mt-9">
+					<Line data={chartStats} options={options} />
+					<div className="flex flex-col gap-4">
+						<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px]">
+							<h4 className="text-accent">1003</h4>
+							<h4>Lines of code written this year</h4>
+						</div>
+						<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px]">
+							<h4 className="text-accent">1003</h4>
+							<h4>Days of continuous programming</h4>
+						</div>
+						<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px]">
+							<h4 className="text-accent">1003</h4>
+							<h4>Bugs encountered and solved</h4>
 						</div>
 					</div>
+				</div>
+			</section>
+			<section className="section-container bg-primary">
+				<div className="flex flex-col w-full gap-3">
+					<h5 className="text-neutral-400 text-left">
+						Journey Checkpoints
+					</h5>
+					<h1 className="text-left text-white">
+						My memorable coding checkpoints
+					</h1>
+				</div>
+				<div className="main-section mt-12">
+					{checkpoint?.checkpoints.map((c, index) => (
+						<div key={index}>
+							<Disclosure>
+								<div className="flex gap-4 items-center justify-between">
+									<img
+										src="/src/assets/mark_location.svg"
+										alt="Location mark icon"
+										className="w-6 h-7"
+									/>
+									<DisclosureButton className="flex flex-grow items-center justify-between px-4 py-1 bg-white/5 rounded-lg group data-[active]:bg-white/10">
+										<h4 className="text-white">
+											{c.title}
+										</h4>
+										<img
+											src="/src/assets/angle_down.svg"
+											alt="Angle down icon"
+											className="-rotate-90 w-8 group-data-[open]:rotate-0 transition-transform duration-200"
+										/>
+									</DisclosureButton>
+								</div>
+								<DisclosurePanel
+									className="mt-3 text-white text-left bg-white/5 border-white/10 border-1 rounded-lg px-4 py-2 origin-top transition duration-200 ease-out data-[closed]:-translate-y-6 data-[closed]:opacity-0 data-[closed]:scale-90"
+									transition>
+									<p>{c.description}</p>
+								</DisclosurePanel>
+							</Disclosure>
+						</div>
+					))}
 				</div>
 			</section>
 		</>

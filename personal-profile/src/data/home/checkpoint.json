@@ -1,0 +1,24 @@
+{
+	"checkpoints": [
+		{
+			"title": "A missed dream",
+			"description": "Growing up, I've always aspired to be a doctor. However, after 10th grade and some experience working with real doctors, I realized I couldn't stand blood and extreme images."
+		},
+		{
+			"title": "My new path",
+			"description": "On the search for a new purpose in life, I stumbled across the world of programming, a place where I can have a positive impact on people's lives and guide them on getting the help they need from professionals."
+		},
+		{
+			"title": "The first program",
+			"description": "I took Mr. Mosh’s Python course from his youtube channel: Programming with Mosh to write my first program."
+		},
+		{
+			"title": "Oh, it’s serious now",
+			"description": "After some time messing around with Python, I decided to complete Harvard’s CS50 course for a better grasp of computer fundamentals."
+		},
+		{
+			"title": "Data Structure & Algorithm",
+			"description": "During the CS50 course, I was introduced to  new data structures that I’ve never heard of. Apparently the root of the tree is on top now."
+		}
+	]
+}
