@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
 	return (
-		<footer className="overflow-hidden clear-both w-full bg-primary text-white">
+		<footer className="overflow-hidden clear-both w-full bg-neutral-800 text-white">
 			<div className="flex justify-between items-top py-4 px-6 lg:px-9 lg:py-2">
 				<div className="flex flex-col gap-px">
 					<h4 className="">Contact me</h4>

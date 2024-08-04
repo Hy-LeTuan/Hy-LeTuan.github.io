@@ -3,7 +3,7 @@
 	"datasets": [
 		{
 			"label": "Year 2024",
-			"data": [1, 2, 3],
+			"data": [8, 2, 3],
 			"borderColor": "#525252",
 			"backgroundColor": "#525252"
 		}

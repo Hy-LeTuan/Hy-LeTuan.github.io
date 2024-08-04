@@ -82,34 +82,38 @@ function Home() {
 				<div className="flex flex-col w-full gap-3">
 					<h5 className="text-neutral-400">WELCOME</h5>
 					<h1>
-						Let me <br /> show you around
+						Let me <br className="md:hidden" /> show you around
 					</h1>
 				</div>
 				<div className="main-section mt-9">
-					<div className="card bg-primary">
-						<header className="flex items-center gap-3">
-							<h2 className="text-white text-left">Who am I</h2>
-							<img
-								src="/src/assets/page-icons/question_mark.svg"
-								alt="question mark icon"
-								className="w-6 h-6"
-							/>
-						</header>
-						<div className="card-body-single-column mt-6">
-							<p className="text-white">
-								Hi there, my name is Le Tuan Hy and I’m an
-								undergraduate from Vietnam. I’m currently
-								working towards fulfilling my dream of being a
-								computer scientist and an engineer.
-							</p>
+					<div className="row">
+						<div className="card bg-primary">
+							<header className="flex items-center gap-3">
+								<h2 className="text-white text-left">
+									Who am I
+								</h2>
+								<img
+									src="/src/assets/page-icons/question_mark.svg"
+									alt="question mark icon"
+									className="w-6 h-6"
+								/>
+							</header>
+							<div className="card-body-single-column mt-6">
+								<p className="text-white">
+									Hi there, my name is Le Tuan Hy and I’m an
+									undergraduate from Vietnam. I’m currently
+									working towards fulfilling my dream of being
+									a computer scientist and an engineer.
+								</p>
+							</div>
+							<footer className="mt-6">
+								<p className="text-neutral-400 text-xs text-left">
+									Apart from programming, I also love
+									designing websites, play music and sending
+									tennis balls flying.
+								</p>
+							</footer>
 						</div>
-						<footer className="mt-6">
-							<p className="text-neutral-400 text-xs text-left">
-								Apart from programming, I also love designing
-								websites, play music and sending tennis balls
-								flying.
-							</p>
-						</footer>
 					</div>
 					<div className="card bg-white border-[0.5px] border-black">
 						<img

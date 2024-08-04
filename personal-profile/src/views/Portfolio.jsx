@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SquareAnimation from "../layout/SquareAnimation";
 import MediaHeader from "../layout/MediaHeader";
-import SectionBanner from "../layout/SectionBanner";
 import projectList from "../data/portfolio/projectList.json";
 import certificateList from "../data/portfolio/certificateList.json";
 import { Bar } from "react-chartjs-2";
@@ -136,35 +135,38 @@ function Portfolio() {
 					</div>
 				</div>
 			</section>
-			<section className="section-container">
-				<div className="main-section place-items-center">
+			<section className="section-container bg-primary px-10">
+				<div className="flex flex-col w-full gap-3">
+					<h5 className="text-neutral-400">Project showcase</h5>
+					<h1 className="text-white">
+						Brief summary of all projects
+					</h1>
+				</div>
+				<div className="main-section gap-16 mt-12 place-items-center">
 					{projects?.map((project, index) => (
 						<div
 							className={
 								doubleCol
 									? index % 2 === 0
-										? "project-card place-self-end"
-										: "project-card place-self-start"
-									: "project-card"
+										? "card bg-wave-pattern bg-cover bg-no-repeat place-self-end"
+										: "card bg-wave-pattern bg-cover bg-no-repeat place-self-start"
+									: "card bg-wave-pattern bg-cover bg-no-repeat"
 							}
 							key={index}>
-							<div className="project-card-body">
+							<div className="card-body-single-column gap-8">
 								<div className="w-full flex justify-center items-center">
-									<div className="rounded-full w-32 h-32 bg-secondary shadow-project"></div>
+									<div className="rounded-full w-32 h-32 bg-secondary"></div>
 								</div>
-								<div className="flex flex-col gap-1 lg:gap-3">
-									<h1 className="text-left text-white">
-										{project.title}
-									</h1>
-									<p className="text-left text-white line-clamp-3">
+								<div className="flex flex-col gap-4">
+									<h2 className="text-left text-white">
+										Title: {project.title}
+									</h2>
+									<p className="text-left text-white line-clamp-4">
 										{project.description}
 									</p>
 								</div>
 								<div className="project-card-stats">
-									<h4 className="text-left text-white">
-										Statistics
-									</h4>
-									<ul className="text-left text-white">
+									<ul className="text-xs text-left text-neutral-200">
 										<li>
 											Date started:{" "}
 											{project.statistics?.date}
@@ -173,6 +175,8 @@ function Portfolio() {
 											No. of collaborators:{" "}
 											{project.statistics?.collaborators}
 										</li>
+									</ul>
+									<ul className="text-xs text-left text-neutral-200">
 										<li>
 											Project length:{" "}
 											{project.statistics?.length}h
@@ -196,11 +200,17 @@ function Portfolio() {
 						</div>
 					))}
 				</div>
-			</section>
 
-			{SectionBanner(6, "Earned Certificates")}
-			<section className="section-container">
-				<div className="main-section place-items-center">
+				<div className="my-12 border-1 border-white"></div>
+				<div className="flex flex-col w-full gap-3">
+					<h5 className="text-neutral-400 text-left">
+						Certificate showcase
+					</h5>
+					<h1 className="text-white text-left">
+						Earned Certificates
+					</h1>
+				</div>
+				<div className="main-section mt-12 gap-8 place-items-center">
 					{certs?.map((cert, index) => (
 						<div
 							className={
