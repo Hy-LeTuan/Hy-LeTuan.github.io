@@ -115,23 +115,25 @@ function Portfolio() {
 					</h1>
 				</div>
 				<Bar data={typesData} options={options} className="mt-12" />
-				<div className="border-black border-t-1 mt-7 mb-9"></div>
-				<div className="card py-2 px-4 bg-neutral-100 border-[0.5px] border-black">
-					<div className="card-body-single-column gap-3">
-						<h2>{stats.finished}</h2>
-						<p className="text-neutral-500">
-							Projects that have been finished with stable main
-							functionalities.
-						</p>
+				<div className="border-black border-t-[0.5px] mt-7 mb-9 md:mt-12 md:mb-14"></div>
+				<div className="m-0 p-0 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch">
+					<div className="card py-2 px-4 bg-neutral-100 border-[0.5px] border-black">
+						<div className="card-body-single-column gap-3">
+							<h2>{stats.finished}</h2>
+							<p className="text-neutral-500">
+								Projects that have been finished with stable
+								main functionalities.
+							</p>
+						</div>
 					</div>
-				</div>
-				<div className="card py-2 px-4 bg-primary border-[0.5px] border-black mt-7">
-					<div className="card-body-single-column gap-3">
-						<h2 className="text-white">{stats.finished}</h2>
-						<p className="text-neutral-400">
-							Projects that have been finished with stable main
-							functionalities.
-						</p>
+					<div className="card py-2 px-4 bg-primary border-[0.5px] border-black mt-7 md:mt-0">
+						<div className="card-body-single-column gap-3">
+							<h2 className="text-white">{stats.finished}</h2>
+							<p className="text-neutral-400">
+								Projects that have been finished with stable
+								main functionalities.
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -142,7 +144,7 @@ function Portfolio() {
 						Brief summary of all projects
 					</h1>
 				</div>
-				<div className="main-section gap-16 mt-12 place-items-center">
+				<div className="main-section gap-16 mt-12 place-items-center md:mt-16 md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5">
 					{projects?.map((project, index) => (
 						<div
 							className={
@@ -201,7 +203,7 @@ function Portfolio() {
 					))}
 				</div>
 
-				<div className="my-12 border-1 border-white"></div>
+				<div className="my-20 border-1 border-white"></div>
 				<div className="flex flex-col w-full gap-3">
 					<h5 className="text-neutral-400 text-left">
 						Certificate showcase
@@ -210,7 +212,7 @@ function Portfolio() {
 						Earned Certificates
 					</h1>
 				</div>
-				<div className="main-section mt-12 gap-8 place-items-center">
+				<div className="main-section mt-12 gap-8 place-items-center md:mt-16 md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5">
 					{certs?.map((cert, index) => (
 						<div
 							className={

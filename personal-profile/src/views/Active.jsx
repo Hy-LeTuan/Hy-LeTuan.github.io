@@ -46,7 +46,7 @@ function Active() {
 					<h5 className="text-neutral-400">Project List</h5>
 					<h1>Actively worked on projects</h1>
 				</div>
-				<div className="main-section place-items-center mt-12 gap-16">
+				<div className="main-section gap-16 mt-12 place-items-center md:mt-16 md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5">
 					{projects?.map((project, index) => (
 						<div
 							className={
