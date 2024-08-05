@@ -2,17 +2,17 @@
 	"blogs": [
 		{
 			"title": "This is blog title",
-			"date": "15/07/2006",
+			"date": "July 15, 2006",
 			"content": "Blog body, this is where all the contents will sit. How do i know deal with the imbalances? I’m not too sure, but I can set a height limit, then anything after theheight limit can be an overlay and expanded on top. It would be awesome to be able to accomplish something like that."
 		},
 		{
 			"title": "This is blog title",
-			"date": "15/07/2006",
+			"date": "July 15, 2006",
 			"content": "Blog body, this is where all the contents will sit. How do i know deal with the imbalances? I’m not too sure, but I can set a height limit. This is shorter content."
 		},
 		{
 			"title": "This is blog title",
-			"date": "15/07/2006",
+			"date": "July 15, 2006",
 			"content": "Blog body, this is where all the contents will sit. How do i know deal with the imbalances? I’m not too sure, but I can set a height limit, then anything after theheight limit can be an overlay and expanded on top. It would be awesome to be able to accomplish something like that."
 		}
 	]

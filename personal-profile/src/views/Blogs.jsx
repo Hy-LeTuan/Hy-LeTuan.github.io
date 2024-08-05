@@ -6,8 +6,8 @@ import blogList from "../data/blogs/blogList.json";
 import categoryList from "../data/blogs/categories.json";
 
 function Blogs() {
-	const [blogs, setBlogs] = useState(blogList.blogs);
-	const [categories, setCategories] = useState(categoryList.categories);
+	const blogs = blogList.blogs;
+	const categories = categoryList.categories;
 
 	const checkReadButton = (target) => {
 		if (target) {
@@ -41,54 +41,58 @@ function Blogs() {
 				</div>
 			</section>
 			<section className="section-container">
-				<div className="main-section">
-					<div className="flex flex-col gap-6 justify-center items-center md:col-span-2 lg:gap-8">
-						<h1 className="text-black">Available Categories</h1>
-						<div className="flex flex-wrap gap-6 px-4 justify-between items-start md:gap-8">
-							{categories?.map((cat, index) => (
-								<div
-									className="flex flex-col items-center justify-center gap-2"
-									key={index}>
-									<div className="bg-neutral w-9 h-9 rounded-full lg:w-12 lg:h-12"></div>
-									<h6 className="text-black">{cat.title}</h6>
-								</div>
-							))}
-						</div>
-					</div>
+				<div className="flex flex-col w-full gap-3 text-center">
+					<h5 className="text-neutral-400">Blogs & Articles</h5>
+					<h1 className="text-black">
+						An entertaining read, perhaps?
+					</h1>
 				</div>
 			</section>
-			{SectionBanner(5, "Blogs & Articles")}
-			<section className="section-container">
-				<div className="main-section place-items-center">
+			<section className="section-container bg-neutral-100">
+				<div className="w-full flex flex-wrap gap-8 justify-between items-center">
+					{categories?.map((cat, index) => (
+						<div
+							className="flex flex-col items-center justify-center gap-3"
+							key={index}>
+							<div className="bg-black w-full h-12 rounded-lg lg:w-12 lg:h-12"></div>
+							<p className="text-neutral-400 text-xs">
+								{cat.title}
+							</p>
+						</div>
+					))}
+				</div>
+			</section>
+			<section className="section-container bg-white">
+				<div className="main-section gap-8 place-items-center">
 					{blogs?.map((blog, index) => (
 						<div className="blog-card" key={index}>
-							<div className="w-full h-96 bg-neutral"></div>
+							<div className="w-full h-72 bg-neutral-400"></div>
 							<div className="blog-card-body">
-								<h1 className="text-white text-left">
+								<h2 className="text-white text-left">
 									{blog.title}
-								</h1>
+								</h2>
 								<p
 									id={`blog-content-${index}`}
-									className="text-left text-white line-clamp-5 transition-all duration-1000">
+									className="text-left text-white line-clamp-3 transition-all duration-1000">
 									{blog.content}
 								</p>
 							</div>
-							<div className="flex w-full justify-between px-8 items-center mb-4">
-								<h4 className="text-white">{blog.date}</h4>
+							<div className="flex w-full justify-between items-center mb-4 px-4">
+								<h5 className="text-white">{blog.date}</h5>
 								{checkReadButton(
 									document.querySelector(
 										`p[id="blog-content-${index}"]`
 									)
 								) ? (
 									<button
-										className="btn btn-blog-read-more"
+										className="btn btn-blog-read-more gap-3"
 										type="button"
 										onClick={(event) =>
 											showMoreContentOnClick(event)
 										}>
-										<h4 className="text-white">
+										<h5 className="text-white">
 											Read more
-										</h4>
+										</h5>
 										<img
 											src="./src/assets/expand.svg"
 											alt="expand icon"
@@ -97,11 +101,11 @@ function Blogs() {
 									</button>
 								) : (
 									<button
-										className="btn btn-blog-read-more"
+										className="btn btn-blog-read-more gap-3"
 										type="button">
-										<h4 className="text-white">
+										<h5 className="text-white">
 											End of content
-										</h4>
+										</h5>
 									</button>
 								)}
 							</div>

@@ -78,14 +78,14 @@ function Home() {
 					{SquareAnimation(null)}
 				</div>
 			</section>
-			<section className="section-container bg-white mt-9">
+			<section className="section-container bg-white">
 				<div className="flex flex-col w-full gap-3">
 					<h5 className="text-neutral-400">WELCOME</h5>
 					<h1>
 						Let me <br className="md:hidden" /> show you around
 					</h1>
 				</div>
-				<div className="main-section mt-9">
+				<div className="main-section mt-12">
 					<div className="row">
 						<div className="card bg-primary">
 							<header className="flex items-center gap-3">

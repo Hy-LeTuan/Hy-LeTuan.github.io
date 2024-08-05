@@ -1,7 +1,7 @@
 {
-	"title": "What the fuck",
+	"title": "Project name",
 	"image": null,
-	"description": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
+	"description": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. This description can be long or short, as long as it fufills its purpose.",
 	"technologies": [
 		"React for frontend framework",
 		"Django for backend",
@@ -12,29 +12,29 @@
 	"statistics": {
 		"date": "15/07/2006",
 		"collaborators": 11,
-		"length": 100,
+		"duration": 100,
 		"status": "Complete"
 	},
 	"goals_and_aims": [
 		{
 			"title": "Target name",
-			"description": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
+			"description": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. This description can be long or short, as long as it fufills its purpose.",
 			"deadline": {
 				"duration": "2 weeks",
-				"from": "15/07/2024",
-				"to": "1/8/2024"
+				"from": "July 15, 2024",
+				"to": "August 1, 2024"
 			},
-			"status": "Mostly complete"
+			"status": "80"
 		},
 		{
 			"title": "Target name",
-			"description": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
+			"description": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. This description can be long or short, as long as it fufills its purpose.",
 			"deadline": {
 				"duration": "2 weeks",
-				"from": "15/07/2024",
-				"to": "1/8/2024"
+				"from": "July 15, 2024",
+				"to": "August 1, 2024"
 			},
-			"status": "Mostly complete"
+			"status": "80"
 		}
 	]
 }

@@ -49,7 +49,9 @@ function PortfolioSpecific() {
 							src="/src/assets/images/project details_illustration.png"
 							alt="Project details illustration"
 						/>
-						<h2 className="text-left">{project?.title}</h2>
+						<h2 className="text-left">
+							Project title: {project?.title}
+						</h2>
 					</div>
 				</div>
 			</section>

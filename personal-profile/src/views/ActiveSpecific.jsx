@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MediaHeader from "../layout/MediaHeader";
 import SquareAnimation from "../layout/SquareAnimation";
-import SectionBanner from "../layout/SectionBanner";
 import { useParams } from "react-router-dom";
 
 function ActiveSpecific() {
@@ -60,152 +59,195 @@ function ActiveSpecific() {
 				</div>
 			</section>
 			<section className="section-container">
-				<div className="main-section">
-					<div className="w-full flex flex-col justify-center items-center gap-4 md:col-span-2 lg:gap-6 xl:gap-8">
-						<div className="rounded-full w-52 h-52 bg-gray-300 shadow-project"></div>
-						<h1 className="">
+				<div className="flex flex-col w-full gap-3">
+					<h5 className="text-neutral-400">Specific Details</h5>
+					<h1>Up-to-date project details</h1>
+				</div>
+				<div className="card bg-white border-[0.5px] border-black mt-12">
+					<div className="card-body-single-column gap-6">
+						<img
+							src="/src/assets/images/project details_illustration.png"
+							alt="Project details illustration"
+						/>
+						<h2 className="text-left">
 							Project title: {activeProject?.title}
-						</h1>
+						</h2>
 					</div>
 				</div>
 			</section>
-			<section className="section-container mt-0">
+			<section className="section-container bg-neutral-100">
+				<div className="flex flex-col w-full gap-3 text-left">
+					<h5 className="text-neutral-400">Project Description</h5>
+					<h1>Delve into the project </h1>
+				</div>
 				<div className="main-section">
-					<div className="project-specific-card md:row-span-2 ">
-						<div className="card-body-single-column gap-4">
-							<div className="project-specific-single-part">
-								<div className="flex items-center gap-2">
-									<h4 className="text-left">
-										Project description
-									</h4>
-									<img
-										className="w-5 h-5 lg:w-6 lg:h-6"
-										src="../src/assets/description.svg"
-										alt="Description icon"
-									/>
+					<div className="main-section mt-12">
+						<div className="card bg-white border-[0.5px] border-black">
+							<div className="card-body-single-column gap-8">
+								<div className="project-specific-single-part gap-3">
+									<div className="flex items-center gap-3">
+										<h4 className="text-left">
+											Project description
+										</h4>
+										<img
+											className="project-specific-card-icon"
+											src="../src/assets/description.svg"
+											alt="Description icon"
+										/>
+									</div>
+									<p className="text-left text-black">
+										{activeProject?.description}
+									</p>
 								</div>
-								<p className="text-left font-body-font text-black text-xs lg:text-sm">
-									{activeProject?.description}
-								</p>
-							</div>
-
-							<div className="project-specific-single-part">
-								<div className="flex items-center gap-2">
-									<h4 className="">Technologies involved</h4>
-									<img
-										className="w-5 h-5 lg:w-6 lg:h-6"
-										src="../src/assets/list_heart.svg"
-										alt="Description icon"
-									/>
-								</div>
-								<ul className="flex flex-col gap-1 text-left text-black marker:text-accent lg:text-sm lg:gap-2">
-									{activeProject?.technologies?.map(
-										(tech, index) => (
-											<li key={index}>{tech}</li>
-										)
-									)}
-								</ul>
-							</div>
-							<div className="w-full h-60 bg-primary md:hidden"></div>
-						</div>
-					</div>
-					<div className="project-specific-card">
-						<div className="card-body-single-column">
-							<div className="project-specific-single-part">
-								<div className="flex items-center gap-2">
-									<h4 className="text-left">
-										Project statistics
-									</h4>
-									<img
-										className="w-5 h-5 lg:w-6 lg:h-6"
-										src="../src/assets/statistics.svg"
-										alt="Description icon"
-									/>
-								</div>
-								<ul className="flex flex-col gap-1 text-left text-black marker:text-accent lg:text-sm lg:gap-2">
-									<li>
-										Date started:{" "}
-										{activeProject?.statistics?.date}
-									</li>
-									<li>
-										Number of collaborators:{" "}
-										{
-											activeProject?.statistics
-												?.collaborators
-										}
-									</li>
-									<li>
-										Project length:{" "}
-										{activeProject?.statistics?.length}h
-									</li>
-									<li>
-										Project status:{" "}
-										{activeProject?.statistics?.status}
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div className="hidden md:block project-specific-card shadow-xs col-span-2">
-						<div className="card-body-single-column">
-							<div className="w-full h-60 bg-primary"></div>
-						</div>
-					</div>
-				</div>
-			</section>
-			{SectionBanner(5, "Goals & Aims")}
-			<section className="section-container">
-				<div className="main-section place-items-center">
-					{activeProject?.goals_and_aims?.map((target, index) => (
-						<div className="target-card" key={index}>
-							<div className="flex flex-col gap-2">
-								<div className="flex justify-start items-center">
-									<h1 className="text-white mr-5">
-										{target.title}
-									</h1>
-									<img
-										className="w-6 h-6"
-										src="../src/assets/target.svg"
-										alt="Description icon"
-									/>
-								</div>
-								<hr className="w-full text-white" />
-							</div>
-							<div className="project-specific-single-part">
-								<div className="flex items-center gap-2">
-									<h4 className="text-white text-left lg:text-xl">
-										Target description
-									</h4>
-									<img
-										className="project-specific-card-icon"
-										src="../src/assets/white_description.svg"
-										alt="Description icon"
-									/>
-								</div>
-								<p className="text-left text-white lg:text-sm">
-									{target.description}
-								</p>
-							</div>
-							<div className="target-card-footer">
-								<div className="target-card-footer-col">
-									<h4 className="text-white text-left">
-										Target deadline
-									</h4>
-									<ul className="flex flex-col gap-1 text-left text-white marker:text-white">
-										<li>
-											Duration: {target.deadline?.duratin}
-										</li>
-										<li>From: {target.deadline?.from}</li>
-										<li>To: {target.deadline?.to}</li>
+								<div className="border-t-[0.5px] border-black"></div>
+								<div className="project-specific-single-part gap-3">
+									<div className="flex items-center gap-3">
+										<h4 className="text-black text-left">
+											Technologies involved
+										</h4>
+										<img
+											className="project-specific-card-icon"
+											src="../src/assets/list_heart.svg"
+											alt="Description icon"
+										/>
+									</div>
+									<ul className="flex flex-col gap-3text-left text-black marker:text-accent">
+										{activeProject?.technologies?.map(
+											(tech, index) => (
+												<li
+													key={index}
+													className="flex gap-3 items-center justify-start">
+													<img
+														src="/src/assets/page-icons/info.svg"
+														alt="Information icon"
+														className="h-3 w-3"
+													/>
+													<p>{tech}</p>
+												</li>
+											)
+										)}
 									</ul>
 								</div>
-								<div className="target-card-footer-col">
+							</div>
+						</div>
+						<div className="card bg-white border-[0.5px] border-black">
+							<div className="card-body-single-column gap-3">
+								<h4 className="text-black text-left">
+									My contributions
+								</h4>
+								<p className="text-left font-body-font text-black">
+									This is the place to put in the project
+									description. Describe what it does and who
+									does it help / who does it benefit. Also
+									describe why you start this project, and
+									maybe how it improves your skills. This
+									description can be long or short, but it
+									must fulfill its intended purpose.
+								</p>
+								<p className="text-left font-body-font text-black mt-2">
+									This is the place to put in the project
+									description. Describe what it does and who
+									does it help / who does it benefit. Also
+									describe why you start this project, and
+									maybe how it improves your skills. This
+									description can be long or short, but it
+									must fulfill its intended purpose.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="my-8 border-t-[0.5px] border-black"></div>
+				<div className="main-section mt-0 mb-0 gap-4">
+					<div className="w-full flex gap-8">
+						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0">
+							<div className="h-full flex flex-col items-start justify-between">
+								<h6 className="text-neutral-300">Start date</h6>
+								<p className="text-base">
+									{activeProject?.statistics?.date}
+								</p>
+							</div>
+						</div>
+						<div className="bg-project-detail-card-pattern-black bg-no-repeat bg-cover overflow-hidden px-4 py-4 rounded-lg flex-grow min-h-24 basis-0">
+							<div className="h-full flex flex-col items-start justify-between">
+								<h6 className="text-neutral-700">
+									Status today
+								</h6>
+								<p className="text-base text-white">
+									{activeProject?.statistics?.status}
+								</p>
+							</div>
+						</div>
+					</div>
+					<div className="w-full flex gap-8">
+						<div className="bg-project-detail-card-pattern-black bg-no-repeat bg-cover overflow-hidden px-4 py-4 rounded-lg flex-grow min-h-24 basis-0">
+							<div className="h-full flex flex-col items-start justify-between">
+								<h6 className="text-neutral-700">
+									Collaborators
+								</h6>
+								<p className="text-base text-white">
+									{activeProject?.statistics?.collaborators}{" "}
+									person
+								</p>
+							</div>
+						</div>
+						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0">
+							<div className="h-full flex flex-col items-start justify-between">
+								<h6 className="text-neutral-300">Duration</h6>
+								<p className="text-base">
+									{activeProject?.statistics?.duration}h
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="mt-8 border-t-[0.5px] border-black"></div>
+			</section>
+			<section className="section-container bg-primary">
+				<div className="flex flex-col w-full gap-3 text-center">
+					<h5 className="text-neutral-400">Goals & Aims</h5>
+					<h1 className="text-white">Targets awaiting completion</h1>
+				</div>
+				<div className="mt-12 main-section gap-8 place-items-center">
+					{activeProject?.goals_and_aims?.map((target, index) => (
+						<div
+							className="card border-[0.5px] border-white"
+							key={index}>
+							<div className="card-body-single-column gap-6">
+								<div className="flex flex-col gap-6">
+									<div className="flex justify-center items-center">
+										<h1 className="text-white mr-5">
+											{target.title}
+										</h1>
+										<img
+											className="w-6 h-6"
+											src="../src/assets/target.svg"
+											alt="Description icon"
+										/>
+									</div>
+									<div className="border-white border-t-[0.5px]"></div>
+								</div>
+								<div className="project-specific-single-part gap-3">
 									<h4 className="text-white text-left">
-										Status
+										Target description
 									</h4>
 									<p className="text-left text-white">
-										{target.status}
+										{target.description}
 									</p>
+								</div>
+								<div className="target-card-footer text-xs text-neutral-400">
+									<div className="target-card-footer-col">
+										<p>
+											Duration:{" "}
+											{target.deadline?.duration}
+										</p>
+										<p>Start: {target.deadline?.from}</p>
+									</div>
+									<div className="border-r-[0.5px] px-px border-white h-8"></div>
+									<div className="target-card-footer-col">
+										<p>Progress: {target.status}%</p>
+										<p>End: {target.deadline?.to}</p>
+									</div>
 								</div>
 							</div>
 						</div>
