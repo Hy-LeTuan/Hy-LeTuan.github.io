@@ -1,6 +1,5 @@
 import MediaHeader from "../layout/MediaHeader";
 import SquareAnimation from "../layout/SquareAnimation";
-import SectionBanner from "../layout/SectionBanner";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -39,20 +38,31 @@ function PortfolioSpecific() {
 					{SquareAnimation(null)}
 				</div>
 			</section>
-			<section className="section-container">
-				<div className="main-section">
-					<div className="w-full flex flex-col justify-center items-center gap-4 md:col-span-2 lg:gap-6 xl:gap-8">
-						<div className="rounded-full w-52 h-52 bg-gray-300 shadow-project"></div>
-						<h1 className="">Project title: {project?.title}</h1>
+			<section className="section-container bg-white">
+				<div className="flex flex-col w-full gap-3">
+					<h5 className="text-neutral-400">Specific Details</h5>
+					<h1>Up-to-date project details </h1>
+				</div>
+				<div className="card bg-white border-[0.5px] border-black mt-12">
+					<div className="card-body-single-column gap-6">
+						<img
+							src="/src/assets/images/project details_illustration.png"
+							alt="Project details illustration"
+						/>
+						<h2 className="text-left">{project?.title}</h2>
 					</div>
 				</div>
 			</section>
-			<section className="section-container mt-0">
-				<div className="main-section">
-					<div className="project-specific-card md:row-span-2">
-						<div className="card-body-single-column">
-							<div className="project-specific-single-part">
-								<div className="flex items-center gap-2">
+			<section className="section-container bg-neutral-100">
+				<div className="flex flex-col w-full gap-3 text-left">
+					<h5 className="text-neutral-400">Project Description</h5>
+					<h1>Delve into the project </h1>
+				</div>
+				<div className="main-section mt-12">
+					<div className="card bg-white border-[0.5px] border-black">
+						<div className="card-body-single-column gap-8">
+							<div className="project-specific-single-part gap-3">
+								<div className="flex items-center gap-3">
 									<h4 className="text-left">
 										Project description
 									</h4>
@@ -66,23 +76,9 @@ function PortfolioSpecific() {
 									{project?.description}
 								</p>
 							</div>
-							<div className="project-specific-single-part">
-								<div className="flex items-center gap-2">
-									<h4 className="text-black text-left">
-										Project details
-									</h4>
-									<img
-										className="project-specific-card-icon"
-										src="../src/assets/description.svg"
-										alt="Description icon"
-									/>
-								</div>
-								<p className="text-left font-body-font text-black">
-									{project?.details}
-								</p>
-							</div>
-							<div className="project-specific-single-part">
-								<div className="flex items-center gap-2">
+							<div className="border-t-[0.5px] border-black"></div>
+							<div className="project-specific-single-part gap-3">
+								<div className="flex items-center gap-3">
 									<h4 className="text-black text-left">
 										Technologies involved
 									</h4>
@@ -92,137 +88,160 @@ function PortfolioSpecific() {
 										alt="Description icon"
 									/>
 								</div>
-								<ul className="flex flex-col gap-1 text-left text-black marker:text-accent">
+								<ul className="flex flex-col gap-3text-left text-black marker:text-accent">
 									{project?.technologies?.map(
 										(tech, index) => (
-											<li key={index}>{tech}</li>
+											<li
+												key={index}
+												className="flex gap-3 items-center justify-start">
+												<img
+													src="/src/assets/page-icons/info.svg"
+													alt="Information icon"
+													className="h-3 w-3"
+												/>
+												<p>{tech}</p>
+											</li>
 										)
 									)}
 								</ul>
 							</div>
 						</div>
 					</div>
-					<div className="project-specific-card">
-						<div className="card-body-single-column">
-							<div className="project-specific-single-part">
-								<div className="flex items-center gap-2">
-									<h4 className="text-black text-left">
-										Project statistics
-									</h4>
-									<img
-										className="w-5 h-5 lg:w-6 lg:h-6"
-										src="../src/assets/statistics.svg"
-										alt="Description icon"
-									/>
-								</div>
-								<ul className="flex flex-col gap-1 text-left text-black marker:text-accent">
-									<li>
-										Date started:{" "}
-										{project?.statistics?.date}
-									</li>
-									<li>
-										Number of collaborators:{" "}
-										{project?.statistics?.collaborators}
-									</li>
-									<li>
-										Project length:{" "}
-										{project?.statistics?.length}h
-									</li>
-									<li>
-										Project status:{" "}
-										{project?.statistics?.status}
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div className="project-specific-card">
-						<div className="card-body-single-column gap-4">
-							<div className="flex items-center gap-2">
-								<h4 className="text-black text-left">
-									My contributions
-								</h4>
-								<img
-									className="w-5 h-5 lg:w-6 lg:h-6"
-									src="../src/assets/description.svg"
-									alt="Description icon"
-								/>
-							</div>
+					<div className="card bg-white border-[0.5px] border-black">
+						<div className="card-body-single-column gap-3">
+							<h4 className="text-black text-left">
+								My contributions
+							</h4>
 							<p className="text-left font-body-font text-black">
 								This is the place to put in the project
 								description. Describe what it does and who does
-								it help / who does it benefit. Be descriptive
-								and pray to god that the Caltech admissions will
-								read it. This can really make or break your
-								profile brother, be strong and be determined.
+								it help / who does it benefit. Also describe why
+								you start this project, and maybe how it
+								improves your skills. This description can be
+								long or short, but it must fulfill its intended
+								purpose.
 							</p>
 							<p className="text-left font-body-font text-black mt-2">
 								This is the place to put in the project
 								description. Describe what it does and who does
-								it help / who does it benefit. Be descriptive
-								and pray to god that the Caltech admissions will
-								read it. This can really make or break your
-								profile brother, be strong and be determined.
+								it help / who does it benefit. Also describe why
+								you start this project, and maybe how it
+								improves your skills. This description can be
+								long or short, but it must fulfill its intended
+								purpose.
 							</p>
 						</div>
 					</div>
-					<div className="project-specific-card shadow-alert shadow-sm lg:col-span-1">
-						<div className="card-body-single-column gap-4">
-							<div className="flex items-center gap-2">
-								<h4 className="text-black text-left lg:text-xl">
-									Difficulties & Struggles
+				</div>
+				<div className="my-8 border-t-[0.5px] border-black"></div>
+				<div className="main-section mt-0 mb-0 gap-4">
+					<div className="w-full flex gap-8">
+						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0">
+							<div className="h-full flex flex-col items-start justify-between">
+								<h6 className="text-neutral-300">Start date</h6>
+								<p className="text-base">
+									{project?.statistics?.date}
+								</p>
+							</div>
+						</div>
+						<div className="bg-project-detail-card-pattern-black bg-no-repeat bg-cover overflow-hidden px-4 py-4 rounded-lg flex-grow min-h-24 basis-0">
+							<div className="h-full flex flex-col items-start justify-between">
+								<h6 className="text-neutral-700">
+									Status today
+								</h6>
+								<p className="text-base text-white">
+									{project?.statistics?.status}
+								</p>
+							</div>
+						</div>
+					</div>
+					<div className="w-full flex gap-8">
+						<div className="bg-project-detail-card-pattern-black bg-no-repeat bg-cover overflow-hidden px-4 py-4 rounded-lg flex-grow min-h-24 basis-0">
+							<div className="h-full flex flex-col items-start justify-between">
+								<h6 className="text-neutral-700">
+									Collaborators
+								</h6>
+								<p className="text-base text-white">
+									{project?.statistics?.collaborators} person
+								</p>
+							</div>
+						</div>
+						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0">
+							<div className="h-full flex flex-col items-start justify-between">
+								<h6 className="text-neutral-300">Duration</h6>
+								<p className="text-base">
+									{project?.statistics?.duration}h
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="my-8 border-t-[0.5px] border-black"></div>
+				<div className="main-section mt-0 mb-0">
+					<div className="card bg-primary">
+						<div className="card-body-single-column gap-3">
+							<div className="flex items-center gap-3">
+								<h4 className="text-white text-left lg:text-xl">
+									Difficulties
 								</h4>
 								<img
-									className="w-5 h-5 lg:w-6 lg:h-6"
+									className="w-6 h-5"
 									src="../src/assets/error_icon.svg"
 									alt="Description icon"
 								/>
 							</div>
-							<ul className="flex flex-col gap-3 text-left text-black lg:gap-4">
-								{project?.diff_and_solutions?.map(
-									(pair, index) => (
-										<li
-											key={index}
-											className="text-left font-body-font text-black">
+							{project?.diff_and_solutions?.map((pair, index) => (
+								<div
+									key={index}
+									className="flex flex-col gap-3">
+									<div className="border-t-[0.5px] border-white"></div>
+									<div className="flex justify-start items-center gap-3">
+										<img
+											src="/src/assets/arrow_circle_right.svg"
+											alt="arrow pointing right icon"
+											className="w-4 h-4"
+										/>
+										<div className="text-left font-body-font text-white">
 											{pair.difficulty}
-										</li>
-									)
-								)}
-							</ul>
+										</div>
+									</div>
+								</div>
+							))}
 						</div>
 					</div>
-					<div className="project-specific-card bg-primary shadow-success shadow-md lg:col-span-1">
-						<div className="card-body-single-column gap-4">
-							<div className="flex items-center gap-2">
-								<h4 className="text-white text-left">
+					<div className="card bg-white border-[0.5px] border-black">
+						<div className="card-body-single-column gap-3">
+							<div className="flex items-center gap-3">
+								<h4 className="text-black text-left">
 									Solutions
 								</h4>
 								<img
-									className="w-5 h-5 lg:w-6 lg:h-6"
+									className="w-6 h-5"
 									src="../src/assets/checkmark.svg"
 									alt="Description icon"
 								/>
 							</div>
-							<ul className="flex flex-col gap-3 text-left text-black marker:text-white lg:gap-4">
-								{project?.diff_and_solutions?.map(
-									(pair, index) => (
-										<li
-											className="text-left font-body-font text-white"
-											key={index}>
-											{pair.solution}
-										</li>
-									)
-								)}
-							</ul>
+							{project?.diff_and_solutions?.map((pair, index) => (
+								<div
+									key={index}
+									className="flex flex-col gap-3">
+									<div className="border-t-[0.5px] border-black"></div>
+									<div className="text-left font-body-font text-black">
+										{pair.solution}
+									</div>
+								</div>
+							))}
 						</div>
 					</div>
 				</div>
 			</section>
-			{SectionBanner(5, "Project showcase")}
-			<section className="section-container">
-				<div className="main-section">
-					<div className="card w-65 h-32 shadow-certificate-card"></div>
-					<div className="card w-65 h-32 shadow-certificate-card"></div>
+			<section className="section-container bg-white">
+				<div className="flex flex-col w-full gap-3 text-center">
+					<h5 className="text-neutral-400">Project Showcase</h5>
+					<h1>See how it works</h1>
+				</div>
+				<div className="main-section mt-10">
+					<div className="card w-full h-60 bg-neutral-500"></div>
 				</div>
 			</section>
 		</>

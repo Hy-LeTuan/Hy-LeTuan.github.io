@@ -221,12 +221,9 @@ function Portfolio() {
 									: "certificate-card relative"
 							}
 							key={index}>
-							<div className="w-full h-40 bg-neutral xl:h-48"></div>
+							<div className="w-full h-40 bg-neutral-400 xl:h-48"></div>
 							<div className="card-body-single-column px-4">
 								<div className="flex flex-col gap-1">
-									<h2 className="text-black text-left">
-										{cert.title}
-									</h2>
 									<p className="text-black text-left">
 										{cert.description}
 									</p>

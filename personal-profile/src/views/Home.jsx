@@ -117,7 +117,7 @@ function Home() {
 					</div>
 					<div className="card bg-white border-[0.5px] border-black">
 						<img
-							src="/src/assets/images/aobut_this_site_illustration.png"
+							src="/src/assets/images/about_this_site_illustration.png"
 							alt="about this site illustration"
 							className=""
 						/>

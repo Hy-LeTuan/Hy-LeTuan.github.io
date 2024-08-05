@@ -1,7 +1,7 @@
 {
-	"title": "What the fuck",
+	"title": "Project title name",
 	"image": null,
-	"description": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
+	"description": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Also describe why you start this project, and maybe how it improves your skills.",
 	"details": "Describe the technologies involved and how it helped in achieving our purpose. This way we can get a deeper grasp of the technical details while also setting up for the difficulties and triumphs down the line.",
 	"technologies": [
 		"React for frontend framework",
@@ -11,27 +11,27 @@
 		"Stripe & Paypal integration"
 	],
 	"statistics": {
-		"date": "15/07/2006",
+		"date": "July 15, 2024",
 		"collaborators": 11,
-		"length": 100,
+		"duration": 100,
 		"status": "Complete"
 	},
 	"contributions": [
-		"This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
-		"This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined."
+		"This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Also describe why you start this project, and maybe how it improves your skills. This description can be long or short, as it will be line clamped into the desired height.",
+		"This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Also describe why you start this project, and maybe how it improves your skills. This description can be long or short, as it will be line clamped into the desired height."
 	],
 	"diff_and_solutions": [
 		{
-			"difficulty": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
-			"solution": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined."
+			"difficulty": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Also describe why you start this project, and maybe how it improves your skills. This description can be long or short, as it will be line clamped into the desired height.",
+			"solution": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Also describe why you start this project, and maybe how it improves your skills. This description can be long or short, as it will be line clamped into the desired height."
 		},
 		{
-			"difficulty": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
-			"solution": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined."
+			"difficulty": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Also describe why you start this project, and maybe how it improves your skills. This description can be long or short, as it will be line clamped into the desired height.",
+			"solution": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Also describe why you start this project, and maybe how it improves your skills. This description can be long or short, as it will be line clamped into the desired height."
 		},
 		{
-			"difficulty": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined.",
-			"solution": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Be descriptive and pray to god that the Caltech admissions will read it. This can really make or break your profile brother, be strong and be determined."
+			"difficulty": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Also describe why you start this project, and maybe how it improves your skills. This description can be long or short, as it will be line clamped into the desired height.",
+			"solution": "This is the place to put in the project description. Describe what it does and who does it help / who does it benefit. Also describe why you start this project, and maybe how it improves your skills. This description can be long or short, as it will be line clamped into the desired height."
 		}
 	],
 	"showcase": [

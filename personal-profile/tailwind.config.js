@@ -44,6 +44,10 @@ export default {
 			backgroundImage: {
 				"wave-pattern":
 					"url('/src/assets/background/wave_pattern.svg')",
+				"project-detail-card-pattern-black":
+					"url('/src/assets/background/project_details_small_card_black.svg')",
+				"project-detail-card-pattern-white":
+					"url('/src/assets/background/project_details_small_card_white.svg')",
 			},
 		},
 	},
