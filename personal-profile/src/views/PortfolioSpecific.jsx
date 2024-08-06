@@ -44,12 +44,14 @@ function PortfolioSpecific() {
 					<h1>Up-to-date project details </h1>
 				</div>
 				<div className="card bg-white border-[0.5px] border-black mt-12">
-					<div className="card-body-single-column gap-6">
+					<div className="card-body-single-column gap-6 md:flex-row md:items-center md:justify-between">
 						<img
 							src="/src/assets/images/project details_illustration.png"
 							alt="Project details illustration"
+							className="md:flex-grow-0 md:basis-0 md:w-1/2 md:order-3"
 						/>
-						<h2 className="text-left">
+						<div className="hidden md:block md:border-r-[0.5px] md:border-black md:h-52 md:order-2"></div>
+						<h2 className="text-left md:basis-0 flex-grow md:w-1/2 md:order-1">
 							Project title: {project?.title}
 						</h2>
 					</div>
@@ -60,8 +62,8 @@ function PortfolioSpecific() {
 					<h5 className="text-neutral-400">Project Description</h5>
 					<h1>Delve into the project </h1>
 				</div>
-				<div className="main-section mt-12">
-					<div className="card bg-white border-[0.5px] border-black">
+				<div className="main-section mt-12 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch">
+					<div className="card bg-white border-[0.5px] border-black md:col-span-1">
 						<div className="card-body-single-column gap-8">
 							<div className="project-specific-single-part gap-3">
 								<div className="flex items-center gap-3">
@@ -109,7 +111,7 @@ function PortfolioSpecific() {
 							</div>
 						</div>
 					</div>
-					<div className="card bg-white border-[0.5px] border-black">
+					<div className="card bg-white border-[0.5px] border-black md:col-span-1">
 						<div className="card-body-single-column gap-3">
 							<h4 className="text-black text-left">
 								My contributions
@@ -135,8 +137,8 @@ function PortfolioSpecific() {
 						</div>
 					</div>
 				</div>
-				<div className="my-8 border-t-[0.5px] border-black"></div>
-				<div className="main-section mt-0 mb-0 gap-4">
+				<div className="my-8 border-t-[0.5px] border-black md:my-14"></div>
+				<div className="main-section mt-0 mb-0 gap-4 md:grid md:grid-cols-2 md:place-items-stretch md:gap-x-8">
 					<div className="w-full flex gap-8">
 						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0">
 							<div className="h-full flex flex-col items-start justify-between">
@@ -179,7 +181,7 @@ function PortfolioSpecific() {
 					</div>
 				</div>
 				<div className="my-8 border-t-[0.5px] border-black"></div>
-				<div className="main-section mt-0 mb-0">
+				<div className="main-section mt-0 mb-0 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch">
 					<div className="card bg-primary">
 						<div className="card-body-single-column gap-3">
 							<div className="flex items-center gap-3">
@@ -228,8 +230,15 @@ function PortfolioSpecific() {
 									key={index}
 									className="flex flex-col gap-3">
 									<div className="border-t-[0.5px] border-black"></div>
-									<div className="text-left font-body-font text-black">
-										{pair.solution}
+									<div className="flex justify-start items-center gap-3">
+										<img
+											src="/src/assets/arrow_circle_right_black.svg"
+											alt="arrow pointing right icon"
+											className="w-4 h-4"
+										/>
+										<div className="text-left font-body-font text-black">
+											{pair.solution}
+										</div>
 									</div>
 								</div>
 							))}

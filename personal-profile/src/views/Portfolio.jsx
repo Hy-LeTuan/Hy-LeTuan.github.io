@@ -150,9 +150,9 @@ function Portfolio() {
 							className={
 								doubleCol
 									? index % 2 === 0
-										? "card bg-wave-pattern bg-cover bg-no-repeat place-self-end"
-										: "card bg-wave-pattern bg-cover bg-no-repeat place-self-start"
-									: "card bg-wave-pattern bg-cover bg-no-repeat"
+										? "card bg-wave-pattern bg-cover bg-no-repeat place-self-end shadow-md shadow-black"
+										: "card bg-wave-pattern bg-cover bg-no-repeat place-self-start shadow-md shadow-black"
+									: "card bg-wave-pattern bg-cover bg-no-repeat shadow-md shadow-black"
 							}
 							key={index}>
 							<div className="card-body-single-column gap-8">
@@ -218,9 +218,9 @@ function Portfolio() {
 							className={
 								doubleCol
 									? index % 2 === 0
-										? "certificate-card relative place-self-end"
-										: "certificate-card relative place-self-start"
-									: "certificate-card relative"
+										? "certificate-card relative shadow-md shadow-black place-self-end"
+										: "certificate-card relative shadow-md shadow-black place-self-start"
+									: "certificate-card relative shadow-md shadow-black"
 							}
 							key={index}>
 							<div className="w-full h-40 bg-neutral-400 xl:h-48"></div>

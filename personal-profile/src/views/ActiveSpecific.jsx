@@ -64,12 +64,14 @@ function ActiveSpecific() {
 					<h1>Up-to-date project details</h1>
 				</div>
 				<div className="card bg-white border-[0.5px] border-black mt-12">
-					<div className="card-body-single-column gap-6">
+					<div className="card-body-single-column gap-6 md:flex-row md:items-center md:justify-between">
 						<img
 							src="/src/assets/images/project details_illustration.png"
 							alt="Project details illustration"
+							className="md:flex-grow-0 md:basis-0 md:w-1/2 md:order-3"
 						/>
-						<h2 className="text-left">
+						<div className="hidden md:block md:border-r-[0.5px] md:border-black md:h-52 md:order-2"></div>
+						<h2 className="text-left md:basis-0 flex-grow md:w-1/2 md:order-1">
 							Project title: {activeProject?.title}
 						</h2>
 					</div>
@@ -80,84 +82,82 @@ function ActiveSpecific() {
 					<h5 className="text-neutral-400">Project Description</h5>
 					<h1>Delve into the project </h1>
 				</div>
-				<div className="main-section">
-					<div className="main-section mt-12">
-						<div className="card bg-white border-[0.5px] border-black">
-							<div className="card-body-single-column gap-8">
-								<div className="project-specific-single-part gap-3">
-									<div className="flex items-center gap-3">
-										<h4 className="text-left">
-											Project description
-										</h4>
-										<img
-											className="project-specific-card-icon"
-											src="../src/assets/description.svg"
-											alt="Description icon"
-										/>
-									</div>
-									<p className="text-left text-black">
-										{activeProject?.description}
-									</p>
+				<div className="main-section mt-12 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch">
+					<div className="card bg-white border-[0.5px] border-black">
+						<div className="card-body-single-column gap-8">
+							<div className="project-specific-single-part gap-3">
+								<div className="flex items-center gap-3">
+									<h4 className="text-left">
+										Project description
+									</h4>
+									<img
+										className="project-specific-card-icon"
+										src="../src/assets/description.svg"
+										alt="Description icon"
+									/>
 								</div>
-								<div className="border-t-[0.5px] border-black"></div>
-								<div className="project-specific-single-part gap-3">
-									<div className="flex items-center gap-3">
-										<h4 className="text-black text-left">
-											Technologies involved
-										</h4>
-										<img
-											className="project-specific-card-icon"
-											src="../src/assets/list_heart.svg"
-											alt="Description icon"
-										/>
-									</div>
-									<ul className="flex flex-col gap-3text-left text-black marker:text-accent">
-										{activeProject?.technologies?.map(
-											(tech, index) => (
-												<li
-													key={index}
-													className="flex gap-3 items-center justify-start">
-													<img
-														src="/src/assets/page-icons/info.svg"
-														alt="Information icon"
-														className="h-3 w-3"
-													/>
-													<p>{tech}</p>
-												</li>
-											)
-										)}
-									</ul>
-								</div>
+								<p className="text-left text-black">
+									{activeProject?.description}
+								</p>
 							</div>
-						</div>
-						<div className="card bg-white border-[0.5px] border-black">
-							<div className="card-body-single-column gap-3">
-								<h4 className="text-black text-left">
-									My contributions
-								</h4>
-								<p className="text-left font-body-font text-black">
-									This is the place to put in the project
-									description. Describe what it does and who
-									does it help / who does it benefit. Also
-									describe why you start this project, and
-									maybe how it improves your skills. This
-									description can be long or short, but it
-									must fulfill its intended purpose.
-								</p>
-								<p className="text-left font-body-font text-black mt-2">
-									This is the place to put in the project
-									description. Describe what it does and who
-									does it help / who does it benefit. Also
-									describe why you start this project, and
-									maybe how it improves your skills. This
-									description can be long or short, but it
-									must fulfill its intended purpose.
-								</p>
+							<div className="border-t-[0.5px] border-black"></div>
+							<div className="project-specific-single-part gap-3">
+								<div className="flex items-center gap-3">
+									<h4 className="text-black text-left">
+										Technologies involved
+									</h4>
+									<img
+										className="project-specific-card-icon"
+										src="../src/assets/list_heart.svg"
+										alt="Description icon"
+									/>
+								</div>
+								<ul className="flex flex-col gap-3text-left text-black marker:text-accent">
+									{activeProject?.technologies?.map(
+										(tech, index) => (
+											<li
+												key={index}
+												className="flex gap-3 items-center justify-start">
+												<img
+													src="/src/assets/page-icons/info.svg"
+													alt="Information icon"
+													className="h-3 w-3"
+												/>
+												<p>{tech}</p>
+											</li>
+										)
+									)}
+								</ul>
 							</div>
 						</div>
 					</div>
+					<div className="card bg-white border-[0.5px] border-black">
+						<div className="card-body-single-column gap-3">
+							<h4 className="text-black text-left">
+								My contributions
+							</h4>
+							<p className="text-left font-body-font text-black">
+								This is the place to put in the project
+								description. Describe what it does and who does
+								it help / who does it benefit. Also describe why
+								you start this project, and maybe how it
+								improves your skills. This description can be
+								long or short, but it must fulfill its intended
+								purpose.
+							</p>
+							<p className="text-left font-body-font text-black mt-2">
+								This is the place to put in the project
+								description. Describe what it does and who does
+								it help / who does it benefit. Also describe why
+								you start this project, and maybe how it
+								improves your skills. This description can be
+								long or short, but it must fulfill its intended
+								purpose.
+							</p>
+						</div>
+					</div>
 				</div>
-				<div className="my-8 border-t-[0.5px] border-black"></div>
+				<div className="my-8 border-t-[0.5px] border-black md:my-14"></div>
 				<div className="main-section mt-0 mb-0 gap-4">
 					<div className="w-full flex gap-8">
 						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0">
@@ -201,14 +201,14 @@ function ActiveSpecific() {
 						</div>
 					</div>
 				</div>
-				<div className="mt-8 border-t-[0.5px] border-black"></div>
+				<div className="mt-8 border-t-[0.5px] border-black md:mt-14"></div>
 			</section>
 			<section className="section-container bg-primary">
 				<div className="flex flex-col w-full gap-3 text-center">
 					<h5 className="text-neutral-400">Goals & Aims</h5>
 					<h1 className="text-white">Targets awaiting completion</h1>
 				</div>
-				<div className="mt-12 main-section gap-8 place-items-center">
+				<div className="mt-12 main-section gap-8 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch md:gap-y-16">
 					{activeProject?.goals_and_aims?.map((target, index) => (
 						<div
 							className="card border-[0.5px] border-white"

@@ -49,12 +49,12 @@ function Blogs() {
 				</div>
 			</section>
 			<section className="section-container bg-neutral-100">
-				<div className="w-full flex flex-wrap gap-8 justify-between items-center">
+				<div className="w-full flex flex-wrap gap-8 justify-between items-center md:px-12">
 					{categories?.map((cat, index) => (
 						<div
 							className="flex flex-col items-center justify-center gap-3"
 							key={index}>
-							<div className="bg-black w-full h-12 rounded-lg lg:w-12 lg:h-12"></div>
+							<div className="bg-black w-full h-12 rounded-lg md:h-14 md:w-14"></div>
 							<p className="text-neutral-400 text-xs">
 								{cat.title}
 							</p>
@@ -63,7 +63,7 @@ function Blogs() {
 				</div>
 			</section>
 			<section className="section-container bg-white">
-				<div className="main-section gap-8 place-items-center">
+				<div className="main-section gap-8 place-items-center md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5">
 					{blogs?.map((blog, index) => (
 						<div className="blog-card" key={index}>
 							<div className="w-full h-72 bg-neutral-400"></div>
