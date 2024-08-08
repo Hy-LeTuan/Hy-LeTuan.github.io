@@ -68,7 +68,7 @@ function Home() {
 		<>
 			<section className="relative overflow-hidden clear-both w-full bg-primary">
 				<div className="main-banner">
-					<div className="relative z-10 rounded-full w-32 h-32 lg:w-48 lg:h-48 xl:w-64 xl:h-64 bg-secondary"></div>
+					<div className="relative z-10 rounded-full w-32 h-32 lg:w-36 lg:h-36 bg-secondary"></div>
 					<div className="biography">
 						<h1 className="display">Hey, I'm Le Tuan Hy</h1>
 						<h4>Studet, Developer, Sportstes</h4>
@@ -82,12 +82,13 @@ function Home() {
 				<div className="flex flex-col w-full gap-3">
 					<h5 className="text-neutral-400">WELCOME</h5>
 					<h1>
-						Let me <br className="md:hidden" /> show you around
+						Let me <br className="md:hidden lg:block" /> show you
+						around
 					</h1>
 				</div>
-				<div className="main-section mt-12 gap-9">
+				<div className="main-section mt-12 gap-9 lg:mt-20 lg:gap-11">
 					<div className="row">
-						<div className="card bg-primary md:w-3/4">
+						<div className="card bg-primary md:w-3/5">
 							<header className="flex items-center gap-3">
 								<h2 className="text-white text-left">
 									Who am I
@@ -137,33 +138,33 @@ function Home() {
 											visitors.
 										</p>
 										<ul className="flex flex-col gap-4">
-											<li className="flex gap-3 items-center justify-start">
+											<li className="flex gap-3 items-center justify-start lg:gap-4">
 												<img
 													src="/src/assets/page-icons/info.svg"
 													alt=""
-													className="h-4 w-4"
+													className="h-4 w-4 lg:h-5 lg:w-5"
 												/>
 												<p>
 													The Homepage is my self
 													introduction.
 												</p>
 											</li>
-											<li className="flex gap-3 items-center justify-start">
+											<li className="flex gap-3 items-center justify-start lg:gap-4">
 												<img
 													src="/src/assets/page-icons/info.svg"
 													alt=""
-													className="h-4 w-4"
+													className="h-4 w-4 lg:h-5 lg:w-5"
 												/>
 												<p>
 													The Profile page contains my
 													completed projects.
 												</p>
 											</li>
-											<li className="flex gap-3 items-center justify-start">
+											<li className="flex gap-3 items-center justify-start lg:gap-4">
 												<img
 													src="/src/assets/page-icons/info.svg"
 													alt=""
-													className="h-4 w-4"
+													className="h-4 w-4 lg:h-5 lg:w-5"
 												/>
 												<p>
 													The Active page contains
@@ -171,11 +172,11 @@ function Home() {
 													working on.
 												</p>
 											</li>
-											<li className="flex gap-3 items-center justify-start">
+											<li className="flex gap-3 items-center justify-start lg:gap-4">
 												<img
 													src="/src/assets/page-icons/info.svg"
 													alt=""
-													className="h-4 w-4"
+													className="h-4 w-4 lg:h-5 lg:w-5"
 												/>
 												<p>
 													The Blogs page has blogs
@@ -201,18 +202,18 @@ function Home() {
 							How about some coding statistics?
 						</h1>
 					</div>
-					<div className="main-section gap-9 mt-12">
+					<div className="main-section gap-9 mt-12 lg:mt-18">
 						<Line data={chartStats} options={options} />
-						<div className="flex flex-col gap-4 md:gap-6">
-							<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px]">
+						<div className="flex flex-col gap-4 md:gap-6 lg:mt-4 lg:gap-6">
+							<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px] lg:pb-3">
 								<h4 className="text-accent">1003</h4>
 								<h4>Lines of code written this year</h4>
 							</div>
-							<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px]">
+							<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px] lg:pb-3">
 								<h4 className="text-accent">1003</h4>
 								<h4>Days of continuous programming</h4>
 							</div>
-							<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px]">
+							<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px] lg:pb-3">
 								<h4 className="text-accent">1003</h4>
 								<h4>Bugs encountered and solved</h4>
 							</div>
@@ -230,7 +231,7 @@ function Home() {
 					</h1>
 				</div>
 				<div className="main-section mt-12">
-					<div className="m-0 p-0 md:grid md:grid-cols-2 md:gap-x-5 md:gap-y-8">
+					<div className="m-0 p-0 md:grid md:grid-cols-2 md:gap-x-5 md:gap-y-8 lg:gap-x-10 lg:gap-y-12">
 						{checkpoint?.checkpoints.map((c, index) => (
 							<div key={index}>
 								<Disclosure>

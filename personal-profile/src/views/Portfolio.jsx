@@ -114,10 +114,10 @@ function Portfolio() {
 						Overview of <br /> project volume
 					</h1>
 				</div>
-				<Bar data={typesData} options={options} className="mt-12" />
-				<div className="border-black border-t-[0.5px] mt-7 mb-9 md:mt-12 md:mb-14"></div>
-				<div className="m-0 p-0 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch">
-					<div className="card py-2 px-4 bg-neutral-100 border-[0.5px] border-black">
+				<Bar data={typesData} options={options} className="mt-20" />
+				<div className="border-black border-t-[0.5px] mt-7 mb-9 md:mt-12 md:mb-14 lg:mt-16 lg:mb-20"></div>
+				<div className="m-0 p-0 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch lg:gap-x-10">
+					<div className="card py-2 px-4 bg-neutral-100 border-[0.5px] border-black mt-7 md:mt-0 lg:py-3">
 						<div className="card-body-single-column gap-3">
 							<h2>{stats.finished}</h2>
 							<p className="text-neutral-500">
@@ -126,7 +126,7 @@ function Portfolio() {
 							</p>
 						</div>
 					</div>
-					<div className="card py-2 px-4 bg-primary border-[0.5px] border-black mt-7 md:mt-0">
+					<div className="card py-2 px-4 bg-primary border-[0.5px] border-black mt-7 md:mt-0 lg:py-3">
 						<div className="card-body-single-column gap-3">
 							<h2 className="text-white">{stats.finished}</h2>
 							<p className="text-neutral-400">
@@ -137,29 +137,29 @@ function Portfolio() {
 					</div>
 				</div>
 			</section>
-			<section className="section-container bg-primary px-10">
+			<section className="section-container bg-primary">
 				<div className="flex flex-col w-full gap-3">
 					<h5 className="text-neutral-400">Project showcase</h5>
 					<h1 className="text-white">
 						Brief summary of all projects
 					</h1>
 				</div>
-				<div className="main-section gap-16 mt-12 place-items-center md:mt-16 md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5">
+				<div className="main-section gap-16 mt-12 place-items-center md:mt-16 md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5 lg:gap-x-10 lg:gap-y-20 lg:mt-24">
 					{projects?.map((project, index) => (
 						<div
 							className={
 								doubleCol
 									? index % 2 === 0
-										? "card bg-wave-pattern bg-cover bg-no-repeat place-self-end shadow-md shadow-black"
-										: "card bg-wave-pattern bg-cover bg-no-repeat place-self-start shadow-md shadow-black"
-									: "card bg-wave-pattern bg-cover bg-no-repeat shadow-md shadow-black"
+										? "card bg-wave-pattern bg-cover bg-no-repeat place-self-end shadow-md shadow-black lg:px-8"
+										: "card bg-wave-pattern bg-cover bg-no-repeat place-self-start shadow-md shadow-black lg:px-8"
+									: "card bg-wave-pattern bg-cover bg-no-repeat shadow-md shadow-black lg:px-5"
 							}
 							key={index}>
-							<div className="card-body-single-column gap-8">
+							<div className="card-body-single-column gap-8 lg:gap-9">
 								<div className="w-full flex justify-center items-center">
 									<div className="rounded-full w-32 h-32 bg-secondary"></div>
 								</div>
-								<div className="flex flex-col gap-4">
+								<div className="flex flex-col gap-4 lg:gap-6">
 									<h2 className="text-left text-white">
 										Title: {project.title}
 									</h2>
@@ -168,7 +168,7 @@ function Portfolio() {
 									</p>
 								</div>
 								<div className="project-card-stats">
-									<ul className="text-xs text-left text-neutral-200">
+									<ul className="text-xs text-left text-neutral-200 lg:text-sm">
 										<li>
 											Date started:{" "}
 											{project.statistics?.date}
@@ -178,7 +178,7 @@ function Portfolio() {
 											{project.statistics?.collaborators}
 										</li>
 									</ul>
-									<ul className="text-xs text-left text-neutral-200">
+									<ul className="text-xs text-left text-neutral-200 lg:text-sm">
 										<li>
 											Project length:{" "}
 											{project.statistics?.length}h
@@ -203,7 +203,7 @@ function Portfolio() {
 					))}
 				</div>
 
-				<div className="my-20 border-1 border-white"></div>
+				<div className="my-20 border-1 border-white lg:my-24"></div>
 				<div className="flex flex-col w-full gap-3">
 					<h5 className="text-neutral-400 text-left">
 						Certificate showcase
@@ -212,7 +212,7 @@ function Portfolio() {
 						Earned Certificates
 					</h1>
 				</div>
-				<div className="main-section mt-12 gap-8 place-items-center md:mt-16 md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5">
+				<div className="main-section mt-12 gap-8 place-items-center md:mt-16 md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5 lg:gap-x-10 lg:gap-y-20">
 					{certs?.map((cert, index) => (
 						<div
 							className={

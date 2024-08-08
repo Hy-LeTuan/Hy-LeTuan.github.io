@@ -27,7 +27,7 @@ function Header() {
 
 	return (
 		<nav className={`relative z-10 w-full bg-primary ${shadowStyle}`}>
-			<div className="flex justify-between items-center px-6 py-2">
+			<div className="flex justify-between items-center px-6 py-2 lg:px-8 lg:py-2">
 				<Link className="text-white" to={"/"}>
 					<h6>Le Tuan Hy</h6>
 				</Link>
@@ -129,7 +129,7 @@ function Header() {
 						</MenuItems>
 					</Menu>
 				</div>
-				<div className="hidden md:flex flex-row items-baseline justify-center gap-8">
+				<div className="hidden md:flex flex-row items-baseline justify-center gap-8 lg:gap-10">
 					<Button className="flex flex-col justify-center items-center gap-1 text-neutral-300 data-[hover]:bg-white/5 data-[focus]:bg-white/5 data-[active]:bg-white/5 px-4 py-1 rounded-lg transition-all ease-out duration-300 data-[hover]:text-white data-[focus]:text-white data-[active]:text-white relative">
 						{isActiveLink(location.pathname, "/") &&
 						location.pathname.length == 1 ? (
