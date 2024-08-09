@@ -62,7 +62,7 @@ function PortfolioSpecific() {
 					<h5 className="text-neutral-400">Project Description</h5>
 					<h1>Delve into the project </h1>
 				</div>
-				<div className="main-section mt-12 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch lg:mt-20 lg:gap-x-10 lg:gap-y-20">
+				<div className="main-section mt-12 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch lg:mt-20 lg:gap-x-10 lg:gap-y-20 xl:gap-x-12">
 					<div className="card bg-white border-[0.5px] border-black md:col-span-1 lg:px-6">
 						<div className="card-body-single-column gap-8">
 							<div className="project-specific-single-part gap-3">
@@ -137,59 +137,59 @@ function PortfolioSpecific() {
 						</div>
 					</div>
 				</div>
-				<div className="my-8 border-t-[0.5px] border-black md:my-14 lg:my-16"></div>
+				<div className="my-8 border-t-[0.5px] border-black md:my-14 lg:my-16 xl:my-24"></div>
 				<div className="main-section mt-0 mb-0 gap-4 md:grid md:grid-cols-2 md:place-items-stretch md:gap-x-8">
 					<div className="w-full flex gap-8">
-						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0">
-							<div className="h-full flex flex-col items-start justify-between">
+						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0 xl:py-5 xl:px-8">
+							<div className="h-full flex flex-col items-start justify-between xl:gap-6">
 								<h6 className="text-neutral-300">Start date</h6>
-								<p className="text-base lg:text-xl">
+								<p className="text-base lg:text-xl xl:text-3xl">
 									{project?.statistics?.date}
 								</p>
 							</div>
 						</div>
-						<div className="bg-project-detail-card-pattern-black bg-no-repeat bg-cover overflow-hidden px-4 py-4 rounded-lg flex-grow min-h-24 basis-0">
-							<div className="h-full flex flex-col items-start justify-between">
+						<div className="bg-project-detail-card-pattern-black bg-no-repeat bg-cover overflow-hidden px-4 py-4 rounded-lg flex-grow min-h-24 basis-0 xl:py-5 xl:px-8">
+							<div className="h-full flex flex-col items-start justify-between xl:gap-6">
 								<h6 className="text-neutral-700">
 									Status today
 								</h6>
-								<p className="text-base text-white lg:text-xl">
+								<p className="text-base text-white lg:text-xl xl:text-3xl">
 									{project?.statistics?.status}
 								</p>
 							</div>
 						</div>
 					</div>
 					<div className="w-full flex gap-8">
-						<div className="bg-project-detail-card-pattern-black bg-no-repeat bg-cover overflow-hidden px-4 py-4 rounded-lg flex-grow min-h-24 basis-0">
-							<div className="h-full flex flex-col items-start justify-between">
+						<div className="bg-project-detail-card-pattern-black bg-no-repeat bg-cover overflow-hidden px-4 py-4 rounded-lg flex-grow min-h-24 basis-0 xl:py-5 xl:px-8">
+							<div className="h-full flex flex-col items-start justify-between xl:gap-6">
 								<h6 className="text-neutral-700">
 									Collaborators
 								</h6>
-								<p className="text-base text-white lg:text-xl">
+								<p className="text-base text-white lg:text-xl xl:text-3xl">
 									{project?.statistics?.collaborators} person
 								</p>
 							</div>
 						</div>
-						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0">
-							<div className="h-full flex flex-col items-start justify-between">
+						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0 xl:py-5 xl:px-8">
+							<div className="h-full flex flex-col items-start justify-between xl:gap-6">
 								<h6 className="text-neutral-300">Duration</h6>
-								<p className="text-base lg:text-xl">
+								<p className="text-base lg:text-xl xl:text-3xl">
 									{project?.statistics?.duration}h
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div className="my-8 border-t-[0.5px] border-black md:my-14 lg:my-16"></div>
+				<div className="my-8 border-t-[0.5px] border-black md:my-14 lg:my-16 xl:my-24"></div>
 				<div className="main-section mt-0 mb-0 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch lg:gap-x-10 lg:gap-y-20">
-					<div className="card bg-primary">
-						<div className="card-body-single-column gap-3 lg:gap-6">
-							<div className="flex items-center gap-3">
-								<h4 className="text-white text-left lg:text-xl">
+					<div className="card bg-primary xl:px-10 xl:py-16">
+						<div className="card-body-single-column gap-3 lg:gap-6 xl:gap-8">
+							<div className="flex items-center gap-4">
+								<h4 className="text-white text-left">
 									Difficulties
 								</h4>
 								<img
-									className="w-6 h-5"
+									className="w-6 h-5 xl:w-8 xl:h-7"
 									src="../src/assets/error_icon.svg"
 									alt="Description icon"
 								/>
@@ -197,7 +197,7 @@ function PortfolioSpecific() {
 							{project?.diff_and_solutions?.map((pair, index) => (
 								<div
 									key={index}
-									className="flex flex-col gap-3">
+									className="flex flex-col gap-3 lg:gap-6 xl:gap-8">
 									<div className="border-t-[0.5px] border-white"></div>
 									<div className="flex justify-start items-center gap-3">
 										<img
@@ -206,21 +206,21 @@ function PortfolioSpecific() {
 											className="w-4 h-4"
 										/>
 										<div className="text-left font-body-font text-white">
-											{pair.difficulty}
+											<p>{pair.difficulty}</p>
 										</div>
 									</div>
 								</div>
 							))}
 						</div>
 					</div>
-					<div className="card bg-white border-[0.5px] border-black">
-						<div className="card-body-single-column gap-3 lg:gap-6">
-							<div className="flex items-center gap-3">
+					<div className="card bg-white border-[0.5px] border-black xl:px-10 xl:py-16">
+						<div className="card-body-single-column gap-3 lg:gap-6 xl:gap-8">
+							<div className="flex items-center gap-4">
 								<h4 className="text-black text-left">
 									Solutions
 								</h4>
 								<img
-									className="w-6 h-5"
+									className="w-6 h-5 xl:w-8 xl:h-7"
 									src="../src/assets/checkmark.svg"
 									alt="Description icon"
 								/>
@@ -228,7 +228,7 @@ function PortfolioSpecific() {
 							{project?.diff_and_solutions?.map((pair, index) => (
 								<div
 									key={index}
-									className="flex flex-col gap-3">
+									className="flex flex-col gap-3 lg:gap-6 xl:gap-8">
 									<div className="border-t-[0.5px] border-black"></div>
 									<div className="flex justify-start items-center gap-3">
 										<img
@@ -237,7 +237,7 @@ function PortfolioSpecific() {
 											className="w-4 h-4"
 										/>
 										<div className="text-left font-body-font text-black">
-											{pair.solution}
+											<p>{pair.solution}</p>
 										</div>
 									</div>
 								</div>

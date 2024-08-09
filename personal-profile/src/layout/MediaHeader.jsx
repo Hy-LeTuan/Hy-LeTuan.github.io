@@ -4,7 +4,7 @@ function MediaHeader(relativity = ".") {
 	return (
 		<div
 			id="social-icon"
-			className="relative z-10 flex justify-center items-center gap-4 lg:gap-6 xl:gap-8">
+			className="relative z-10 flex justify-center items-center gap-4 lg:gap-6 xl:gap-12">
 			<a href="https://github.com/Hy-LeTuan">
 				<img
 					src={`${relativity}/src/assets/github.svg`}

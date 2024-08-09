@@ -8,52 +8,60 @@
 	}
 
 	h1 {
-		@apply text-3xl font-heading-font font-medium lg:text-4xl;
+		@apply text-3xl font-heading-font font-medium lg:text-4xl xl:text-5xl;
 	}
 
 	h2 {
-		@apply text-2xl font-heading-font font-medium lg:text-3xl;
+		@apply text-2xl font-heading-font font-medium lg:text-3xl xl:text-xl-h2;
 	}
 
 	h3 {
-		@apply text-xl font-heading-font font-medium lg:text-2xl;
+		@apply text-xl font-heading-font font-medium lg:text-2xl xl:text-4xl;
 	}
 
 	h4 {
-		@apply text-lg font-heading-font font-medium lg:text-xl;
+		@apply text-lg font-heading-font font-medium lg:text-xl xl:text-3xl;
 	}
 
 	h5 {
-		@apply text-base font-heading-font font-medium lg:text-lg;
+		@apply text-base font-heading-font font-medium lg:text-lg xl:text-2xl;
 	}
 
 	h6 {
-		@apply text-sm font-heading-font font-medium lg:text-base;
+		@apply text-sm font-heading-font font-medium lg:text-base xl:text-xl;
 	}
 
 	p {
-		@apply text-sm font-body-font lg:text-base;
+		@apply text-sm font-body-font lg:text-base xl:text-2xl;
 	}
 }
 
 @layer components {
 	/* Font size  */
 	.display {
-		@apply text-4xl lg:text-5xl;
+		@apply text-4xl lg:text-5xl xl:text-6xl;
 	}
 
 	/* Banners */
 	.main-banner {
-		@apply text-white py-16 flex flex-col gap-4 justify-center items-center overflow-hidden md:py-20 lg:py-24 lg:gap-7 xl:py-14;
+		@apply text-white py-16 flex flex-col gap-4 justify-center items-center overflow-hidden md:py-20 lg:py-24 lg:gap-7 xl:py-40 xl:gap-10;
+	}
+
+	.section-banner {
+		@apply w-full bg-primary relative overflow-hidden mt-7 flex justify-center items-center py-3 md:mt-8 lg:py-6 lg:mt-9 xl:py-8;
+	}
+
+	.banner-hr {
+		@apply text-white bg-white w-1/2 text-center xl:w-2/5;
 	}
 
 	.biography {
-		@apply relative z-10 flex flex-col gap-2 xl:gap-4 text-white;
+		@apply relative z-10 flex flex-col gap-2 xl:gap-5 text-white;
 	}
 
 	/* Icon */
 	.media-icon {
-		@apply w-6 h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8;
+		@apply w-6 h-6 lg:w-7 lg:h-7 xl:w-12 xl:h-12;
 	}
 
 	.location-icon {
@@ -91,7 +99,7 @@
 	}
 
 	.card {
-		@apply px-4 py-8 md:px-6 col-span-1 rounded-xl;
+		@apply px-4 py-8 md:px-6 col-span-1 rounded-xl xl:py-10 xl:px-8;
 	}
 
 	.project-specific-card {
@@ -123,11 +131,11 @@
 	}
 
 	.blog-card {
-		@apply flex flex-col gap-8 justify-center items-center bg-primary rounded-lg overflow-hidden lg:gap-10;
+		@apply flex flex-col gap-8 justify-center items-center bg-primary rounded-lg overflow-hidden lg:gap-10 xl:gap-14;
 	}
 
 	.blog-card-body {
-		@apply flex flex-col gap-2 py-0 px-4 lg:gap-4 lg:px-5;
+		@apply flex flex-col gap-2 py-0 px-4 lg:gap-4 lg:px-5 xl:gap-6;
 	}
 
 	.target-card {
@@ -160,16 +168,8 @@
 		@apply flex flex-col gap-9 p-6 lg:col-span-2 lg:grid lg:grid-cols-2 lg:place-items-stretch lg:gap-20;
 	}
 
-	.section-banner {
-		@apply w-full bg-primary relative overflow-hidden mt-7 flex justify-center items-center py-3 md:mt-8 lg:py-6 lg:mt-9 xl:py-8;
-	}
-
-	.banner-hr {
-		@apply text-white bg-white w-1/2 text-center;
-	}
-
 	.section-container {
-		@apply px-6 py-16 md:py-20 md:px-7 lg:py-24 lg:px-16;
+		@apply px-6 py-16 md:py-20 md:px-7 lg:py-24 lg:px-16 xl:px-24 xl:py-28;
 	}
 
 	/* Cluster */

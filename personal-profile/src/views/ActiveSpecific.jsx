@@ -82,8 +82,8 @@ function ActiveSpecific() {
 					<h5 className="text-neutral-400">Project Description</h5>
 					<h1>Delve into the project </h1>
 				</div>
-				<div className="main-section mt-12 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch lg:mt-20 lg:gap-x-10 lg:gap-y-20">
-					<div className="card bg-white border-[0.5px] border-black">
+				<div className="main-section mt-12 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch lg:mt-20 lg:gap-x-10 lg:gap-y-20 xl:gap-x-12">
+					<div className="card bg-white border-[0.5px] border-black md:col-span-1 lg:px-6">
 						<div className="card-body-single-column gap-8">
 							<div className="project-specific-single-part gap-3">
 								<div className="flex items-center gap-3">
@@ -112,7 +112,7 @@ function ActiveSpecific() {
 										alt="Description icon"
 									/>
 								</div>
-								<ul className="flex flex-col gap-3text-left text-black marker:text-accent">
+								<ul className="flex flex-col gap-3 text-left text-black marker:text-accent">
 									{activeProject?.technologies?.map(
 										(tech, index) => (
 											<li
@@ -131,7 +131,7 @@ function ActiveSpecific() {
 							</div>
 						</div>
 					</div>
-					<div className="card bg-white border-[0.5px] border-black">
+					<div className="card bg-white border-[0.5px] border-black md:col-span-1 lg:px-6">
 						<div className="card-body-single-column gap-3">
 							<h4 className="text-black text-left">
 								My contributions
@@ -157,63 +157,63 @@ function ActiveSpecific() {
 						</div>
 					</div>
 				</div>
-				<div className="my-8 border-t-[0.5px] border-black md:my-14 lg:my-16"></div>
+				<div className="my-8 border-t-[0.5px] border-black md:my-14 lg:my-16 xl:my-24"></div>
 				<div className="main-section mt-0 mb-0 gap-4 md:grid md:grid-cols-2 md:place-items-stretch md:gap-x-8">
 					<div className="w-full flex gap-8">
-						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0">
-							<div className="h-full flex flex-col items-start justify-between">
+						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0 xl:py-5 xl:px-8">
+							<div className="h-full flex flex-col items-start justify-between xl:gap-6">
 								<h6 className="text-neutral-300">Start date</h6>
-								<p className="text-base lg:text-xl">
+								<p className="text-base lg:text-xl xl:text-3xl">
 									{activeProject?.statistics?.date}
 								</p>
 							</div>
 						</div>
-						<div className="bg-project-detail-card-pattern-black bg-no-repeat bg-cover overflow-hidden px-4 py-4 rounded-lg flex-grow min-h-24 basis-0">
-							<div className="h-full flex flex-col items-start justify-between">
+						<div className="bg-project-detail-card-pattern-black bg-no-repeat bg-cover overflow-hidden px-4 py-4 rounded-lg flex-grow min-h-24 basis-0 xl:py-5 xl:px-8">
+							<div className="h-full flex flex-col items-start justify-between xl:gap-6">
 								<h6 className="text-neutral-700">
 									Status today
 								</h6>
-								<p className="text-base text-white lg:text-xl">
+								<p className="text-base text-white lg:text-xl xl:text-3xl">
 									{activeProject?.statistics?.status}
 								</p>
 							</div>
 						</div>
 					</div>
 					<div className="w-full flex gap-8">
-						<div className="bg-project-detail-card-pattern-black bg-no-repeat bg-cover overflow-hidden px-4 py-4 rounded-lg flex-grow min-h-24 basis-0">
-							<div className="h-full flex flex-col items-start justify-between">
+						<div className="bg-project-detail-card-pattern-black bg-no-repeat bg-cover overflow-hidden px-4 py-4 rounded-lg flex-grow min-h-24 basis-0 xl:py-5 xl:px-8">
+							<div className="h-full flex flex-col items-start justify-between xl:gap-6">
 								<h6 className="text-neutral-700">
 									Collaborators
 								</h6>
-								<p className="text-base text-white lg:text-xl">
+								<p className="text-base text-white lg:text-xl xl:text-3xl">
 									{activeProject?.statistics?.collaborators}{" "}
 									person
 								</p>
 							</div>
 						</div>
-						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0">
-							<div className="h-full flex flex-col items-start justify-between">
+						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0 xl:py-5 xl:px-8">
+							<div className="h-full flex flex-col items-start justify-between xl:gap-6">
 								<h6 className="text-neutral-300">Duration</h6>
-								<p className="text-base lg:text-xl">
+								<p className="text-base lg:text-xl xl:text-3xl">
 									{activeProject?.statistics?.duration}h
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div className="mt-8 border-t-[0.5px] border-black md:mt-14 lg:mt-16"></div>
+				<div className="mt-8 border-t-[0.5px] border-black md:mt-14 lg:mt-16 xl:mt-24"></div>
 			</section>
 			<section className="section-container bg-primary">
 				<div className="flex flex-col w-full gap-3 text-center">
 					<h5 className="text-neutral-400">Goals & Aims</h5>
 					<h1 className="text-white">Targets awaiting completion</h1>
 				</div>
-				<div className="mt-12 main-section gap-8 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch md:gap-y-16 lg:gap-x-10 lg:gap-y-20 lg:mt-20">
+				<div className="mt-12 main-section gap-8 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch md:gap-y-16 lg:gap-x-10 lg:gap-y-20 lg:mt-20 xl:w-3/4 xl:mx-auto xl:gap-x-12 xl:gap-y-24">
 					{activeProject?.goals_and_aims?.map((target, index) => (
 						<div
-							className="card border-[0.5px] border-white"
+							className="card border-[0.5px] border-white xl:py-14 xl:px-12"
 							key={index}>
-							<div className="card-body-single-column gap-6 lg:gap-8">
+							<div className="card-body-single-column gap-6 lg:gap-8 xl:gap-12">
 								<div className="flex flex-col gap-6 lg:gap-8">
 									<div className="flex justify-center items-center">
 										<h1 className="text-white mr-5">
@@ -227,7 +227,7 @@ function ActiveSpecific() {
 									</div>
 									<div className="border-white border-t-[0.5px]"></div>
 								</div>
-								<div className="project-specific-single-part gap-3">
+								<div className="project-specific-single-part gap-3 xl:gap-5">
 									<h4 className="text-white text-left">
 										Target description
 									</h4>
@@ -237,16 +237,22 @@ function ActiveSpecific() {
 								</div>
 								<div className="target-card-footer text-xs text-neutral-400">
 									<div className="target-card-footer-col">
-										<p>
+										<p className="text-xs lg:text-sm xl:text-xl">
 											Duration:{" "}
 											{target.deadline?.duration}
 										</p>
-										<p>Start: {target.deadline?.from}</p>
+										<p className="text-xs lg:text-sm xl:text-xl">
+											Start: {target.deadline?.from}
+										</p>
 									</div>
 									<div className="border-r-[0.5px] px-px border-white h-8"></div>
 									<div className="target-card-footer-col">
-										<p>Progress: {target.status}%</p>
-										<p>End: {target.deadline?.to}</p>
+										<p className="text-xs lg:text-sm xl:text-xl">
+											Progress: {target.status}%
+										</p>
+										<p className="text-xs lg:text-sm xl:text-xl">
+											End: {target.deadline?.to}
+										</p>
 									</div>
 								</div>
 							</div>

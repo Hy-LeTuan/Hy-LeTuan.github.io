@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 function Footer() {
 	return (
 		<footer className="overflow-hidden clear-both w-full bg-neutral-800 text-white">
-			<div className="flex justify-between items-top py-4 px-6 lg:px-9 lg:py-5">
-				<div className="flex flex-col gap-px items-start lg:gap-1">
+			<div className="flex justify-between items-top py-4 px-6 lg:px-9 lg:py-5 xl:py-10 xl:px-24">
+				<div className="flex flex-col gap-px items-start lg:gap-1 xl:gap-2">
 					<h4 className="">Contact me</h4>
-					<ul className="text-white lg:text-base list-disc list-inside">
+					<ul className="text-white lg:text-base list-disc list-inside xl:text-2xl">
 						<li>
 							<a href="https://github.com/Hy-LeTua">Github</a>
 						</li>
@@ -26,9 +26,9 @@ function Footer() {
 						</li>
 					</ul>
 				</div>
-				<div className="flex flex-col gap-px items-center lg:gap-1">
+				<div className="flex flex-col gap-px items-center lg:gap-1 xl:gap-2">
 					<h4 className="">Sitemap</h4>
-					<ul className="text-white lg:text-base list-disc list-inside">
+					<ul className="text-white lg:text-base list-disc list-inside xl:text-2xl">
 						<li>
 							<Link to={"/"}>Home</Link>
 						</li>
@@ -43,9 +43,9 @@ function Footer() {
 						</li>
 					</ul>
 				</div>
-				<div className="flex flex-col gap-px items-start lg:gap-1">
+				<div className="flex flex-col gap-px items-start lg:gap-1 xl:gap-2">
 					<h4 className="">Source Code</h4>
-					<ul className="text-white lg:text-base list-disc list-inside">
+					<ul className="text-white lg:text-base list-disc list-inside xl:text-2xl">
 						<li>
 							<a href="https://github.com/Hy-LeTuan/Hy-LeTuan.github.io">
 								Code

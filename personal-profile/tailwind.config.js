@@ -49,6 +49,9 @@ export default {
 				"project-detail-card-pattern-white":
 					"url('/src/assets/background/project_details_small_card_white.svg')",
 			},
+			fontSize: {
+				"xl-h2": ["2.5rem", "2.75rem"],
+			},
 		},
 	},
 

@@ -68,7 +68,7 @@ function Home() {
 		<>
 			<section className="relative overflow-hidden clear-both w-full bg-primary">
 				<div className="main-banner">
-					<div className="relative z-10 rounded-full w-32 h-32 lg:w-36 lg:h-36 bg-secondary"></div>
+					<div className="relative z-10 rounded-full w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 bg-secondary"></div>
 					<div className="biography">
 						<h1 className="display">Hey, I'm Le Tuan Hy</h1>
 						<h4>Studet, Developer, Sportstes</h4>
@@ -82,24 +82,24 @@ function Home() {
 				<div className="flex flex-col w-full gap-3">
 					<h5 className="text-neutral-400">WELCOME</h5>
 					<h1>
-						Let me <br className="md:hidden lg:block" /> show you
-						around
+						Let me <br className="md:hidden lg:block xl:hidden" />{" "}
+						show you around
 					</h1>
 				</div>
-				<div className="main-section mt-12 gap-9 lg:mt-20 lg:gap-11">
+				<div className="main-section mt-12 gap-9 lg:mt-20 lg:gap-11 xl:mt-24 xl:gap-14">
 					<div className="row">
 						<div className="card bg-primary md:w-3/5">
-							<header className="flex items-center gap-3">
+							<header className="flex items-center gap-3 xl:gap-5">
 								<h2 className="text-white text-left">
 									Who am I
 								</h2>
 								<img
 									src="/src/assets/page-icons/question_mark.svg"
 									alt="question mark icon"
-									className="w-6 h-6"
+									className="w-6 h-6 xl:h-8 xl:w-8"
 								/>
 							</header>
-							<div className="card-body-single-column mt-6">
+							<div className="card-body-single-column mt-6 xl:mt-8">
 								<p className="text-white">
 									Hi there, my name is Le Tuan Hy and I’m an
 									undergraduate from Vietnam. I’m currently
@@ -107,8 +107,8 @@ function Home() {
 									a computer scientist and an engineer.
 								</p>
 							</div>
-							<footer className="mt-6">
-								<p className="text-neutral-400 text-xs text-left">
+							<footer className="mt-6 xl:mt-8">
+								<p className="text-neutral-400 text-xs text-left lg:text-sm xl:text-xl">
 									Apart from programming, I also love
 									designing websites, play music and sending
 									tennis balls flying.
@@ -117,32 +117,32 @@ function Home() {
 						</div>
 					</div>
 					<div className="row">
-						<div className="card bg-white border-[0.5px] border-black">
-							<div className="m-0 p-0 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-center">
+						<div className="card bg-white border-[0.5px] border-black xl:px-12">
+							<div className="m-0 p-0 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-center xl:gap-x-12">
 								<img
 									src="/src/assets/images/about_this_site_illustration.png"
 									alt="about this site illustration"
-									className="md:col-span-1 md:row-start-1 md:col-start-2"
+									className="md:col-span-1 md:row-start-1 md:col-start-2 md:row-span-1"
 								/>
-								<div className="m-0 p-0 md:col-span-1 md:col-start-1 md:row-start-1">
+								<div className="m-0 p-0 md:col-span-1 md:col-start-1 md:row-start-1 md:row-span-1">
 									<header className="mt-6 md:mt-0">
 										<h2 className="text-left">
 											About this site
 										</h2>
 									</header>
-									<div className="card-body-single-column mt-6 gap-6">
+									<div className="card-body-single-column mt-6 gap-6 xl:gap-10 xl:mt-10">
 										<p className="text-left">
 											This site is my own portfolio page,
 											a page where I can show off my
 											passion and hopefully impress
 											visitors.
 										</p>
-										<ul className="flex flex-col gap-4">
+										<ul className="flex flex-col gap-4 xl:gap-7">
 											<li className="flex gap-3 items-center justify-start lg:gap-4">
 												<img
 													src="/src/assets/page-icons/info.svg"
 													alt=""
-													className="h-4 w-4 lg:h-5 lg:w-5"
+													className="h-4 w-4 lg:h-5 lg:w-5 xl:h-6 xl:w-6"
 												/>
 												<p>
 													The Homepage is my self
@@ -153,7 +153,7 @@ function Home() {
 												<img
 													src="/src/assets/page-icons/info.svg"
 													alt=""
-													className="h-4 w-4 lg:h-5 lg:w-5"
+													className="h-4 w-4 lg:h-5 lg:w-5 xl:h-6 xl:w-6"
 												/>
 												<p>
 													The Profile page contains my
@@ -164,7 +164,7 @@ function Home() {
 												<img
 													src="/src/assets/page-icons/info.svg"
 													alt=""
-													className="h-4 w-4 lg:h-5 lg:w-5"
+													className="h-4 w-4 lg:h-5 lg:w-5 xl:h-6 xl:w-6"
 												/>
 												<p>
 													The Active page contains
@@ -176,7 +176,7 @@ function Home() {
 												<img
 													src="/src/assets/page-icons/info.svg"
 													alt=""
-													className="h-4 w-4 lg:h-5 lg:w-5"
+													className="h-4 w-4 lg:h-5 lg:w-5 xl:h-6 xl:w-6"
 												/>
 												<p>
 													The Blogs page has blogs
@@ -202,18 +202,22 @@ function Home() {
 							How about some coding statistics?
 						</h1>
 					</div>
-					<div className="main-section gap-9 mt-12 lg:mt-18">
-						<Line data={chartStats} options={options} />
-						<div className="flex flex-col gap-4 md:gap-6 lg:mt-4 lg:gap-6">
-							<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px] lg:pb-3">
+					<div className="main-section gap-9 mt-12 lg:mt-18 xl:mt-24 xl:gap-12">
+						<Line
+							data={chartStats}
+							options={options}
+							className="justify-self-center self-center"
+						/>
+						<div className="flex flex-col gap-4 md:gap-6 lg:mt-4 lg:gap-6 xl:gap-8">
+							<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px] lg:pb-3 xl:pb-5">
 								<h4 className="text-accent">1003</h4>
 								<h4>Lines of code written this year</h4>
 							</div>
-							<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px] lg:pb-3">
+							<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px] lg:pb-3 xl:pb-5">
 								<h4 className="text-accent">1003</h4>
 								<h4>Days of continuous programming</h4>
 							</div>
-							<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px] lg:pb-3">
+							<div className="flex justify-between items-center pt-1 pb-2 border-black border-b-[0.5px] lg:pb-3 xl:pb-5">
 								<h4 className="text-accent">1003</h4>
 								<h4>Bugs encountered and solved</h4>
 							</div>
@@ -230,8 +234,8 @@ function Home() {
 						My memorable coding checkpoints
 					</h1>
 				</div>
-				<div className="main-section mt-12">
-					<div className="m-0 p-0 md:grid md:grid-cols-2 md:gap-x-5 md:gap-y-8 lg:gap-x-10 lg:gap-y-12">
+				<div className="main-section mt-12 xl:mt-24">
+					<div className="m-0 p-0 md:grid md:grid-cols-2 md:gap-x-5 md:gap-y-8 lg:gap-x-10 lg:gap-y-12 xl:gap-x-12 xl:gap-y-20">
 						{checkpoint?.checkpoints.map((c, index) => (
 							<div key={index}>
 								<Disclosure>
@@ -239,16 +243,16 @@ function Home() {
 										<img
 											src="/src/assets/mark_location.svg"
 											alt="Location mark icon"
-											className="w-6 h-7"
+											className="w-6 h-7 xl:w-8 xl:h-9"
 										/>
-										<DisclosureButton className="flex flex-grow items-center justify-between px-4 py-1 bg-white/5 rounded-lg group data-[active]:bg-white/10">
+										<DisclosureButton className="flex flex-grow items-center justify-between px-4 py-1 bg-white/5 rounded-lg group data-[active]:bg-white/10 xl:py-3 xl:px-6">
 											<h4 className="text-white">
 												{c.title}
 											</h4>
 											<img
 												src="/src/assets/angle_down.svg"
 												alt="Angle down icon"
-												className="-rotate-90 w-8 group-data-[open]:rotate-0 transition-transform duration-200"
+												className="-rotate-90 w-8 group-data-[open]:rotate-0 transition-transform duration-200 xl:w-8 xl:h-8"
 											/>
 										</DisclosureButton>
 									</div>

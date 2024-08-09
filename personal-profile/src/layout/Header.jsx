@@ -27,7 +27,7 @@ function Header() {
 
 	return (
 		<nav className={`relative z-10 w-full bg-primary ${shadowStyle}`}>
-			<div className="flex justify-between items-center px-6 py-2 lg:px-8 lg:py-2">
+			<div className="flex justify-between items-center px-6 py-2 lg:px-8 lg:py-2 xl:py-3 xl:px-12">
 				<Link className="text-white" to={"/"}>
 					<h6>Le Tuan Hy</h6>
 				</Link>
@@ -135,48 +135,56 @@ function Header() {
 						location.pathname.length == 1 ? (
 							<>
 								<Link to={"/"} className="text-white">
-									Home
+									<h6>Home</h6>
 								</Link>
 								<div className="bg-gradient-to-t from-accent to-white/5 rounded-lg py-[2px] w-full"></div>
 							</>
 						) : (
-							<Link to={"/"}>Home</Link>
+							<Link to={"/"}>
+								<h6>Home</h6>
+							</Link>
 						)}
 					</Button>
 					<Button className="flex flex-col justify-center items-center gap-1 text-neutral-300 data-[hover]:bg-white/5 data-[focus]:bg-white/5 data-[active]:bg-white/5 px-4 py-1 rounded-lg transition-all ease-out duration-300 data-[hover]:text-white data-[focus]:text-white data-[active]:text-white relative">
 						{isActiveLink(location.pathname, "portfolio") ? (
 							<>
 								<Link to={"/portfolio"} className="text-white">
-									Profile
+									<h6>Profile</h6>
 								</Link>
 								<div className="bg-gradient-to-t from-accent to-white/5 rounded-lg py-[2px] w-full"></div>
 							</>
 						) : (
-							<Link to={"/portfolio"}>Profile</Link>
+							<Link to={"/portfolio"}>
+								<h6>Profile</h6>
+							</Link>
 						)}
 					</Button>
 					<Button className="flex flex-col justify-center items-center gap-1 text-neutral-300 data-[hover]:bg-white/5 data-[focus]:bg-white/5 data-[active]:bg-white/5 px-4 py-1 rounded-lg transition-all ease-out duration-300 data-[hover]:text-white data-[focus]:text-white data-[active]:text-white relative">
 						{isActiveLink(location.pathname, "/active") ? (
 							<>
 								<Link to={"/active"} className="text-white">
-									Active
+									<h6>Active</h6>
 								</Link>
 								<div className="bg-gradient-to-t from-accent to-white/5 rounded-lg py-[2px] w-full"></div>
 							</>
 						) : (
-							<Link to={"/active"}>Active</Link>
+							<Link to={"/active"}>
+								<h6>Active</h6>
+							</Link>
 						)}
 					</Button>
 					<Button className="flex flex-col justify-center items-center gap-1 text-neutral-300 data-[hover]:bg-white/5 data-[focus]:bg-white/5 data-[active]:bg-white/5 px-4 py-1 rounded-lg transition-all ease-out duration-300 data-[hover]:text-white data-[focus]:text-white data-[active]:text-white relative">
 						{isActiveLink(location.pathname, "/blogs") ? (
 							<>
 								<Link to={"/blogs"} className="text-white">
-									Blogs
+									<h6>Blogs</h6>
 								</Link>
 								<div className="bg-gradient-to-t from-accent to-white/5 rounded-lg py-[2px] w-full"></div>
 							</>
 						) : (
-							<Link to={"/blogs"}>Blogs</Link>
+							<Link to={"/blogs"}>
+								<h6>Blogs</h6>
+							</Link>
 						)}
 					</Button>
 				</div>

@@ -52,10 +52,10 @@ function Blogs() {
 				<div className="w-full flex flex-wrap gap-8 justify-between items-center md:px-12">
 					{categories?.map((cat, index) => (
 						<div
-							className="flex flex-col items-center justify-center gap-3"
+							className="flex flex-col items-center justify-center gap-3 xl:gap-5"
 							key={index}>
-							<div className="bg-black w-full h-12 rounded-lg md:h-14 md:w-14 lg:h-16 lg:w-16"></div>
-							<p className="text-neutral-400 text-xs lg:text-base">
+							<div className="bg-black w-full h-12 rounded-lg md:h-14 md:w-14 lg:h-16 lg:w-16 xl:h-20 xl:w-20"></div>
+							<p className="text-neutral-400 text-xs lg:text-base xl:text-2xl">
 								{cat.title}
 							</p>
 						</div>
@@ -63,10 +63,10 @@ function Blogs() {
 				</div>
 			</section>
 			<section className="section-container bg-white">
-				<div className="main-section gap-8 place-items-center md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5 lg:gap-x-10 lg:gap-y-20">
+				<div className="main-section gap-8 place-items-center md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5 lg:gap-x-10 lg:gap-y-20 xl:gap-x-12 xl:gap-y-24 xl:w-3/4 xl:mx-auto">
 					{blogs?.map((blog, index) => (
 						<div className="blog-card" key={index}>
-							<div className="w-full h-72 bg-neutral-400"></div>
+							<div className="w-full h-72 xl:h-96 bg-neutral-400"></div>
 							<div className="blog-card-body">
 								<h2 className="text-white text-left">
 									{blog.title}
@@ -77,7 +77,7 @@ function Blogs() {
 									{blog.content}
 								</p>
 							</div>
-							<div className="flex w-full justify-between items-center mb-4 px-4 lg:px-5 lg:mb-6">
+							<div className="flex w-full justify-between items-center mb-4 px-4 lg:px-5 lg:mb-6 xl:mb-10">
 								<h5 className="text-white">{blog.date}</h5>
 								{checkReadButton(
 									document.querySelector(
