@@ -44,7 +44,7 @@
 
 	/* Banners */
 	.main-banner {
-		@apply text-white py-16 flex flex-col gap-4 justify-center items-center overflow-hidden md:py-20 lg:py-24 lg:gap-5 xl:py-14;
+		@apply text-white py-16 flex flex-col gap-4 justify-center items-center overflow-hidden md:py-20 lg:py-24 lg:gap-7 xl:py-14;
 	}
 
 	.biography {
@@ -123,11 +123,11 @@
 	}
 
 	.blog-card {
-		@apply flex flex-col gap-8 justify-center items-center bg-primary rounded-lg overflow-hidden;
+		@apply flex flex-col gap-8 justify-center items-center bg-primary rounded-lg overflow-hidden lg:gap-10;
 	}
 
 	.blog-card-body {
-		@apply flex flex-col gap-2 py-0 px-4;
+		@apply flex flex-col gap-2 py-0 px-4 lg:gap-4 lg:px-5;
 	}
 
 	.target-card {

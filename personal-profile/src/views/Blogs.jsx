@@ -54,8 +54,8 @@ function Blogs() {
 						<div
 							className="flex flex-col items-center justify-center gap-3"
 							key={index}>
-							<div className="bg-black w-full h-12 rounded-lg md:h-14 md:w-14"></div>
-							<p className="text-neutral-400 text-xs">
+							<div className="bg-black w-full h-12 rounded-lg md:h-14 md:w-14 lg:h-16 lg:w-16"></div>
+							<p className="text-neutral-400 text-xs lg:text-base">
 								{cat.title}
 							</p>
 						</div>
@@ -63,7 +63,7 @@ function Blogs() {
 				</div>
 			</section>
 			<section className="section-container bg-white">
-				<div className="main-section gap-8 place-items-center md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5">
+				<div className="main-section gap-8 place-items-center md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5 lg:gap-x-10 lg:gap-y-20">
 					{blogs?.map((blog, index) => (
 						<div className="blog-card" key={index}>
 							<div className="w-full h-72 bg-neutral-400"></div>
@@ -77,7 +77,7 @@ function Blogs() {
 									{blog.content}
 								</p>
 							</div>
-							<div className="flex w-full justify-between items-center mb-4 px-4">
+							<div className="flex w-full justify-between items-center mb-4 px-4 lg:px-5 lg:mb-6">
 								<h5 className="text-white">{blog.date}</h5>
 								{checkReadButton(
 									document.querySelector(

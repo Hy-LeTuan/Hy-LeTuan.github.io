@@ -43,7 +43,7 @@ function PortfolioSpecific() {
 					<h5 className="text-neutral-400">Specific Details</h5>
 					<h1>Up-to-date project details </h1>
 				</div>
-				<div className="card bg-white border-[0.5px] border-black mt-12">
+				<div className="card bg-white border-[0.5px] border-black mt-12 lg:mt-20">
 					<div className="card-body-single-column gap-6 md:flex-row md:items-center md:justify-between">
 						<img
 							src="/src/assets/images/project details_illustration.png"
@@ -62,8 +62,8 @@ function PortfolioSpecific() {
 					<h5 className="text-neutral-400">Project Description</h5>
 					<h1>Delve into the project </h1>
 				</div>
-				<div className="main-section mt-12 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch">
-					<div className="card bg-white border-[0.5px] border-black md:col-span-1">
+				<div className="main-section mt-12 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch lg:mt-20 lg:gap-x-10 lg:gap-y-20">
+					<div className="card bg-white border-[0.5px] border-black md:col-span-1 lg:px-6">
 						<div className="card-body-single-column gap-8">
 							<div className="project-specific-single-part gap-3">
 								<div className="flex items-center gap-3">
@@ -92,7 +92,7 @@ function PortfolioSpecific() {
 										alt="Description icon"
 									/>
 								</div>
-								<ul className="flex flex-col gap-3text-left text-black marker:text-accent">
+								<ul className="flex flex-col gap-3 text-left text-black marker:text-accent">
 									{project?.technologies?.map(
 										(tech, index) => (
 											<li
@@ -111,7 +111,7 @@ function PortfolioSpecific() {
 							</div>
 						</div>
 					</div>
-					<div className="card bg-white border-[0.5px] border-black md:col-span-1">
+					<div className="card bg-white border-[0.5px] border-black md:col-span-1 lg:px-6">
 						<div className="card-body-single-column gap-3">
 							<h4 className="text-black text-left">
 								My contributions
@@ -137,13 +137,13 @@ function PortfolioSpecific() {
 						</div>
 					</div>
 				</div>
-				<div className="my-8 border-t-[0.5px] border-black md:my-14"></div>
+				<div className="my-8 border-t-[0.5px] border-black md:my-14 lg:my-16"></div>
 				<div className="main-section mt-0 mb-0 gap-4 md:grid md:grid-cols-2 md:place-items-stretch md:gap-x-8">
 					<div className="w-full flex gap-8">
 						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0">
 							<div className="h-full flex flex-col items-start justify-between">
 								<h6 className="text-neutral-300">Start date</h6>
-								<p className="text-base">
+								<p className="text-base lg:text-xl">
 									{project?.statistics?.date}
 								</p>
 							</div>
@@ -153,7 +153,7 @@ function PortfolioSpecific() {
 								<h6 className="text-neutral-700">
 									Status today
 								</h6>
-								<p className="text-base text-white">
+								<p className="text-base text-white lg:text-xl">
 									{project?.statistics?.status}
 								</p>
 							</div>
@@ -165,7 +165,7 @@ function PortfolioSpecific() {
 								<h6 className="text-neutral-700">
 									Collaborators
 								</h6>
-								<p className="text-base text-white">
+								<p className="text-base text-white lg:text-xl">
 									{project?.statistics?.collaborators} person
 								</p>
 							</div>
@@ -173,17 +173,17 @@ function PortfolioSpecific() {
 						<div className="bg-project-detail-card-pattern-white bg-no-repeat bg-cover px-4 py-4 border-[0.5px] border-black rounded-lg flex-grow min-h-24 basis-0">
 							<div className="h-full flex flex-col items-start justify-between">
 								<h6 className="text-neutral-300">Duration</h6>
-								<p className="text-base">
+								<p className="text-base lg:text-xl">
 									{project?.statistics?.duration}h
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div className="my-8 border-t-[0.5px] border-black"></div>
-				<div className="main-section mt-0 mb-0 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch">
+				<div className="my-8 border-t-[0.5px] border-black md:my-14 lg:my-16"></div>
+				<div className="main-section mt-0 mb-0 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch lg:gap-x-10 lg:gap-y-20">
 					<div className="card bg-primary">
-						<div className="card-body-single-column gap-3">
+						<div className="card-body-single-column gap-3 lg:gap-6">
 							<div className="flex items-center gap-3">
 								<h4 className="text-white text-left lg:text-xl">
 									Difficulties
@@ -214,7 +214,7 @@ function PortfolioSpecific() {
 						</div>
 					</div>
 					<div className="card bg-white border-[0.5px] border-black">
-						<div className="card-body-single-column gap-3">
+						<div className="card-body-single-column gap-3 lg:gap-6">
 							<div className="flex items-center gap-3">
 								<h4 className="text-black text-left">
 									Solutions
