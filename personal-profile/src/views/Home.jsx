@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SquareAnimation from "../layout/SquareAnimation";
 import MediaHeader from "../layout/MediaHeader";
 import chartStats from "/src/data/home/stats.json";
@@ -12,7 +12,42 @@ import {
 } from "@headlessui/react";
 
 function Home() {
-	console.log(checkpoint);
+	const [bodyFontSize, setBodyFontSize] = useState(14);
+	const [headerFontSize, setHeaderFontSize] = useState(16);
+
+    const [axesSpacing, setAxesSpacing] = useState(24); 
+    const [titleSpacing, setTitleSpacing] = useState(8); 
+
+	const onScreenSizeChange = () => {
+		const width = window.innerWidth;
+
+		if (width < 768) {
+            // set font size 
+			setBodyFontSize(14);
+			setHeaderFontSize(16);
+
+            // set spacing
+            setAxesSpacing(8); 
+            setTitleSpacing(2); 
+		} else if (width >= 1024 && width < 1280) {
+            // set font size
+			setBodyFontSize(16);
+			setHeaderFontSize(20);
+            
+            // set spacing
+            setAxesSpacing(20); 
+            setTitleSpacing(4); 
+		} else if (width >= 1280) {
+            // set font size 
+			setBodyFontSize(20);
+			setHeaderFontSize(30);
+
+            // set spacing
+            setAxesSpacing(24); 
+            setTitleSpacing(12); 
+		}
+	};
+
 	const options = {
 		elements: {
 			point: {
@@ -23,9 +58,9 @@ function Home() {
 			legend: {
 				display: true,
 				labels: {
-					font: {
-						family: "Montserrat, sans-serif",
-						size: "12px",
+			font: {
+						fmily: "Montserrat, sans-serif",
+						size: `${bodyFontSize}px`,
 					},
 				},
 			},
@@ -36,11 +71,11 @@ function Home() {
 				align: "center",
 				font: {
 					family: "Montserrat, sans-serif",
-					size: 14,
+					size: `${headerFontSize}px`,
 				},
 				color: "#000",
 				padding: {
-					top: 10,
+					top: `${titleSpacing}`,
 				},
 			},
 		},
@@ -49,20 +84,31 @@ function Home() {
 				ticks: {
 					font: {
 						family: "Montserrat, sans-serif",
-						size: 12,
+						size: `${bodyFontSize}px`,
 					},
+                    padding: axesSpacing,
 				},
 			},
 			y: {
 				ticks: {
 					font: {
 						family: "Montserrat, sans-serif",
-						size: 12,
+						size: `${bodyFontSize}px`,
 					},
+                    padding: axesSpacing,
 				},
 			},
 		},
 	};
+
+	useEffect(() => {
+		onScreenSizeChange();
+		window.addEventListener("resize", onScreenSizeChange);
+
+		return () => {
+			window.removeEventListener("resize", onScreenSizeChange);
+		};
+	}, []);
 
 	return (
 		<>
@@ -79,7 +125,7 @@ function Home() {
 				</div>
 			</section>
 			<section className="section-container bg-white">
-				<div className="flex flex-col w-full gap-3">
+				<div className="flex flex-col w-full">
 					<h5 className="text-neutral-400">WELCOME</h5>
 					<h1>
 						Let me <br className="md:hidden lg:block xl:hidden" />{" "}
