@@ -141,10 +141,10 @@ function Home() {
                     {SquareAnimation(null)}
                 </div>
             </section>
-            <section className="section-container bg-white">
-                <div className="flex flex-col w-full">
+            <section className="section-container px-8 bg-white">
+                <div className="flex flex-col w-full gap-8">
                     <h5 className="text-neutral-400">WELCOME</h5>
-                    <h1>
+                    <h1 className="font-semibold">
                         Let me <br className="md:hidden lg:block xl:hidden" />{" "}
                         show you around
                     </h1>
@@ -152,19 +152,19 @@ function Home() {
                 <div className="main-section mt-12 gap-9 lg:mt-20 lg:gap-11 xl:mt-24 xl:gap-14">
                     <div className="flex flex-row justfiy-center items-stretch gap-8">
                         <div
-                            className="card bg-primary overflow-hidden py-0 pr-0 xl:ps-12 data-[open]:w-full data-[close]:w-1/2 data-[open]:grow-1 group data-[close]:py-8 data-[close]:px-12 transition-all"
+                            className="card relative bg-primary overflow-hidden py-0 px-0 grow-1 data-[open]:w-full data-[close]:w-1/2 group transition-all duration-500"
                             id="left-card"
                             onMouseEnter={(e) => onDynamicCardMouseHover(e)}
                             data-open={leftCardOpen ? "" : undefined}
                             data-close={leftCardOpen ? undefined : ""}
                         >
-                            <div className="m-0 p-0 flex flex-row items-center justfiy-center gap-20 h-full ">
+                            <div className="m-0 p-0 px-12 h-full flex flex-row justify-between">
                                 <img
                                     src="/src/assets/images/profile_picture.png"
-                                    alt="about this site illustration"
-                                    className="basis-0 object-cover w-2/5 h-full order-1 group-data-[open]:opacity-100 group-data-[open]:display-block group-data-[close]:opacity-0 group-data-[close]:hidden transition-opacity duration-500"
+                                    alt="Profile picture"
+                                    className="right-0 basis-0 object-cover w-2/5 h-full order-1 absolute group-data-[open]:opacity-100 group-data-[close]:opacity-0 data-[close]:hidden transition-opacity"
                                 />
-                                <div className="m-0 p-0 flex-1 order-0 basis-1 flex flex-col gap-0 group-data-[open]:justify-center group-data-[close]:justify-between h-full">
+                                <div className="py-8 order-0 max-w-[500px] h-full flex flex-col justify-center items-start">
                                     <header className="mt-6 md:mt-0 flex flex-col lg:gap-6">
                                         <img
                                             src="/src/assets/page-icons/square_up_right_white.svg"
@@ -174,33 +174,34 @@ function Home() {
                                             Who Am I
                                         </h2>
                                     </header>
-                                    <div className="card-body-single-column mt-6 gap-6 xl:gap-10 xl:mt-10 ">
-                                        <p className="text-left text-white transition-all">
-                                            This site is my own portfolio page, a page where I can show off my passion and hopefully impress visitors.
+                                    <div className="card-body-single-column mt-6 gap-6 xl:gap-10 xl:mt-10">
+                                        <p className="text-left text-white group-data-[close]:delay-200 group-data-[open]:delay-75 transition-all group-data-[close]:translate-y-40 duration-300">
+                                            Hi there, my name is Tuan Hy and I
+                                            just have a passion for computer
+                                            from Vietnam.
                                         </p>
-                                        <footer className="flex flex-col gap-4 justify-center items-start group-data-[open]:opacity-100 group-data-[close]:opacity-0 transition-all">
+                                        <footer className="flex flex-col gap-6 justify-center items-start group-data-[open]:opacity-100 group-data-[close]:opacity-0 transition-opacity ease-out group-data-[open]:delay-200 group-data-[close]:delay-75 duration-300">
                                             <div className="flex flex-row gap-4 justify-center items-center">
                                                 <img
                                                     src="/src/assets/page-icons/checkbox.svg"
-                                                    className="w-4 h-4"
+                                                    className="w-5 h-5"
                                                 />
                                                 <p className="text-neutral-400 text-xs text-left lg:text-sm xl:text-xl">
                                                     I’m currently working
                                                     towards fulfilling my dream
                                                     of being a certified
-                                                    computer scientist and an
-                                                    engineer.
+                                                    computer scientist.
                                                 </p>
                                             </div>
                                             <div className="flex flex-row gap-4 justify-center items-center">
                                                 <img
                                                     src="/src/assets/page-icons/checkbox.svg"
-                                                    className="w-4 h-4"
+                                                    className="w-5 h-5"
                                                 />
                                                 <p className="text-neutral-400 text-xs text-left lg:text-sm xl:text-xl">
                                                     Apart from programming, I
                                                     also love designing
-                                                    websites, play music and
+                                                    websites, playing music and
                                                     sending tennis balls flying.
                                                 </p>
                                             </div>
@@ -210,19 +211,19 @@ function Home() {
                             </div>
                         </div>
                         <div
-                            className="card bg-white border-[0.5px] border-black overflow-hidden py-0 pr-0 xl:ps-12 grow-1 group/right-card data-[close]:py-8 data-[close]:px-12"
+                            className="card relative bg-white border-[0.5px] border-black overflow-hidden py-0 px-0 grow-1 group/right-card data-[open]:w-full data-[close]:w-1/2 transition-all duration-500"
                             id="right-card"
                             onMouseEnter={(e) => onDynamicCardMouseHover(e)}
                             data-open={rightCardOpen ? "" : undefined}
                             data-close={rightCardOpen ? undefined : ""}
                         >
-                            <div className="m-0 p-0 flex flex-row items-center justfiy-center gap-20 h-full">
+                            <div className="m-0 p-0 h-full px-12 flex flex-row justify-between">
                                 <img
                                     src="/src/assets/images/about_this_site_illustration.png"
-                                    alt="about this site illustration"
-                                    className="basis-0 object-full w-1/3 order-1 group-data-[close]/right-card:hidden"
+                                    alt="About this site illustration"
+                                    className="absolute top-1/2 -translate-y-1/2 right-0 basis-0 object-fit w-1/2 order-1 group-data-[close]/right-card:hidden"
                                 />
-                                <div className="m-0 p-0 flex-1 order-0 basis-1">
+                                <div className="py-20 order-0 max-w-[500px] h-full flex flex-col justify-center items-start">
                                     <header className="mt-6 md:mt-0 flex flex-col lg:gap-6">
                                         <img
                                             src="/src/assets/page-icons/square_up_right_black.svg"
@@ -233,189 +234,36 @@ function Home() {
                                         </h2>
                                     </header>
                                     <div className="card-body-single-column mt-6 gap-6 xl:gap-10 xl:mt-10">
-                                        <p className="text-left">
-                                            This site is my own portfolio page,
-                                            a page where I can show off my
-                                            passion and hopefully impress
-                                            visitors.
+                                        <p className="text-left group-data-[close]/right-card:delay-200 group-data-[open]/right-card:delay-75 transition-all group-data-[close]/right-card:translate-y-40 duration-300">
+                                            This is my own portfolio page, where
+                                            I show off my passion for
+                                            programming.
                                         </p>
-                                        <ul className="flex flex-col gap-4 text-neutral-700 xl:gap-7">
-                                            <li className="flex gap-3 items-center justify-start lg:gap-4">
+                                        <footer className="flex flex-col gap-6 justify-center items-start group-data-[open]/right-card:opacity-100 group-data-[close]/right-card:opacity-0 transition-opacity ease-out group-data-[open]/right-card:delay-200 group-data-[close]/right-card:delay-75 duration-300">
+                                            <div className="flex flex-row gap-4 justify-center items-center">
                                                 <img
-                                                    src="/src/assets/page-icons/info.svg"
-                                                    alt=""
-                                                    className="h-4 w-4 lg:h-5 lg:w-5 xl:h-6 xl:w-6"
+                                                    src="/src/assets/page-icons/checkbox.svg"
+                                                    className="w-5 h-5"
                                                 />
-                                                <p>
-                                                    The Homepage is my self
-                                                    introduction.
+                                                <p className="text-neutral-700 text-xs text-left lg:text-sm xl:text-xl">
+                                                    The Profile page contains
+                                                    projects that have fulfilled
+                                                    their main purposeses.
                                                 </p>
-                                            </li>
-                                            <li className="flex gap-3 items-center justify-start lg:gap-4">
+                                            </div>
+                                            <div className="flex flex-row gap-4 justify-center items-center">
                                                 <img
-                                                    src="/src/assets/page-icons/info.svg"
-                                                    alt=""
-                                                    className="h-4 w-4 lg:h-5 lg:w-5 xl:h-6 xl:w-6"
+                                                    src="/src/assets/page-icons/checkbox.svg"
+                                                    className="w-5 h-5"
                                                 />
-                                                <p>
-                                                    The Profile page contains my
-                                                    completed projects.
-                                                </p>
-                                            </li>
-                                            <li className="flex gap-3 items-center justify-start lg:gap-4">
-                                                <img
-                                                    src="/src/assets/page-icons/info.svg"
-                                                    alt=""
-                                                    className="h-4 w-4 lg:h-5 lg:w-5 xl:h-6 xl:w-6"
-                                                />
-                                                <p>
+                                                <p className="text-neutral-700 text-xs text-left lg:text-sm xl:text-xl">
                                                     The Active page contains
-                                                    projects I’m currently
-                                                    working on.
+                                                    projects that are currently
+                                                    worked on to fulfill their
+                                                    main purposes.
                                                 </p>
-                                            </li>
-                                            <li className="flex gap-3 items-center justify-start lg:gap-4">
-                                                <img
-                                                    src="/src/assets/page-icons/info.svg"
-                                                    alt=""
-                                                    className="h-4 w-4 lg:h-5 lg:w-5 xl:h-6 xl:w-6"
-                                                />
-                                                <p>
-                                                    The Blogs page has blogs
-                                                    about interesting topics
-                                                    technology topics.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="card bg-primary md:w-3/5">
-                            <header className="flex items-center gap-3 xl:gap-5">
-                                <h2 className="text-white text-left">
-                                    Who am I
-                                </h2>
-                                <img
-                                    src="/src/assets/page-icons/question_mark.svg"
-                                    alt="question mark icon"
-                                    className="w-6 h-6 xl:h-8 xl:w-8"
-                                />
-                            </header>
-                            <div className="card-body-single-column mt-6 xl:mt-8">
-                                <p className="text-white">
-                                    Hi there, my name is Le Tuan Hy and I’m an
-                                    undergraduate with a passion for computer
-                                    from Vietnam.
-                                </p>
-                            </div>
-                            <footer className="mt-6 xl:mt-8">
-                                <p className="text-neutral-400 text-xs text-left lg:text-sm xl:text-xl">
-                                    Apart from programming, I also love
-                                    designing websites, play music and sending
-                                    tennis balls flying.
-                                </p>
-                            </footer>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="card bg-white border-[0.5px] border-black xl:px-12">
-                            <div className="m-0 p-0 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-center xl:gap-x-12">
-                                <img
-                                    src="/src/assets/images/about_this_site_illustration.png"
-                                    alt="about this site illustration"
-                                    className="md:col-span-1 md:row-start-1 md:col-start-2 md:row-span-1"
-                                />
-                                <div className="m-0 p-0 md:col-span-1 md:col-start-1 md:row-start-1 md:row-span-1">
-                                    <header className="mt-6 md:mt-0">
-                                        <h2 className="text-left">
-                                            About this site
-                                        </h2>
-                                    </header>
-                                    <div className="card-body-single-column mt-6 gap-6 xl:gap-10 xl:mt-10">
-                                        <p className="text-left">
-                                            This site is my own portfolio page,
-                                            a page where I can show off my
-                                            passion and hopefully impress
-                                            visitors.
-                                        </p>
-                                        <ul className="flex flex-col gap-4 xl:gap-7">
-                                            <li className="flex gap-3 items-center justify-start lg:gap-4">
-                                                <img
-                                                    src="/src/assets/page-icons/info.svg"
-                                                    alt=""
-                                                    className="h-4 w-4 lg:h-5 lg:w-5 xl:h-6 xl:w-6"
-                                                />
-                                                <p>
-                                                    The Homepage is my self
-                                                    introduction.
-                                                </p>
-                                            </li>
-                                            <li className="flex gap-3 items-center justify-start lg:gap-4">
-                                                <img
-                                                    src="/src/assets/page-icons/info.svg"
-                                                    alt=""
-                                                    className="h-4 w-4 lg:h-5 lg:w-5 xl:h-6 xl:w-6"
-                                                />
-                                                <p>
-                                                    The Profile page contains my
-                                                    completed projects.
-                                                </p>
-                                                <div className="flex flex-row gap-4 justify-center items-center">
-                                                    <img
-                                                        src="/src/assets/page-icons/checkbox.svg"
-                                                        className="w-4 h-4"
-                                                    />
-                                                    <p className="text-neutral-400 text-xs text-left lg:text-sm xl:text-xl">
-                                                        I’m currently working
-                                                        towards fulfilling my
-                                                        dream of being a
-                                                        certified computer
-                                                        scientist and an
-                                                        engineer.
-                                                    </p>
-                                                </div>
-                                                <div className="flex flex-row gap-4 justify-center items-center">
-                                                    <img
-                                                        src="/src/assets/page-icons/checkbox.svg"
-                                                        className="w-4 h-4"
-                                                    />
-                                                    <p className="text-neutral-400 text-xs text-left lg:text-sm xl:text-xl">
-                                                        Apart from programming,
-                                                        I also love designing
-                                                        websites, play music and
-                                                        sending tennis balls
-                                                        flying.
-                                                    </p>
-                                                </div>
-                                            </li>
-                                            <li className="flex gap-3 items-center justify-start lg:gap-4">
-                                                <img
-                                                    src="/src/assets/page-icons/info.svg"
-                                                    alt=""
-                                                    className="h-4 w-4 lg:h-5 lg:w-5 xl:h-6 xl:w-6"
-                                                />
-                                                <p>
-                                                    The Active page contains
-                                                    projects I’m currently
-                                                    working on.
-                                                </p>
-                                            </li>
-                                            <li className="flex gap-3 items-center justify-start lg:gap-4">
-                                                <img
-                                                    src="/src/assets/page-icons/info.svg"
-                                                    alt=""
-                                                    className="h-4 w-4 lg:h-5 lg:w-5 xl:h-6 xl:w-6"
-                                                />
-                                                <p>
-                                                    The Blogs page has blogs
-                                                    about interesting topics
-                                                    technology topics.
-                                                </p>
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </footer>
                                     </div>
                                 </div>
                             </div>
