@@ -41,7 +41,7 @@ function Blogs() {
 				</div>
 			</section>
 			<section className="section-container">
-				<div className="flex flex-col w-full gap-3 text-center">
+				<div className="title-subtitle-cluster">
 					<h5 className="text-neutral-400">Blogs & Articles</h5>
 					<h1 className="text-black">
 						An entertaining read, perhaps?

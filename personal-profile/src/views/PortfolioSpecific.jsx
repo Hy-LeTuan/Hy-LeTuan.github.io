@@ -39,7 +39,7 @@ function PortfolioSpecific() {
 				</div>
 			</section>
 			<section className="section-container bg-white">
-				<div className="flex flex-col w-full gap-3">
+				<div className="title-subtitle-cluster">
 					<h5 className="text-neutral-400">Specific Details</h5>
 					<h1>Up-to-date project details </h1>
 				</div>
@@ -58,7 +58,7 @@ function PortfolioSpecific() {
 				</div>
 			</section>
 			<section className="section-container bg-neutral-100">
-				<div className="flex flex-col w-full gap-3 text-left">
+				<div className="title-subtitle-cluster">
 					<h5 className="text-neutral-400">Project Description</h5>
 					<h1>Delve into the project </h1>
 				</div>
@@ -247,7 +247,7 @@ function PortfolioSpecific() {
 				</div>
 			</section>
 			<section className="section-container bg-white">
-				<div className="flex flex-col w-full gap-3 text-center">
+				<div className="title-subtitle-cluster">
 					<h5 className="text-neutral-400">Project Showcase</h5>
 					<h1>See how it works</h1>
 				</div>

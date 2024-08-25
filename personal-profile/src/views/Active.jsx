@@ -43,11 +43,11 @@ function Active() {
 
 			<section className="section-container">
 				<div className="w-full m-0 p-0 xl:w-3/4 xl:mx-auto">
-					<div className="flex flex-col w-full gap-3">
+					<div className="title-subtitle-cluster">
 						<h5 className="text-neutral-400">Project List</h5>
 						<h1>Actively worked on projects</h1>
 					</div>
-					<div className="main-section gap-16 mt-12 place-items-center md:mt-16 md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5 lg:gap-x-10 lg:gap-y-20 lg:mt-24 xl:mt-32 xl:gap-x-12 xl:gap-y-24 xl:">
+					<div className="main-section gap-16 mt-12 place-items-center md:mt-16 md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5 lg:gap-x-10 lg:gap-y-20 lg:mt-24 xl:mt-28 xl:gap-x-12 xl:gap-y-24 xl:">
 						{projects?.map((project, index) => (
 							<div
 								className={

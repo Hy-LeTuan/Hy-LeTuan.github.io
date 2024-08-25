@@ -3,206 +3,213 @@
 @tailwind utilities;
 
 @layer base {
-	body {
-		@apply bg-light-blue;
-	}
+    body {
+        @apply bg-light-blue;
+    }
 
-	h1 {
-		@apply text-3xl font-heading-font font-medium lg:text-4xl xl:text-5xl;
-	}
+    h1 {
+        @apply text-3xl font-heading-font font-medium lg:text-4xl xl:text-5xl;
+    }
 
-	h2 {
-		@apply text-2xl font-heading-font font-medium lg:text-3xl xl:text-xl-h2;
-	}
+    h2 {
+        @apply text-2xl font-heading-font font-medium lg:text-3xl xl:text-xl-h2;
+    }
 
-	h3 {
-		@apply text-xl font-heading-font font-medium lg:text-2xl xl:text-4xl;
-	}
+    h3 {
+        @apply text-xl font-heading-font font-medium lg:text-2xl xl:text-4xl;
+    }
 
-	h4 {
-		@apply text-lg font-heading-font font-medium lg:text-xl xl:text-3xl;
-	}
+    h4 {
+        @apply text-lg font-heading-font font-medium lg:text-xl xl:text-3xl;
+    }
 
-	h5 {
-		@apply text-base font-heading-font font-medium lg:text-lg xl:text-2xl;
-	}
+    h5 {
+        @apply text-base font-heading-font font-medium lg:text-lg xl:text-2xl;
+    }
 
-	h6 {
-		@apply text-sm font-heading-font font-medium lg:text-base xl:text-xl;
-	}
+    h6 {
+        @apply text-sm font-heading-font font-medium lg:text-base xl:text-xl;
+    }
 
-	p {
-		@apply text-sm font-body-font lg:text-base xl:text-2xl;
-	}
+    p {
+        @apply text-sm font-body-font lg:text-base xl:text-xl;
+    }
 }
 
 @layer components {
-	/* Font size  */
-	.display {
-		@apply text-4xl lg:text-5xl xl:text-6xl;
-	}
+    /* Font size  */
+    .display {
+        @apply text-4xl lg:text-5xl xl:text-6xl;
+    }
 
-	/* Banners */
-	.main-banner {
-		@apply text-white py-16 flex flex-col gap-4 justify-center items-center overflow-hidden md:py-20 lg:py-24 lg:gap-7 xl:py-40 xl:gap-10;
-	}
+    /* Banners */
+    .main-banner {
+        @apply text-white py-16 flex flex-col gap-4 justify-center items-center overflow-hidden md:py-20 lg:py-24 lg:gap-7 xl:py-40 xl:gap-10;
+    }
 
-	.section-banner {
-		@apply w-full bg-primary relative overflow-hidden mt-7 flex justify-center items-center py-3 md:mt-8 lg:py-6 lg:mt-9 xl:py-8;
-	}
+    .section-banner {
+        @apply w-full bg-primary relative overflow-hidden mt-7 flex justify-center items-center py-3 md:mt-8 lg:py-6 lg:mt-9 xl:py-8;
+    }
 
-	.banner-hr {
-		@apply text-white bg-white w-1/2 text-center xl:w-2/5;
-	}
+    .banner-hr {
+        @apply text-white bg-white w-1/2 text-center xl:w-2/5;
+    }
 
-	.biography {
-		@apply relative z-10 flex flex-col gap-2 xl:gap-5 text-white;
-	}
+    .biography {
+        @apply relative z-10 flex flex-col gap-2 xl:gap-5 text-white;
+    }
 
-	/* Icon */
-	.media-icon {
-		@apply w-6 h-6 lg:w-7 lg:h-7 xl:w-12 xl:h-12;
-	}
+    /* Icon */
+    .media-icon {
+        @apply w-6 h-6 lg:w-7 lg:h-7 xl:w-12 xl:h-12;
+    }
 
-	.location-icon {
-		@apply w-5 h-5;
-	}
+    .location-icon {
+        @apply w-5 h-5;
+    }
 
-	.project-specific-card-icon {
-		@apply w-5 h-5;
-	}
+    .project-specific-card-icon {
+        @apply w-5 h-5;
+    }
 
-	/* Buttons  */
-	.btn {
-		@apply flex items-center justify-center text-center border-solid;
-	}
+    /* Buttons  */
+    .btn {
+        @apply flex items-center justify-center text-center border-solid;
+    }
 
-	.btn-header {
-		@apply font-heading-font border-border-translucent-black bg-neutral rounded-full border-1 h-5 w-16 text-white p-0 transition-colors shadow-header-button duration-300 lg:h-6 lg:w-20;
-	}
+    .btn-header {
+        @apply font-heading-font border-border-translucent-black bg-neutral rounded-full border-1 h-5 w-16 text-white p-0 transition-colors shadow-header-button duration-300 lg:h-6 lg:w-20;
+    }
 
-	.btn-header-active {
-		@apply font-heading-font border-border-translucent-black bg-accent rounded-full border-1 h-5 w-16 text-white p-0 transition-colors shadow-active-header-button duration-300 lg:h-6 lg:w-20;
-	}
+    .btn-header-active {
+        @apply font-heading-font border-border-translucent-black bg-accent rounded-full border-1 h-5 w-16 text-white p-0 transition-colors shadow-active-header-button duration-300 lg:h-6 lg:w-20;
+    }
 
-	.btn-card-footer {
-		@apply bg-gradient-to-r from-accent to-alert w-full py-1 rounded-md lg:px-3 xl:px-5 xl:py-1;
-	}
+    .btn-card-footer {
+        @apply bg-gradient-to-r from-accent to-alert w-full py-1 rounded-md lg:px-3 xl:px-5 xl:py-1;
+    }
 
-	.btn-blog-read-more {
-		@apply bg-gradient-to-r from-alert to-accent px-4 py-px rounded-md;
-	}
+    .btn-blog-read-more {
+        @apply bg-gradient-to-r from-alert to-accent px-4 py-px rounded-md;
+    }
 
-	/* Cards */
-	.card-full-width-banner {
-		@apply shadow-card col-span-1 flex flex-col bg-white overflow-hidden gap-4 pb-2 w-1/2 md:pb-3 md:w-2/3 lg:pb-4 xl:w-1/2;
-	}
+    /* Cards */
+    .card-full-width-banner {
+        @apply shadow-card col-span-1 flex flex-col bg-white overflow-hidden gap-4 pb-2 w-1/2 md:pb-3 md:w-2/3 lg:pb-4 xl:w-1/2;
+    }
 
-	.card {
-		@apply px-4 py-8 md:px-6 col-span-1 rounded-xl xl:py-10 xl:px-8;
-	}
+    .card {
+        @apply px-4 py-8 md:px-6 col-span-1 rounded-xl xl:py-10 xl:px-8;
+    }
 
-	.project-specific-card {
-		@apply bg-transparent backdrop-blur-md px-3 py-2 col-span-1 md:px-3 md:py-3 lg:px-4 lg:py-4 xl:px-5 shadow-gray-500 shadow-md;
-	}
+    .project-specific-card {
+        @apply bg-transparent backdrop-blur-md px-3 py-2 col-span-1 md:px-3 md:py-3 lg:px-4 lg:py-4 xl:px-5 shadow-gray-500 shadow-md;
+    }
 
-	.certificate-card {
-		@apply bg-white col-span-1 flex flex-col gap-4 pb-2 rounded-lg shadow-lg shadow-black border-1 border-white overflow-hidden lg:pb-4;
-	}
+    .certificate-card {
+        @apply bg-white col-span-1 flex flex-col gap-4 pb-2 rounded-lg shadow-lg shadow-black border-1 border-white overflow-hidden lg:pb-4;
+    }
 
-	.card-split-title {
-		@apply shadow-card bg-white pr-3 col-span-1;
-	}
+    .card-split-title {
+        @apply shadow-card bg-white pr-3 col-span-1;
+    }
 
-	.card-body-single-column {
-		@apply flex flex-col text-left;
-	}
+    .card-body-single-column {
+        @apply flex flex-col text-left;
+    }
 
-	.project-card-stats {
-		@apply flex items-center justify-between;
-	}
+    .project-card-stats {
+        @apply flex items-center justify-between;
+    }
 
-	.project-card-footer {
-		@apply flex justify-between items-end w-full lg:flex-col lg:justify-center lg:items-center lg:gap-6;
-	}
+    .project-card-footer {
+        @apply flex justify-between items-end w-full lg:flex-col lg:justify-center lg:items-center lg:gap-6;
+    }
 
-	.project-specific-single-part {
-		@apply flex flex-col gap-1 items-start justify-start;
-	}
+    .project-specific-single-part {
+        @apply flex flex-col gap-1 items-start justify-start;
+    }
 
-	.blog-card {
-		@apply flex flex-col gap-8 justify-center items-center bg-primary rounded-lg overflow-hidden lg:gap-10 xl:gap-14;
-	}
+    .blog-card {
+        @apply flex flex-col gap-8 justify-center items-center bg-primary rounded-lg overflow-hidden lg:gap-10 xl:gap-14;
+    }
 
-	.blog-card-body {
-		@apply flex flex-col gap-2 py-0 px-4 lg:gap-4 lg:px-5 xl:gap-6;
-	}
+    .blog-card-body {
+        @apply flex flex-col gap-2 py-0 px-4 lg:gap-4 lg:px-5 xl:gap-6;
+    }
 
-	.target-card {
-		@apply shadow-card relative overflow-hidden flex flex-col col-span-1 gap-4 py-4 px-4 justify-center bg-primary rounded-xl md:gap-6 lg:px-6 lg:py-6 max-w-80 md:max-w-96 xl:max-w-md;
-	}
+    .target-card {
+        @apply shadow-card relative overflow-hidden flex flex-col col-span-1 gap-4 py-4 px-4 justify-center bg-primary rounded-xl md:gap-6 lg:px-6 lg:py-6 max-w-80 md:max-w-96 xl:max-w-md;
+    }
 
-	.target-card-footer {
-		@apply flex justify-between items-center;
-	}
+    .target-card-footer {
+        @apply flex justify-between items-center;
+    }
 
-	.target-card-footer-col {
-		@apply flex flex-col justify-center items-start gap-1;
-	}
+    .target-card-footer-col {
+        @apply flex flex-col justify-center items-start gap-1;
+    }
 
-	/* Utilities */
+    /* Utilities */
+    .main-section {
+        @apply flex flex-col gap-6 w-full;
+    }
 
-	.main-section {
-		@apply flex flex-col gap-6;
-	}
+    .row {
+        @apply w-full flex justify-center items-center;
+    }
 
-	.row {
-		@apply w-full flex justify-center items-center;
-	}
+    .statistic-row {
+        @apply flex justify-between items-center bg-primary text-white rounded-md px-4 py-1 lg:py-1;
+    }
 
-	.statistic-row {
-		@apply flex justify-between items-center bg-primary text-white rounded-md px-4 py-1 lg:py-1;
-	}
+    .card-holder {
+        @apply flex flex-col gap-9 p-6 lg:col-span-2 lg:grid lg:grid-cols-2 lg:place-items-stretch lg:gap-20;
+    }
 
-	.card-holder {
-		@apply flex flex-col gap-9 p-6 lg:col-span-2 lg:grid lg:grid-cols-2 lg:place-items-stretch lg:gap-20;
-	}
+    .section-container {
+        @apply px-6 py-16 md:py-20 md:px-7 lg:py-24 lg:px-16 xl:px-24 xl:py-32;
+    }
 
-	.section-container {
-		@apply px-6 py-16 md:py-20 md:px-7 lg:py-24 lg:px-16 xl:px-24 xl:py-28;
-	}
+    .dialogue-box {
+        @apply mt-3 lg:mt-8 text-white text-left bg-white/5 border-white/10 border-1 rounded-lg px-4 xl:px-6 py-2 xl:py-6 origin-top transition duration-200 ease-out;
+    }
 
-	/* Cluster */
-	.normal-card-cluster {
-		@apply flex flex-col gap-1 lg:gap-2;
-	}
+    /* Cluster */
+    .normal-card-cluster {
+        @apply flex flex-col gap-1 lg:gap-2;
+    }
+
+    .title-subtitle-cluster {
+        @apply flex flex-col w-full gap-8;
+    }
 }
 
 .circles li {
-	opacity: 0;
-	scale: 0;
-	border-radius: 100%;
-	animation: bubbles linear;
-	animation-iteration-count: infinite;
-	z-index: 1;
+    opacity: 0;
+    scale: 0;
+    border-radius: 100%;
+    animation: bubbles linear;
+    animation-iteration-count: infinite;
+    z-index: 1;
 }
 
 @keyframes bubbles {
-	from {
-		opacity: 0;
-		scale: 0;
-		transform-origin: bottom;
-	}
+    from {
+        opacity: 0;
+        scale: 0;
+        transform-origin: bottom;
+    }
 
-	50% {
-		opacity: 0.5;
-		scale: 1;
-		transform-origin: top;
-	}
+    50% {
+        opacity: 0.5;
+        scale: 1;
+        transform-origin: top;
+    }
 
-	to {
-		opacity: 0;
-		scale: 2;
-		transform-origin: bottom;
-	}
+    to {
+        opacity: 0;
+        scale: 2;
+        transform-origin: bottom;
+    }
 }
