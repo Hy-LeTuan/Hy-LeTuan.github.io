@@ -69,7 +69,7 @@
     }
 
     .project-specific-card-icon {
-        @apply w-5 h-5;
+        @apply w-5 h-5 xl:w-7 xl:h-7;
     }
 
     /* Buttons  */
@@ -90,7 +90,7 @@
     }
 
     .btn-blog-read-more {
-        @apply bg-gradient-to-r from-alert to-accent px-4 py-px rounded-md;
+        @apply hover:scale-105 hover:from-alert/80 hover:to-accent/80 transition-all duration-300 bg-gradient-to-r from-alert to-accent px-4 py-px xl:py-1 rounded-md;
     }
 
     /* Cards */
@@ -131,7 +131,7 @@
     }
 
     .blog-card {
-        @apply flex flex-col gap-8 justify-center items-center bg-primary rounded-lg overflow-hidden lg:gap-10 xl:gap-14;
+        @apply flex flex-col gap-8 justify-center items-center bg-primary rounded-lg overflow-hidden shadow-black shadow-md lg:gap-10 xl:gap-14;
     }
 
     .blog-card-body {

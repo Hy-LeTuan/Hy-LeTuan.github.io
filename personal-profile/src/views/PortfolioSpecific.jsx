@@ -92,7 +92,7 @@ function PortfolioSpecific() {
 										alt="Description icon"
 									/>
 								</div>
-								<ul className="flex flex-col gap-3 text-left text-black marker:text-accent">
+								<ul className="flex flex-col gap-3 xl:gap-5 text-left text-black marker:text-accent">
 									{project?.technologies?.map(
 										(tech, index) => (
 											<li
@@ -101,7 +101,7 @@ function PortfolioSpecific() {
 												<img
 													src="/src/assets/page-icons/info.svg"
 													alt="Information icon"
-													className="h-3 w-3"
+													className="h-3 w-3 xl:w-5 xl:h-5"
 												/>
 												<p>{tech}</p>
 											</li>
@@ -112,7 +112,7 @@ function PortfolioSpecific() {
 						</div>
 					</div>
 					<div className="card bg-white border-[0.5px] border-black md:col-span-1 lg:px-6">
-						<div className="card-body-single-column gap-3">
+						<div className="card-body-single-column gap-3 xl:gap-5">
 							<h4 className="text-black text-left">
 								My contributions
 							</h4>
@@ -125,6 +125,7 @@ function PortfolioSpecific() {
 								long or short, but it must fulfill its intended
 								purpose.
 							</p>
+                            <hr className="border-black text-black/50"/>
 							<p className="text-left font-body-font text-black mt-2">
 								This is the place to put in the project
 								description. Describe what it does and who does
@@ -199,11 +200,11 @@ function PortfolioSpecific() {
 									key={index}
 									className="flex flex-col gap-3 lg:gap-6 xl:gap-8">
 									<div className="border-t-[0.5px] border-white"></div>
-									<div className="flex justify-start items-center gap-3">
+									<div className="flex justify-start items-center gap-3 xl:gap-5">
 										<img
 											src="/src/assets/arrow_circle_right.svg"
 											alt="arrow pointing right icon"
-											className="w-4 h-4"
+											className="w-4 h-4 xl:h-5 xl:w-5"
 										/>
 										<div className="text-left font-body-font text-white">
 											<p>{pair.difficulty}</p>
@@ -230,11 +231,11 @@ function PortfolioSpecific() {
 									key={index}
 									className="flex flex-col gap-3 lg:gap-6 xl:gap-8">
 									<div className="border-t-[0.5px] border-black"></div>
-									<div className="flex justify-start items-center gap-3">
+									<div className="flex justify-start items-center gap-3 xl:gap-5">
 										<img
 											src="/src/assets/arrow_circle_right_black.svg"
 											alt="arrow pointing right icon"
-											className="w-4 h-4"
+											className="w-4 h-4 xl:h-5 xl:w-5"
 										/>
 										<div className="text-left font-body-font text-black">
 											<p>{pair.solution}</p>

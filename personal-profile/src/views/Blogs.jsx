@@ -63,7 +63,7 @@ function Blogs() {
 				</div>
 			</section>
 			<section className="section-container bg-white">
-				<div className="main-section gap-8 place-items-center md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5 lg:gap-x-10 lg:gap-y-20 xl:gap-x-12 xl:gap-y-24 xl:w-3/4 xl:mx-auto">
+				<div className="main-section gap-8 place-items-center md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5 lg:gap-x-10 lg:gap-y-20 xl:gap-x-24 xl:gap-y-24 xl:w-3/4 xl:mx-auto">
 					{blogs?.map((blog, index) => (
 						<div className="blog-card" key={index}>
 							<div className="w-full h-72 xl:h-96 bg-neutral-400"></div>
@@ -96,7 +96,7 @@ function Blogs() {
 										<img
 											src="./src/assets/expand.svg"
 											alt="expand icon"
-											className="text-white w-4 h-4 -rotate-90 transition-all duration-300"
+											className="text-white w-4 h-4 xl:w-8 xl:h-8 -rotate-90 transition-all duration-300"
 										/>
 									</button>
 								) : (

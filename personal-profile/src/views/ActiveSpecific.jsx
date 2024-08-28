@@ -112,7 +112,7 @@ function ActiveSpecific() {
 										alt="Description icon"
 									/>
 								</div>
-								<ul className="flex flex-col gap-3 text-left text-black marker:text-accent">
+								<ul className="flex flex-col gap-3 xl:gap-5 text-left text-black marker:text-accent">
 									{activeProject?.technologies?.map(
 										(tech, index) => (
 											<li
@@ -121,7 +121,7 @@ function ActiveSpecific() {
 												<img
 													src="/src/assets/page-icons/info.svg"
 													alt="Information icon"
-													className="h-3 w-3"
+													className="h-3 w-3 xl:w-5 xl:h-5"
 												/>
 												<p>{tech}</p>
 											</li>
@@ -145,6 +145,7 @@ function ActiveSpecific() {
 								long or short, but it must fulfill its intended
 								purpose.
 							</p>
+                            <hr className="border-black text-black/50"/>
 							<p className="text-left font-body-font text-black mt-2">
 								This is the place to put in the project
 								description. Describe what it does and who does
