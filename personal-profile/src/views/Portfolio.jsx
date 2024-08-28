@@ -68,6 +68,11 @@ function Portfolio() {
         }
     };
 
+    // on hovering over certificate 
+    const onMousEnterCertificate = () => {
+        console.log("mouse hovering over certificate"); 
+    }
+
     // options
     const options = {
         elements: {
@@ -174,7 +179,7 @@ function Portfolio() {
                     />
                     <div className="border-black border-t-[0.5px] mt-7 mb-9 md:mt-12 md:mb-14 lg:mt-16 lg:mb-20 xl:mt-20 xl:mb-24"></div>
                     <div className="m-0 p-0 md:grid md:grid-cols-2 md:gap-x-5 md:place-items-stretch lg:gap-x-10 xl:gap-x-12">
-                        <div className="card py-2 px-4 bg-neutral-100 border-[0.5px] border-black mt-7 md:mt-0 lg:py-3 xl:py-6 lx:px-6">
+                        <div className="card py-2 px-4 bg-neutral-100 border-[0.5px] border-black mt-7 md:mt-0 lg:py-3 xl:py-6 lx:px-6 transition-all hover:border-accent/80 hover:border-2 hover:scale-105">
                             <div className="card-body-single-column gap-3 xl:gap-8">
                                 <h2>{stats.finished}</h2>
                                 <p className="text-neutral-500">
@@ -183,7 +188,7 @@ function Portfolio() {
                                 </p>
                             </div>
                         </div>
-                        <div className="card py-2 px-4 bg-primary border-[0.5px] border-black mt-7 md:mt-0 lg:py-3 xl:py-6 lx:px-6">
+                        <div className="card py-2 px-4 bg-primary border-[0.5px] border-black mt-7 md:mt-0 lg:py-3 xl:py-6 lx:px-6 transition-all hover:border-accent/80 hover:border-2 hover:scale-105">
                             <div className="card-body-single-column gap-3 xl:gap-8">
                                 <h2 className="text-white">{stats.finished}</h2>
                                 <p className="text-neutral-400">
@@ -278,6 +283,7 @@ function Portfolio() {
                     <div className="main-section mt-12 gap-8 place-items-center md:mt-16 md:grid md:grid-cols-2 md:gap-y-16 md:gap-x-5 lg:gap-x-10 lg:gap-y-20 xl:mt-24 xl:gap-x-12 xl:gap-y-24">
                         {certs?.map((cert, index) => (
                             <div
+                                onMouseEnter={(e) => onMousEnterCertificate(e)}
                                 className={
                                     doubleCol
                                         ? index % 2 === 0

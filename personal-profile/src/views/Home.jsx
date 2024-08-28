@@ -129,7 +129,7 @@ function Home() {
         <>
             <section className="relative overflow-hidden clear-both w-full bg-primary">
                 <div className="main-banner">
-                    <div className="relative z-10 rounded-full w-32 h-32 lg:w-36 lg:h-36 xl:w-44 xl:h-44 bg-secondary"></div>
+                    <img src="/src/assets/images/main_profile_picture.png" className="relative z-10 mb-2 md:mb-4 lg:mb-6 xl:mb-6 object-cover rounded-full w-28 h-28 md:w-32 md:h-32 lg:w-48 lg:h-48 xl:w-64 xl:h-64"/>
                     <div className="biography">
                         <h1 className="display">Hey, I'm Le Tuan Hy</h1>
                         <h4>Studet, Developer, Sportstes</h4>
@@ -139,7 +139,7 @@ function Home() {
                     {SquareAnimation(null)}
                 </div>
             </section>
-            <section className="section-container px-8 bg-white">
+            <section className="section-container px-4 lg:px-8 bg-white">
                 <div className="title-subtitle-cluster">
                     <h5 className="text-neutral-400">WELCOME</h5>
                     <h1 className="">
@@ -148,7 +148,7 @@ function Home() {
                     </h1>
                 </div>
                 <div className="main-section mt-12 gap-9 lg:mt-20 lg:gap-11 xl:mt-24 xl:gap-14">
-                    <div className="flex flex-col md:flex-row justifiy-center items-stretch gap-8">
+                    <div className="flex flex-col md:flex-row justifiy-center items-stretch md:gap-4 lg:gap-6 xl:gap-8">
                         <div
                             className="card relative bg-primary overflow-hidden py-0 px-0 grow-1 md:data-[open]:w-full md:data-[close]:w-1/2 group transition-all duration-500"
                             id="left-card"
@@ -156,13 +156,13 @@ function Home() {
                             data-open={leftCardOpen ? "" : undefined}
                             data-close={leftCardOpen ? undefined : ""}
                         >
-                            <div className="m-0 py-0 px-0 md:px-12 h-full flex flex-col md:flex-row md:justify-between">
+                            <div className="m-0 py-0 px-0 md:px-4 lg:px-6 xl:px-12 h-full flex flex-col md:flex-row md:justify-between">
                                 <img
                                     src="/src/assets/images/profile_picture.png"
                                     alt="Profile picture"
-                                    className="basis-0 object-fit w-full md:w-2/5 md:absolute md:right-0 md:group-data-[open]:opacity-100 md:group-data-[close]:opacity-0 md:data-[close]:hidden md:transition-opacity"
+                                    className="basis-0 object-fit md:w-2/5 md:absolute md:right-0 md:group-data-[open]:opacity-100 md:top-1/2 md:rounded-md md:-translate-y-1/2 md:group-data-[close]:opacity-0 md:data-[close]:hidden md:transition-opacity"
                                 />
-                                <div className="px-6 py-8 max-w-[500px] gap-4 h-full flex flex-col justify-center items-start">
+                                <div className="md:py-4 lg:py-6 xl:py-8 md:max-w-[250px] lg:max-w-[320px] xl:max-w-[500px] gap-4 h-full flex flex-col justify-center items-start">
                                     <header className="flex flex-col gap-3 lg:gap-6">
                                         <img
                                             src="/src/assets/page-icons/square_up_right_white.svg"
@@ -174,9 +174,8 @@ function Home() {
                                     </header>
                                     <div className="card-body-single-column gap-6 xl:gap-10 xl:mt-10">
                                         <p className="text-left text-white group-data-[close]:delay-200 md:group-data-[open]:delay-75 transition-all md:group-data-[close]:translate-y-40 duration-300">
-                                            Hi there, my name is Tuan Hy and I
-                                            just have a passion for computer
-                                            from Vietnam.
+                                            Hi there! My name is Tuan Hy and I
+                                            have a passion for computer.
                                         </p>
                                         <footer className="flex flex-col gap-4 md:gap-6 justify-center items-start md:group-data-[open]:opacity-100 md:group-data-[close]:opacity-0 transition-opacity ease-out md:group-data-[open]:delay-200 md:group-data-[close]:delay-75 duration-300">
                                             <div className="flex flex-row gap-4 justify-center items-center">
@@ -185,9 +184,9 @@ function Home() {
                                                     className="w-3 h-3 md:w-5 md:h-5"
                                                 />
                                                 <p className="text-neutral-400 text-xs text-left lg:text-sm xl:text-xl">
-                                                    I’m currently working
-                                                    towards my dream of being a
-                                                    computer scientist.
+                                                    I’m working towards my dream
+                                                    of being a computer
+                                                    scientist.
                                                 </p>
                                             </div>
                                             <div className="flex flex-row gap-4 justify-center items-center">
@@ -196,10 +195,9 @@ function Home() {
                                                     className="w-3 h-3 md:w-5 md:h-5"
                                                 />
                                                 <p className="text-neutral-400 text-xs text-left lg:text-sm xl:text-xl">
-                                                    Apart from programming, I
-                                                    also love designing
-                                                    websites, playing music and
-                                                    sending tennis balls flying.
+                                                    I also enjoy some web designing,
+                                                    playing good music and sending
+                                                    tennis balls flying.
                                                 </p>
                                             </div>
                                         </footer>
@@ -214,13 +212,13 @@ function Home() {
                             data-open={rightCardOpen ? "" : undefined}
                             data-close={rightCardOpen ? undefined : ""}
                         >
-                            <div className="m-0 p-0 px-0 md:px-12 h-full flex flex-col md:flex-row md:justify-between">
+                            <div className="m-0 p-0 px-0 md:px-4 lg:px-6 xl:px-12 h-full flex flex-col md:flex-row md:justify-between">
                                 <img
                                     src="/src/assets/images/about_this_site_illustration.png"
                                     alt="About this site illustration"
-                                    className="basis-0 object-fit md:w-1/2 md:absolute md:top-1/2 md:-translate-y-1/2 md:right-0 md:group-data-[close]/right-card:hidden"
+                                    className="basis-0 object-fit md:w-2/5 lg:w-5/12 xl:w-1/2 md:absolute md:top-1/2 md:-translate-y-1/2 md:right-0 md:group-data-[close]/right-card:hidden"
                                 />
-                                <div className="px-6 py-8 max-w-[500px] gap-4 h-full flex flex-col justify-center items-start">
+                                <div className="md:py-4 lg:py-6 xl:py-8 md:max-w-[250px] lg:max-w-[320px] xl:max-w-[500px] gap-4 h-full flex flex-col justify-center items-start">
                                     <header className="flex flex-col gap-3 lg:gap-6">
                                         <img
                                             src="/src/assets/page-icons/square_up_right_black.svg"
@@ -232,9 +230,8 @@ function Home() {
                                     </header>
                                     <div className="card-body-single-column gap-6 xl:gap-10 xl:mt-10">
                                         <p className="text-left group-data-[close]/right-card:delay-200 md:group-data-[open]/right-card:delay-75 transition-all md:group-data-[close]/right-card:translate-y-40 duration-300">
-                                            This is my own portfolio page, where
-                                            I show off my passion for
-                                            programming.
+                                            This is my portfolio page, where I
+                                            show off some fun projects.
                                         </p>
                                         <footer className="flex flex-col gap-4 md:gap-6 justify-center items-start md:group-data-[open]/right-card:opacity-100 md:group-data-[close]/right-card:opacity-0 transition-opacity ease-out md:group-data-[open]/right-card:delay-200 md:group-data-[close]/right-card:delay-75 duration-300">
                                             <div className="flex flex-row gap-4 justify-center items-center">
@@ -245,7 +242,7 @@ function Home() {
                                                 <p className="text-neutral-700 text-xs text-left lg:text-sm xl:text-xl">
                                                     The Profile page contains
                                                     projects that have fulfilled
-                                                    their main purposeses.
+                                                    their functions.
                                                 </p>
                                             </div>
                                             <div className="flex flex-row gap-4 justify-center items-center">
@@ -331,7 +328,7 @@ function Home() {
                                         </DisclosureButton>
                                     </div>
                                     <DisclosurePanel
-                                        className="dialogue-box data-[closed]:-translate-y-6 data-[closed]:opacity-0 data-[closed]:scale-90"
+                                        className="dialogue-box duration-200 data-[closed]:-translate-y-6 data-[closed]:opacity-0 data-[closed]:scale-90"
                                         transition
                                     >
                                         <p>{c.description}</p>
