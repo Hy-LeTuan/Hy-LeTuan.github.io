@@ -129,7 +129,10 @@ function Home() {
         <>
             <section className="relative overflow-hidden clear-both w-full bg-primary">
                 <div className="main-banner">
-                    <img src="/src/assets/images/main_profile_picture.png" className="relative z-10 mb-2 md:mb-4 lg:mb-6 xl:mb-6 object-cover rounded-full w-28 h-28 md:w-32 md:h-32 lg:w-48 lg:h-48 xl:w-64 xl:h-64"/>
+                    <img
+                        src="/src/assets/images/main_profile_picture.png"
+                        className="relative z-10 mb-2 md:mb-4 lg:mb-6 xl:mb-6 object-cover rounded-full w-28 h-28 md:w-32 md:h-32 lg:w-48 lg:h-48 xl:w-64 xl:h-64"
+                    />
                     <div className="biography">
                         <h1 className="display">Hey, I'm Le Tuan Hy</h1>
                         <h4>Studet, Developer, Sportstes</h4>
@@ -195,9 +198,10 @@ function Home() {
                                                     className="w-3 h-3 md:w-5 md:h-5"
                                                 />
                                                 <p className="text-neutral-400 text-xs text-left lg:text-sm xl:text-xl">
-                                                    I also enjoy some web designing,
-                                                    playing good music and sending
-                                                    tennis balls flying.
+                                                    I also enjoy some web
+                                                    designing, playing good
+                                                    music and sending tennis
+                                                    balls flying.
                                                 </p>
                                             </div>
                                         </footer>
@@ -300,9 +304,9 @@ function Home() {
             </section>
             <section className="section-container bg-primary">
                 <div className="title-subtitle-cluster">
-                    <h5 className="text-neutral-400">Journey Checkpoints</h5>
+                    <h5 className="text-neutral-400">Coding Skillset</h5>
                     <h1 className="text-white">
-                        My memorable coding checkpoints
+                        VALUABLE SKILLS I ACCQUIRED
                     </h1>
                 </div>
                 <div className="main-section mt-12 xl:mt-32">
@@ -314,16 +318,19 @@ function Home() {
                                         <img
                                             src="/src/assets/mark_location.svg"
                                             alt="Location mark icon"
-                                            className="w-6 h-7 xl:w-8 xl:h-9"
+                                            className="w-6 h-7 xl:w-9 xl:h-10"
                                         />
                                         <DisclosureButton className="flex flex-grow items-center justify-between px-4 py-1 bg-white/5 rounded-lg group data-[active]:bg-white/10 xl:py-4 xl:px-8">
-                                            <h4 className="text-white">
-                                                {c.title}
-                                            </h4>
+                                            <div className="flex flex-row items-center gap-6 xl:gap-8">
+                                                <h3 className="text-white">
+                                                    {c.title}
+                                                </h3>
+                                                <img className="checkpoint-icon" src={`${c.icon}`}/>
+                                            </div>
                                             <img
                                                 src="/src/assets/angle_down.svg"
                                                 alt="Angle down icon"
-                                                className="-rotate-90 w-8 group-data-[open]:rotate-0 transition-transform duration-200 xl:w-8 xl:h-8"
+                                                className="-rotate-90 w-8 group-data-[open]:rotate-0 transition-transform duration-200 xl:w-10 xl:h-10"
                                             />
                                         </DisclosureButton>
                                     </div>

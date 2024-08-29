@@ -1,24 +1,38 @@
-{
-	"checkpoints": [
-		{
-			"title": "A missed dream",
-			"description": "Growing up, I've always aspired to be a doctor. However, after 10th grade and some experience working with real doctors, I realized I couldn't stand blood and extreme images."
-		},
-		{
-			"title": "My new path",
-			"description": "On the search for a new purpose in life, I stumbled across the world of programming, a place where I can have a positive impact on people's lives and guide them on getting the help they need from professionals."
-		},
-		{
-			"title": "The first program",
-			"description": "I took Mr. Mosh’s Python course from his youtube channel: Programming with Mosh to write my first program."
-		},
-		{
-			"title": "Oh, it’s serious now",
-			"description": "After some time messing around with Python, I decided to complete Harvard’s CS50 course for a better grasp of computer fundamentals."
-		},
-		{
-			"title": "The infamous DS & A",
-			"description": "During the CS50 course, I was introduced to  new data structures that I’ve never heard of. Apparently the root of the tree is on top now."
-		}
-	]
+{ "checkpoints": [
+        {
+            "title": "HTML",
+            "description": "I have had experiences in coding with basic and semantic HTML for better SEO and clear, concise code",
+            "icon": "/src/assets/skill-icons/html-icon.svg"
+        },
+        {
+            "title": "CSS",
+            "description": "I am efficient in working with CSS attributes, CSS selectors and CSS rules. I am also comfortable with making keyframes animations and do media queries for responsive design.",
+            "icon": "/src/assets/skill-icons/css-icon.svg"
+        },
+        {
+            "title": "JAVASCRIPT",
+            "description": "I started learning Javascript by reading the entirety of Javascript - The Definitive Guide by David Flanagan. I am also familiar with manipulating DOM elements using pure Javascript",
+            "icon": "/src/assets/skill-icons/js-icon.svg"
+        },
+        {
+            "title": "TAILWIND",
+            "description": "I have had experiences working with Tailwind CSS and has grapsed its many utility classes. I have also worked with configuring the base style of Tailwind to fit the brand identity and provide custom classes for faster work flow",
+            "icon": "/src/assets/skill-icons/tailwind-icon.svg"
+        },
+        {
+            "title": "REACT",
+            "description": "React was the first Frontend library I learnt, and so I am very familiar with its core functionalities. I have worked with React hooks and custom hooks multiple times and am also efficient in using React as a frontend to communicate with a backend server",
+            "icon": "/src/assets/skill-icons/react-icon.svg"
+        },
+        {
+            "title": "SQL DATABASE",
+            "description": "I started working with SQL database through Microsoft Access first to graps its architecture. From then I have had experiences working with SQL database through SQLite and the Flask framework and SQL database through the ORM from Django and other frameworks.",
+            "icon": "/src/assets/skill-icons/database-icon.svg"
+        },
+        {
+            "title": "Django Framework",
+            "description": "I have built projects with Django and Django REST framework as a backend service. I have also worked with Django's ORM and Django admin view to create admin control panels for better control of the website.",
+            "icon": "/src/assets/skill-icons/django-icon.svg"
+        }
+    ]
 }
