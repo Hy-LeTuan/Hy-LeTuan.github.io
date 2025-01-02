@@ -1,0 +1,84 @@
+@use "../index.scss";
+
+.header {
+	position: sticky;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	.item {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+
+		button {
+			padding: 0.25rem 1rem;
+			border-radius: 100rem;
+			border: 1px solid #5c5ca3;
+			background: none;
+		}
+	}
+
+	.item--button {
+		position: relative;
+		button {
+			border: none;
+			background: none;
+			transition: color 150ms linear;
+
+			&:hover {
+				color: #5c5ca3;
+			}
+		}
+	}
+}
+
+.header-menu {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	margin-top: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #5c5ca3;
+	border-radius: 8px;
+	padding: 0.5rem 1rem;
+	gap: 1rem;
+	transition-property: height width;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	box-sizing: content-box;
+	overflow: hidden;
+
+	.header-menu-page {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		transition-property: transform opacity;
+		transition-duration: 150ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		animation: fadeIn 600ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+
+		.footer {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			gap: 0.75rem;
+		}
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		transform: translateX(-30px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}

@@ -1,0 +1,43 @@
+:root {
+  --color-primary: #1a1a2e;
+  --color-secondary: #fbf8ef;
+  --color-accent-teal: #72baa9;
+  --color-accent-orange: #f4a261;
+  --color-accent-blue: #78b3ce;
+}
+
+.ff-header {
+  font-family: "Piazzolla", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.ff-body {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-primary);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--color-secondary);
+}
+
+button {
+  color: inherit;
+}
+
+/*# sourceMappingURL=index.css.map */
