@@ -2,6 +2,7 @@
   --color-primary: #1a1a2e;
   --color-primary-light: #5c5ca3;
   --color-primary-dimmed: #373762;
+  --color-card-purple: #2e2e51;
   --color-secondary: #fbf8ef;
   --color-accent-teal: #72baa9;
   --color-accent-orange: #f4a261;
@@ -27,6 +28,7 @@
   --gap-10: 2.75rem;
   --gap-11: 3rem;
   --gap-sm: 4.25rem;
+  --gap-md: 6rem;
 }
 
 * {
@@ -192,13 +194,26 @@ hr {
   background-color: var(--color-accent-teal);
 }
 
+/*
+---- card
+*/
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-center {
+  justify-content: center;
+  align-items: center;
+}
+
 .index-main {
   width: 100%;
   height: 100vh;
 }
 
 .hero {
-  margin-top: var(--gap-sm);
+  margin-top: var(--gap-md);
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -257,9 +272,16 @@ hr {
 }
 
 .section-button-left {
+  position: absolute;
   left: var(--gap-sm);
   top: 0;
   transform: translateY(-50%);
+  border-radius: 300px;
+  padding: var(--gap-1) var(--gap-3);
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-family: var(--ff-header);
+  font-size: var(--fs-3);
 }
 @media (min-width: 1440px) {
   .section-button-left {
@@ -268,20 +290,27 @@ hr {
 }
 
 .section-button-right {
+  position: absolute;
   right: var(--gap-sm);
   top: 0;
   transform: translateY(-50%);
+  border-radius: 300px;
+  padding: var(--gap-1) var(--gap-3);
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-family: var(--ff-header);
+  font-size: var(--fs-3);
 }
 @media (min-width: 1440px) {
   .section-button-right {
-    left: 6rem;
+    right: 6rem;
   }
 }
 
 .experience .experience-main {
-  max-width: 900px;
+  max-width: 890px;
   margin-inline: auto;
-  margin-top: var(--gap-sm);
+  margin-top: var(--gap-md);
 }
 .experience .experience-main .controller {
   width: 100%;
@@ -380,17 +409,31 @@ hr {
 }
 
 .stacks {
-  margin-top: var(--gap-sm);
+  margin-top: var(--gap-md);
 }
-.stacks .section-button {
-  left: var(--gap-sm);
-  top: 0;
-  transform: translateY(-50%);
+.stacks .stacks-main {
+  margin-top: var(--gap-md);
+  margin-inline: auto;
+  max-width: 1107px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--gap-2);
 }
-@media (min-width: 1440px) {
-  .stacks .section-button {
-    left: 6rem;
-  }
+.stacks .stacks-main .card {
+  background-color: #2e2e51;
+  padding-top: var(--gap-5);
+  padding-bottom: var(--gap-5);
+  border-radius: 12px;
+  gap: var(--gap-4);
+}
+.stacks .stacks-main .card header {
+  font-size: var(--fs-3);
+  font-weight: bold;
+  color: var(--color-accent-teal);
+}
+.stacks .stacks-main .card .icon {
+  max-width: 155px;
+  max-height: 155px;
 }
 
 /*# sourceMappingURL=Index.css.map */

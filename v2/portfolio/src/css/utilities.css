@@ -103,4 +103,17 @@
   background-color: var(--color-accent-teal);
 }
 
+/*
+---- card
+*/
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-center {
+  justify-content: center;
+  align-items: center;
+}
+
 /*# sourceMappingURL=utilities.css.map */
