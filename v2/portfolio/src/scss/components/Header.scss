@@ -1,11 +1,12 @@
 @use "../index.scss";
+@use "../utilities.scss";
 
 .header {
 	position: sticky;
-	display: flex;
-	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+	padding: 1rem 12rem;
+	font-size: var(--fs-0);
 
 	.item {
 		display: flex;
@@ -19,12 +20,30 @@
 			border-radius: 100rem;
 			border: 1px solid #5c5ca3;
 			background: none;
+
+			font-family: inherit;
+			font-size: inherit;
+		}
+	}
+
+	.item--main {
+		div {
+			font-weight: normal;
+			transition-property: transform font-weight;
+
+			&:hover {
+				font-weight: bold;
+				transform: scale(1.1);
+			}
 		}
 	}
 
 	.item--button {
 		position: relative;
+
 		button {
+			font-family: inherit;
+			font-size: inherit;
 			border: none;
 			background: none;
 			transition: color 150ms linear;

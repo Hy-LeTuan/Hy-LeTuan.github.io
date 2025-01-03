@@ -1,0 +1,109 @@
+/*
+---- transitions
+*/
+
+.transition {
+	transition-duration: 150ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-100 {
+	transition-duration: 100ms !important;
+}
+
+/*
+---- positon
+*/
+.relative {
+	position: relative;
+}
+
+/*
+---- flex
+*/
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+/*
+---- icon
+*/
+
+.icon {
+	display: block;
+}
+
+.icon-base {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.icon-large {
+	width: 2rem;
+	height: 2rem;
+}
+
+.location-icon {
+	width: 20px;
+	height: 24px;
+}
+
+/*
+---- hr
+*/
+
+.hr-primary {
+	background-color: var(--color-primary-light);
+	color: var(--color-primary-light);
+	opacity: 1;
+	height: 1px;
+	border: none;
+	width: 100%;
+}
+
+.hr-white {
+	background-color: var(--color-secondary);
+	color: var(--color-secondary);
+	opacity: 1;
+	height: 1px;
+	border: none;
+	width: 100%;
+}
+
+/*
+---- section
+*/
+
+.section {
+	width: 100%;
+	background-color: var(--color-primary);
+}
+
+.section-button {
+	position: absolute;
+	font-family: var(--ff-header);
+	font-size: 24px;
+	font-weight: bold;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: var(--gap-1) var(--gap-3);
+	border-radius: 100px;
+	border: none;
+}
+
+.section-button--orange {
+	background-color: var(--color-accent-orange);
+}
+
+.section-button--teal {
+	background-color: var(--color-accent-teal);
+}
