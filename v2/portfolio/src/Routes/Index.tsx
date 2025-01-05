@@ -3,6 +3,7 @@ import "../css/routes/Index.css";
 import LocationPin from "../Icons/Location";
 import { useAnimate, useInView, stagger, animate, motion } from "motion/react";
 import useArray from "../hooks/useArray";
+import { anim } from "../utils/anim";
 
 function Index() {
 	return (
@@ -148,15 +149,45 @@ function Experience() {
 	const contentContainerRef = useRef(null);
 	const contentContainerInView = useInView(contentContainerRef);
 
-	console.log(contentContainerInView);
+	const experienceRef = useRef(null);
+	const experienceRefInView = useInView(experienceRef, {
+		amount: 0.25,
+	});
 
 	const onControllerClick = (onIndex: number, offIndex: number) => {
 		setActiveSection(onIndex, true);
 		setActiveSection(offIndex, false);
 	};
 
+	// set up animations
+	const animateSection = () => {
+		if (experienceRefInView) {
+			animate(
+				experienceRef.current,
+				{
+					opacity: 1,
+					x: [-200, 0],
+				},
+				{ duration: 0.8, type: "spring", bounce: 0.4 }
+			);
+		} else {
+			animate(
+				experienceRef.current,
+				{
+					opacity: 0,
+					x: [0, 200],
+				},
+				{ duration: 0.8, type: "spring", bounce: 0.4 }
+			);
+		}
+	};
+
+	useEffect(() => {
+		animateSection();
+	}, [experienceRefInView]);
+
 	return (
-		<div className="relative experience">
+		<div className="relative experience" ref={experienceRef}>
 			<div className="section-button-left section-button--orange">
 				Education & Work
 			</div>
@@ -199,6 +230,7 @@ function ExperienceContent(props: {
 	activeSection: Array<boolean>;
 	setHeight: (height: number) => void;
 }) {
+	// useEffect hooks
 	useEffect(() => {
 		let headerMenu = document.querySelector(".content") as HTMLElement;
 		let headerHeight = headerMenu.offsetHeight;
@@ -377,6 +409,7 @@ function ExperienceContent(props: {
 									Engineered a 32K vocab size tokenizer to
 									generate text embeddings
 								</li>
+								<hr className="hr hr-white" />
 								<li>Engineered a 150GB dataset</li>
 							</ul>
 						</div>
@@ -448,100 +481,149 @@ function ExperienceContent(props: {
 }
 
 function TechStacks() {
+	const [stackScope, animateStackScope] = useAnimate();
+	const stackInView = useInView(stackScope, { amount: 0.4 });
+
+	useEffect(() => {
+		if (stackInView) {
+			animateStackScope(
+				".card-wrapper",
+				{ opacity: 1, y: [100, 0] },
+				{
+					delay: stagger(0.1),
+					duration: 0.8,
+					type: "spring",
+					bounce: 0.65,
+				}
+			);
+		} else {
+			animateStackScope(
+				".card-wrapper",
+				{ opacity: 0 },
+				{
+					delay: stagger(0.05),
+					duration: 0.1,
+				}
+			);
+		}
+	}, [stackInView]);
+
 	return (
-		<div className="relative stacks">
+		<div className="relative stacks" ref={stackScope}>
 			<div className="section-button-right section-button--teal">
 				My Tech Stack
 			</div>
 			<hr className="hr hr-primary" />
 			<div className="stacks-main">
-				<div className="card card-center">
-					<img
-						src="/src/assets/icons/pytorch.svg"
-						alt="PyTorch icon"
-						className="icon"
-					/>
-					<header>PyTorch</header>
+				<div className="card-wrapper">
+					<div className="card card-center">
+						<img
+							src="/src/assets/icons/pytorch.svg"
+							alt="PyTorch icon"
+							className="icon"
+						/>
+						<header>PyTorch</header>
+					</div>
 				</div>
-				<div className="card card-center">
-					<img
-						src="/src/assets/icons/tensorflow.svg"
-						alt="TensorFlow icon"
-						className="icon"
-					/>
-					<header>TensorFlow</header>
+				<div className="card-wrapper">
+					<div className="card card-center">
+						<img
+							src="/src/assets/icons/tensorflow.svg"
+							alt="TensorFlow icon"
+							className="icon"
+						/>
+						<header>TensorFlow</header>
+					</div>
 				</div>
-				<div className="card card-center">
-					<img
-						src="/src/assets/icons/numpy.svg"
-						alt="Numpy icon"
-						className="icon"
-					/>
-					<header>NumPy</header>
+				<div className="card-wrapper">
+					<div className="card card-center">
+						<img
+							src="/src/assets/icons/numpy.svg"
+							alt="Numpy icon"
+							className="icon"
+						/>
+						<header>NumPy</header>
+					</div>
 				</div>
-				<div className="card card-center">
-					<img
-						src="/src/assets/icons/django.svg"
-						alt="Django icon"
-						className="icon"
-					/>
-					<header>Django</header>
+				<div className="card-wrapper">
+					<div className="card card-center">
+						<img
+							src="/src/assets/icons/django.svg"
+							alt="Django icon"
+							className="icon"
+						/>
+						<header>Django</header>
+					</div>
 				</div>
-				<div className="card card-center">
-					<img
-						src="/src/assets/icons/apache-spark.svg"
-						alt="Apache Spark icon"
-						className="icon"
-					/>
-					<header>Apache Spark</header>
+				<div className="card-wrapper">
+					<div className="card card-center">
+						<img
+							src="/src/assets/icons/apache-spark.svg"
+							alt="Apache Spark icon"
+							className="icon"
+						/>
+						<header>Apache Spark</header>
+					</div>
 				</div>
-				<div className="card card-center">
-					<img
-						src="/src/assets/icons/python.svg"
-						alt="Python icon"
-						className="icon"
-					/>
-					<header>Python</header>
+				<div className="card-wrapper">
+					<div className="card card-center">
+						<img
+							src="/src/assets/icons/python.svg"
+							alt="Python icon"
+							className="icon"
+						/>
+						<header>Python</header>
+					</div>
 				</div>
-				<div className="card card-center">
-					<img
-						src="/src/assets/icons/react.svg"
-						alt="React icon"
-						className="icon"
-					/>
-					<header>React</header>
+				<div className="card-wrapper">
+					<div className="card card-center">
+						<img
+							src="/src/assets/icons/react.svg"
+							alt="React icon"
+							className="icon"
+						/>
+						<header>React</header>
+					</div>
 				</div>
-				<div className="card card-center">
-					<img
-						src="/src/assets/icons/shopify.svg"
-						alt="Shopify icon"
-						className="icon"
-					/>
-					<header>Shopify</header>
+				<div className="card-wrapper">
+					<div className="card card-center">
+						<img
+							src="/src/assets/icons/shopify.svg"
+							alt="Shopify icon"
+							className="icon"
+						/>
+						<header>Shopify</header>
+					</div>
 				</div>
-				<div className="card card-center">
-					<img
-						src="/src/assets/icons/tailwind.svg"
-						alt="Tailwind CSS icon"
-						className="icon"
-					/>
-					<header>Tailwind</header>
+				<div className="card-wrapper">
+					<div className="card card-center">
+						<img
+							src="/src/assets/icons/tailwind.svg"
+							alt="Tailwind CSS icon"
+							className="icon"
+						/>
+						<header>Tailwind</header>
+					</div>
 				</div>
-				<div className="card card-center">
-					<img
-						src="/src/assets/icons/c-sharp.svg"
-						alt="C Sharp icon"
-						className="icon"
-					/>
-					<header>C#</header>
+				<div className="card-wrapper">
+					<div className="card card-center">
+						<img
+							src="/src/assets/icons/c-sharp.svg"
+							alt="C Sharp icon"
+							className="icon"
+						/>
+						<header>C#</header>
+					</div>
 				</div>
-				<div className="card card-center">
-					<img
-						src="/src/assets/icons/unity.svg"
-						alt="Unity icon"
-						className="icon"
-					/>
-					<header>Unity</header>
+				<div className="card-wrapper">
+					<div className="card card-center">
+						<img
+							src="/src/assets/icons/unity.svg"
+							alt="Unity icon"
+							className="icon"
+						/>
+						<header>Unity</header>
+					</div>
 				</div>
 			</div>
 		</div>

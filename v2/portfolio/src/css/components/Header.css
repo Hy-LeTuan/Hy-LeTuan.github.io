@@ -94,7 +94,7 @@ hr {
 */
 .transition {
   transition-duration: 150ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(-1.4, 0, 0.2, 1);
 }
 
 .duration-100 {
@@ -213,6 +213,7 @@ hr {
   justify-content: space-between;
   padding: 1rem 12rem;
   font-size: var(--fs-0);
+  border-bottom: 1px solid var(--color-primary-light);
 }
 .header .item {
   display: flex;
