@@ -4,6 +4,7 @@
 	--color-primary: #1a1a2e;
 	--color-primary-light: #5c5ca3;
 	--color-primary-dimmed: #373762;
+	--color-card-purple-dark: #252541;
 	--color-card-purple: #2e2e51;
 	--color-secondary: #fbf8ef;
 	--color-accent-teal: #72baa9;
@@ -50,6 +51,30 @@ h5,
 h6 {
 	margin: 0;
 	padding: 0;
+}
+
+h6 {
+	font-size: var(--fs-0);
+}
+
+h5 {
+	font-size: var(--fs-1);
+}
+
+h4 {
+	font-size: var(--fs-2);
+}
+
+h3 {
+	font-size: var(--fs-3);
+}
+
+h2 {
+	font-size: var(--fs-4);
+}
+
+h1 {
+	font-size: var(--fs-5);
 }
 
 #root {

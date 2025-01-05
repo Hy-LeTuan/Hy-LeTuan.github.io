@@ -2,6 +2,7 @@
   --color-primary: #1a1a2e;
   --color-primary-light: #5c5ca3;
   --color-primary-dimmed: #373762;
+  --color-card-purple-dark: #252541;
   --color-card-purple: #2e2e51;
   --color-secondary: #fbf8ef;
   --color-accent-teal: #72baa9;
@@ -43,6 +44,30 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+}
+
+h6 {
+  font-size: var(--fs-0);
+}
+
+h5 {
+  font-size: var(--fs-1);
+}
+
+h4 {
+  font-size: var(--fs-2);
+}
+
+h3 {
+  font-size: var(--fs-3);
+}
+
+h2 {
+  font-size: var(--fs-4);
+}
+
+h1 {
+  font-size: var(--fs-5);
 }
 
 #root {
@@ -90,6 +115,79 @@ hr {
 }
 
 /*
+---- shadow
+*/
+.shadow-md {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.shadow-teal-md {
+  box-shadow: 0 4px 4px 0 rgba(114, 186, 169, 0.25);
+}
+
+.shadow-orange-md {
+  box-shadow: 0 4px 4px 0 rgba(244, 162, 97, 0.25);
+}
+
+/*
+---- width
+*/
+.w-full {
+  width: 100%;
+}
+
+/*
+---- gap
+*/
+.gap-0 {
+  gap: var(--gap-0);
+}
+
+.gap-1 {
+  gap: var(--gap-1);
+}
+
+.gap-2 {
+  gap: var(--gap-2);
+}
+
+.gap-3 {
+  gap: var(--gap-3);
+}
+
+.gap-4 {
+  gap: var(--gap-4);
+}
+
+.gap-5 {
+  gap: var(--gap-5);
+}
+
+.gap-6 {
+  gap: var(--gap-6);
+}
+
+.gap-7 {
+  gap: var(--gap-7);
+}
+
+.gap-8 {
+  gap: var(--gap-8);
+}
+
+.gap-9 {
+  gap: var(--gap-9);
+}
+
+.gap-10 {
+  gap: var(--gap-10);
+}
+
+.gap-11 {
+  gap: var(--gap-11);
+}
+
+/*
 ---- transitions
 */
 .transition {
@@ -119,6 +217,30 @@ hr {
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.items-start {
+  align-items: start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: end;
 }
 
 /*
@@ -205,6 +327,21 @@ hr {
 .card-center {
   justify-content: center;
   align-items: center;
+}
+
+/*
+---- text color
+*/
+.color-orange {
+  color: var(--color-accent-orange);
+}
+
+.color-teal {
+  color: var(--color-accent-teal);
+}
+
+.color-blue {
+  color: var(--color-accent-blue);
 }
 
 .index-main {
@@ -378,11 +515,7 @@ hr {
 .experience .experience-main .content .block header .header-row.main {
   color: var(--color-accent-orange);
   font-weight: bold;
-  font-family: var(--ff-header);
-  font-size: var(--fs-2);
-}
-.experience .experience-main .content .block header .header-row .flex-row {
-  justify-content: center;
+  uatojustify-content: center;
   align-items: center;
   gap: var(--gap-0);
 }
@@ -451,6 +584,89 @@ hr {
 .stacks .stacks-main .card:hover {
   transform: scale(1.05);
   background-color: var(--color-primary-light);
+}
+
+.card-icon {
+  background-color: var(--color-primary-light);
+  border-radius: 12px;
+  display: flex;
+  padding: var(--gap-1) var(--gap-2);
+}
+.card-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.projects {
+  margin-top: var(--gap-md);
+}
+.projects .project-main {
+  margin-top: var(--gap-md);
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1400px;
+  padding: var(--gap-4);
+}
+.projects .project-main header {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-7);
+}
+.projects .project-main header h1 {
+  font-family: var(--ff-header);
+  font-size: var(--fs-5);
+}
+.projects .project-main header div {
+  font-size: var(--fs-4);
+  width: 50%;
+  text-align: center;
+}
+.projects .project-main .project-main-content {
+  margin-top: var(--gap-sm);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-4);
+}
+.projects .project-main .project-main-content .card {
+  overflow: hidden;
+  border-radius: 12px;
+  justify-content: start;
+  align-items: start;
+  background-color: var(--color-card-purple-dark);
+}
+.projects .project-main .project-main-content .card img {
+  width: 100%;
+  max-height: 308px;
+}
+.projects .project-main .project-main-content .card .card-content {
+  width: 100%;
+  padding: var(--gap-4);
+  gap: var(--gap-5);
+}
+.projects .project-main .project-main-content .card h3,
+.projects .project-main .project-main-content .card h6 {
+  width: max-content;
+  white-space: nowrap;
+  font-family: var(--ff-header);
+}
+.projects .project-main .project-main-content .card button {
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-size: var(--fs-1);
+  border-radius: 12px;
+  padding: var(--gap-0) var(--gap-5);
+  transition-property: background-color;
+}
+.projects .project-main .project-main-content .card button.teal {
+  background-color: var(--color-accent-teal);
+}
+.projects .project-main .project-main-content .card button.orange {
+  background-color: var(--color-accent-orange);
+}
+.projects .project-main .project-main-content .card button:hover {
+  background-color: var(--color-primary-dimmed);
 }
 
 /*# sourceMappingURL=Index.css.map */
