@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import "../css/routes/Index.css";
 import LocationPin from "../Icons/Location";
 import { useAnimate, useInView, stagger, animate, motion } from "motion/react";
+import { AnimateRotateFade } from "../utils/Animation";
 import useArray from "../hooks/useArray";
 
 function Index() {
@@ -640,12 +641,45 @@ function Projects() {
 			<hr className="hr hr-primary" />
 			<div className="project-main">
 				<header className="flex-col">
-					<h1>Research & Development Projects</h1>
-					<div>
-						<b className="color-orange">Research</b> and{" "}
-						<b className="color-teal">Development</b> projects I’ve
-						built for various competitions, companies and for myself
-					</div>
+					<AnimateRotateFade
+						classname=""
+						delay={0}
+						duration={0.6}
+						width="full"
+						additionalAnimate={{}}
+						additionalInitial={{}}
+						additionalTransition={{}}
+						additionalExit={{}}
+						initialRotation={undefined}
+						finalRotation={undefined}
+						elementKey={0}
+						extraStyle={{}}
+						animateOnView={true}
+						onViewAmount={0.5}>
+						<h1>Research & Development Projects</h1>
+					</AnimateRotateFade>
+					<AnimateRotateFade
+						classname=""
+						delay={0.15}
+						duration={0.6}
+						width="full"
+						additionalAnimate={{}}
+						additionalInitial={{}}
+						additionalTransition={{}}
+						additionalExit={{}}
+						initialRotation={undefined}
+						finalRotation={undefined}
+						elementKey={0}
+						extraStyle={{}}
+						animateOnView={true}
+						onViewAmount={0.5}>
+						<div style={{ marginInline: "auto" }}>
+							<b className="color-orange">Research</b> and{" "}
+							<b className="color-teal">Development</b> projects
+							I’ve built for various competitions, companies and
+							for myself
+						</div>
+					</AnimateRotateFade>
 				</header>
 				<div className="project-main-content">
 					<div className="flex-col card shadow-teal-md">

@@ -1,4 +1,4 @@
-function anim(variants: any) {
+function anim(variants: { initial: any; enter: any; exit: any }) {
 	return {
 		intial: "initial",
 		animate: "enter",
