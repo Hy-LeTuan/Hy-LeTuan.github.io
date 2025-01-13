@@ -189,7 +189,7 @@
 .experience .experience-main .content .block header .header-row.main {
   color: var(--color-accent-orange);
   font-weight: bold;
-  uatojustify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: var(--gap-0);
 }
