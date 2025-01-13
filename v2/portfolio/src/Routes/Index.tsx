@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import "../css/routes/Index.css";
 import LocationPin from "../Icons/Location";
 import { useAnimate, useInView, stagger, animate, motion } from "motion/react";
-import { AnimateRotateFade } from "../utils/Animation";
+import { AnimateRotateFade, AnimateFadeIn } from "../utils/Animation";
 import useArray from "../hooks/useArray";
 
 function Index() {
@@ -151,11 +151,12 @@ function Experience() {
 	const [containerHeight, setContainerHeight] = useState(0);
 
 	const contentContainerRef = useRef(null);
-	const contentContainerInView = useInView(contentContainerRef);
+	const contentContainerInView = useInView(contentContainerRef, {once: true});
 
 	const experienceRef = useRef(null);
 	const experienceRefInView = useInView(experienceRef, {
 		amount: 0.25,
+        once: true,
 	});
 
 	const onControllerClick = (onIndex: number, offIndex: number) => {
@@ -247,7 +248,8 @@ function ExperienceContent(props: {
 				className="flex-col content"
 				key={0}
 				animate={{ opacity: 1, x: 0 }}
-				initial={{ opacity: 0, x: -40 }}>
+			initial={{ opacity: 0, x: -40 }}
+            >
 				<div className="flex-col block">
 					<header className="flex-col">
 						<div className="flex-row header-row main">
@@ -682,249 +684,318 @@ function Projects() {
 					</AnimateRotateFade>
 				</header>
 				<div className="project-main-content">
-					<div className="flex-col card shadow-teal-md">
-						<img
-							src="/src/assets/images/rot/rot-model.png"
-							alt="RotCAtt-TransUNet++ architecture diagram"
-						/>
-						<div className="flex-col card-content">
-							<div className="flex-col justify-start items-start w-full">
-								<div className="flex-row justify-center items-center gap-3 w-full">
-									<h3 className="color-teal">
-										RotCAtt-TransUNet++
-									</h3>
-									<hr className="hr hr-primary" />
-								</div>
-								<div className="flex-row justify-center items-center gap-3 w-full">
-									<h6 className="color-teal">
-										Research projects
-									</h6>
-									<hr className="hr hr-primary" />
-								</div>
-							</div>
-							<div className="flex-col justify-start items-start gap-5">
-								<div>
-									Designed and developed a novel segmentation
-									model to improve accuracy in cardiovascular
-									scan analysis and disease detection.
-								</div>
-								<div className="flex-row items-center justify-center gap-3">
-									<div className="card-icon">
-										<img
-											src="/src/assets/icons/python.svg"
-											alt="Python icon"
-										/>
+					<AnimateFadeIn
+						direction={"x"}
+						amount={-200}
+						delay={0}
+						duration={0.6}
+						width={""}
+						additionalAnimate={{}}
+						additionalExit={{}}
+						additionalTransition={{}}
+						additionalInitial={{}}
+						animateOnView={true}
+						onViewAmount={0.5}
+						classname={""}
+						extraStyle={{}}
+						elementKey={null}>
+						<div className="transition flex-col card shadow-teal-md">
+							<img
+								src="/src/assets/images/rot/rot-model.png"
+								alt="RotCAtt-TransUNet++ architecture diagram"
+							/>
+							<div className="flex-col card-content">
+								<div className="flex-col justify-start items-start w-full">
+									<div className="flex-row justify-center items-center gap-3 w-full">
+										<h3 className="color-teal">
+											RotCAtt-TransUNet++
+										</h3>
+										<hr className="hr hr-primary" />
 									</div>
-									<div className="card-icon">
-										<img
-											src="/src/assets/icons/numpy.svg"
-											alt="Numpy Icon"
-										/>
-									</div>
-									<div className="card-icon">
-										<img
-											src="/src/assets/icons/pytorch.svg"
-											alt="PyTorch icon"
-										/>
+									<div className="flex-row justify-center items-center gap-3 w-full">
+										<h6 className="color-teal">
+											Research projects
+										</h6>
+										<hr className="hr hr-primary" />
 									</div>
 								</div>
-								<button
-									className="teal transition flex-row items-center justify-center gap-0"
-									onClick={() => navigator("/projects/rot")}>
-									Explore
-									<img
-										src="/src/assets/icons/arrow-up-right.svg"
-										alt=""
-										className="icon icon-base"
-									/>
-								</button>
-							</div>
-						</div>
-					</div>
-					<div className="flex-col card shadow-teal-md">
-						<img
-							src="/src/assets/images/isef-sim/vr-play.png"
-							alt="RotCAtt-TransUNet++ architecture diagram"
-						/>
-						<div className="flex-col card-content">
-							<div className="flex-col justify-start items-start w-full">
-								<div className="flex-row justify-center items-center gap-3 w-full">
-									<h3 className="color-teal">
-										VR Cardiac Visualizer
-									</h3>
-									<hr className="hr hr-primary" />
-								</div>
-								<div className="flex-row justify-center items-center gap-3 w-full">
-									<h6 className="color-teal">
-										Research projects
-									</h6>
-									<hr className="hr hr-primary" />
-								</div>
-							</div>
-							<div className="flex-col justify-start items-start gap-5">
-								<div>
-									Developed a VR environment for intuitive
-									dissection and annotation of 3D
-									cardiovascular structures reconstructed from
-									MRI or CT scans.
-								</div>
-								<div className="flex-row items-center justify-center gap-3">
-									<div className="card-icon">
-										<img
-											src="/src/assets/icons/c-sharp.svg"
-											alt="Python icon"
-										/>
+								<div className="flex-col justify-start items-start gap-5">
+									<div>
+										Designed and developed a novel
+										segmentation model to improve accuracy
+										in cardiovascular scan analysis and
+										disease detection.
 									</div>
-									<div className="card-icon">
-										<img
-											src="/src/assets/icons/unity.svg"
-											alt="Numpy Icon"
-										/>
+									<div className="flex-row items-center justify-center gap-3">
+										<div className="card-icon">
+											<img
+												src="/src/assets/icons/python.svg"
+												alt="Python icon"
+											/>
+										</div>
+										<div className="card-icon">
+											<img
+												src="/src/assets/icons/numpy.svg"
+												alt="Numpy Icon"
+											/>
+										</div>
+										<div className="card-icon">
+											<img
+												src="/src/assets/icons/pytorch.svg"
+												alt="PyTorch icon"
+											/>
+										</div>
 									</div>
-									<div className="card-icon">
+									<button
+										className="teal transition flex-row items-center justify-center gap-0"
+										onClick={() =>
+											navigator("/projects/rot")
+										}>
+										Explore
 										<img
-											src="/src/assets/icons/python.svg"
-											alt="PyTorch icon"
+											src="/src/assets/icons/arrow-up-right.svg"
+											alt=""
+											className="icon icon-base"
 										/>
-									</div>
+									</button>
 								</div>
-								<button
-									className="teal transition flex-row items-center justify-center gap-0"
-									onClick={() =>
-										navigator("/projects/isef-sim")
-									}>
-									Explore
-									<img
-										src="/src/assets/icons/arrow-up-right.svg"
-										alt=""
-										className="icon icon-base"
-									/>
-								</button>
 							</div>
 						</div>
-					</div>
-					<div className="flex-col card shadow-teal-md">
-						<img
-							src="/src/assets/images/cotai-bert/model-architecture.png"
-							alt="RotCAtt-TransUNet++ architecture diagram"
-						/>
-						<div className="flex-col card-content">
-							<div className="flex-col justify-start items-start w-full">
-								<div className="flex-row justify-center items-center gap-3 w-full">
-									<h3 className="color-teal">
-										CoTAI BERT model
-									</h3>
-									<hr className="hr hr-primary" />
-								</div>
-								<div className="flex-row justify-center items-center gap-3 w-full">
-									<h6 className="color-teal">
-										Research projects
-									</h6>
-									<hr className="hr hr-primary" />
-								</div>
-							</div>
-							<div className="flex-col justify-start items-start gap-5">
-								<div>
-									Designed a lightweight encoder model for
-									bilingual online text processing and
-									encoding, focusing on Vietnamese and English
-									speeches.
-								</div>
-								<div className="flex-row items-center justify-center gap-3">
-									<div className="card-icon">
-										<img
-											src="/src/assets/icons/pytorch.svg"
-											alt="Python icon"
-										/>
+					</AnimateFadeIn>
+					<AnimateFadeIn
+						direction={"x"}
+						amount={200}
+						delay={0}
+						duration={0.6}
+						width={""}
+						additionalAnimate={{}}
+						additionalExit={{}}
+						additionalTransition={{}}
+						additionalInitial={{}}
+						animateOnView={true}
+						onViewAmount={0.5}
+						classname={""}
+						extraStyle={{}}
+						elementKey={null}>
+						<div className="flex-col card shadow-teal-md">
+							<img
+								src="/src/assets/images/isef-sim/vr-play.png"
+								alt="RotCAtt-TransUNet++ architecture diagram"
+							/>
+							<div className="flex-col card-content">
+								<div className="flex-col justify-start items-start w-full">
+									<div className="flex-row justify-center items-center gap-3 w-full">
+										<h3 className="color-teal">
+											VR Cardiac Visualizer
+										</h3>
+										<hr className="hr hr-primary" />
 									</div>
-									<div className="card-icon">
-										<img
-											src="/src/assets/icons/numpy.svg"
-											alt="Numpy Icon"
-										/>
-									</div>
-									<div className="card-icon">
-										<img
-											src="/src/assets/icons/apache-spark.svg"
-											alt="PyTorch icon"
-										/>
-									</div>
-									<div className="card-icon">
-										<img
-											src="/src/assets/icons/python.svg"
-											alt="PyTorch icon"
-										/>
+									<div className="flex-row justify-center items-center gap-3 w-full">
+										<h6 className="color-teal">
+											Research projects
+										</h6>
+										<hr className="hr hr-primary" />
 									</div>
 								</div>
-								<button
-									className="teal transition flex-row items-center justify-center gap-0"
-									onClick={() =>
-										navigator("/projects/isef-sim")
-									}>
-									Explore
-									<img
-										src="/src/assets/icons/arrow-up-right.svg"
-										alt=""
-										className="icon icon-base"
-									/>
-								</button>
-							</div>
-						</div>
-					</div>
-					<div className="flex-col card shadow-orange-md">
-						<img
-							src="/src/assets/images/tt-pottery/offer-feature-section.png"
-							alt="RotCAtt-TransUNet++ architecture diagram"
-						/>
-						<div className="flex-col card-content">
-							<div className="flex-col justify-start items-start w-full">
-								<div className="flex-row justify-center items-center gap-3 w-full">
-									<h3 className="color-orange">TT pottery</h3>
-									<hr className="hr hr-primary" />
-								</div>
-								<div className="flex-row justify-center items-center gap-3 w-full">
-									<h6 className="color-orange">
-										Development projects
-									</h6>
-									<hr className="hr hr-primary" />
-								</div>
-							</div>
-							<div className="flex-col justify-start items-start gap-5">
-								<div>
-									Developed a B2B pottery wholesale website
-									using Hydrogen, a headless storefront for
-									Shopify, to create a custom e-commerce
-									experience.
-								</div>
-								<div className="flex-row items-center justify-center gap-3">
-									<div className="card-icon">
-										<img
-											src="/src/assets/icons/react.svg"
-											alt="React icon"
-										/>
+								<div className="flex-col justify-start items-start gap-5">
+									<div>
+										Developed a VR environment for intuitive
+										dissection and annotation of 3D
+										cardiovascular structures reconstructed
+										from MRI or CT scans.
 									</div>
-									<div className="card-icon">
-										<img
-											src="/src/assets/icons/shopify.svg"
-											alt="Numpy Icon"
-										/>
+									<div className="flex-row items-center justify-center gap-3">
+										<div className="card-icon">
+											<img
+												src="/src/assets/icons/c-sharp.svg"
+												alt="Python icon"
+											/>
+										</div>
+										<div className="card-icon">
+											<img
+												src="/src/assets/icons/unity.svg"
+												alt="Numpy Icon"
+											/>
+										</div>
+										<div className="card-icon">
+											<img
+												src="/src/assets/icons/python.svg"
+												alt="PyTorch icon"
+											/>
+										</div>
 									</div>
+									<button
+										className="teal transition flex-row items-center justify-center gap-0"
+										onClick={() =>
+											navigator("/projects/isef-sim")
+										}>
+										Explore
+										<img
+											src="/src/assets/icons/arrow-up-right.svg"
+											alt=""
+											className="icon icon-base"
+										/>
+									</button>
 								</div>
-								<button
-									className="transition flex-row items-center justify-center gap-0 orange"
-									onClick={() =>
-										navigator("/projects/isef-sim")
-									}>
-									Explore
-									<img
-										src="/src/assets/icons/arrow-up-right.svg"
-										alt=""
-										className="icon icon-base"
-									/>
-								</button>
 							</div>
 						</div>
-					</div>
+					</AnimateFadeIn>
+					<AnimateFadeIn
+						direction={"x"}
+						amount={-200}
+						delay={0.3}
+						duration={0.6}
+						width={""}
+						additionalAnimate={{}}
+						additionalExit={{}}
+						additionalTransition={{}}
+						additionalInitial={{}}
+						animateOnView={true}
+						onViewAmount={0.5}
+						classname={""}
+						extraStyle={{}}
+						elementKey={null}>
+						<div className="flex-col card shadow-teal-md">
+							<img
+								src="/src/assets/images/cotai-bert/model-architecture.png"
+								alt="RotCAtt-TransUNet++ architecture diagram"
+							/>
+							<div className="flex-col card-content">
+								<div className="flex-col justify-start items-start w-full">
+									<div className="flex-row justify-center items-center gap-3 w-full">
+										<h3 className="color-teal">
+											CoTAI BERT model
+										</h3>
+										<hr className="hr hr-primary" />
+									</div>
+									<div className="flex-row justify-center items-center gap-3 w-full">
+										<h6 className="color-teal">
+											Research projects
+										</h6>
+										<hr className="hr hr-primary" />
+									</div>
+								</div>
+								<div className="flex-col justify-start items-start gap-5">
+									<div>
+										Designed a lightweight encoder model for
+										bilingual online text processing and
+										encoding, focusing on Vietnamese and
+										English speeches.
+									</div>
+									<div className="flex-row items-center justify-center gap-3">
+										<div className="card-icon">
+											<img
+												src="/src/assets/icons/pytorch.svg"
+												alt="Python icon"
+											/>
+										</div>
+										<div className="card-icon">
+											<img
+												src="/src/assets/icons/numpy.svg"
+												alt="Numpy Icon"
+											/>
+										</div>
+										<div className="card-icon">
+											<img
+												src="/src/assets/icons/apache-spark.svg"
+												alt="PyTorch icon"
+											/>
+										</div>
+										<div className="card-icon">
+											<img
+												src="/src/assets/icons/python.svg"
+												alt="PyTorch icon"
+											/>
+										</div>
+									</div>
+									<button
+										className="teal transition flex-row items-center justify-center gap-0"
+										onClick={() =>
+											navigator("/projects/isef-sim")
+										}>
+										Explore
+										<img
+											src="/src/assets/icons/arrow-up-right.svg"
+											alt=""
+											className="icon icon-base"
+										/>
+									</button>
+								</div>
+							</div>
+						</div>
+					</AnimateFadeIn>
+					<AnimateFadeIn
+						direction={"x"}
+						amount={200}
+						delay={0.3}
+						duration={0.6}
+						width={""}
+						additionalAnimate={{}}
+						additionalExit={{}}
+						additionalTransition={{}}
+						additionalInitial={{}}
+						animateOnView={true}
+						onViewAmount={0.5}
+						classname={""}
+						extraStyle={{}}
+						elementKey={null}>
+						<div className="flex-col card shadow-orange-md">
+							<img
+								src="/src/assets/images/tt-pottery/offer-feature-section.png"
+								alt="RotCAtt-TransUNet++ architecture diagram"
+							/>
+							<div className="flex-col card-content">
+								<div className="flex-col justify-start items-start w-full">
+									<div className="flex-row justify-center items-center gap-3 w-full">
+										<h3 className="color-orange">
+											TT pottery
+										</h3>
+										<hr className="hr hr-primary" />
+									</div>
+									<div className="flex-row justify-center items-center gap-3 w-full">
+										<h6 className="color-orange">
+											Development projects
+										</h6>
+										<hr className="hr hr-primary" />
+									</div>
+								</div>
+								<div className="flex-col justify-start items-start gap-5">
+									<div>
+										Developed a B2B pottery wholesale
+										website using Hydrogen, a headless
+										storefront for Shopify, to create a
+										custom e-commerce experience.
+									</div>
+									<div className="flex-row items-center justify-center gap-3">
+										<div className="card-icon">
+											<img
+												src="/src/assets/icons/react.svg"
+												alt="React icon"
+											/>
+										</div>
+										<div className="card-icon">
+											<img
+												src="/src/assets/icons/shopify.svg"
+												alt="Numpy Icon"
+											/>
+										</div>
+									</div>
+									<button
+										className="transition flex-row items-center justify-center gap-0 orange"
+										onClick={() =>
+											navigator("/projects/isef-sim")
+										}>
+										Explore
+										<img
+											src="/src/assets/icons/arrow-up-right.svg"
+											alt=""
+											className="icon icon-base"
+										/>
+									</button>
+								</div>
+							</div>
+						</div>
+					</AnimateFadeIn>
 				</div>
 			</div>
 		</div>

@@ -41,7 +41,7 @@ function Header() {
 				</div>
 			</div>
 			<div className="item--button">
-				<button>Contact us</button>
+				<button>Contact me</button>
 			</div>
 		</nav>
 	);

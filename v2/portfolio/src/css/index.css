@@ -16,6 +16,7 @@
   --fs-3: 24px;
   --fs-4: 28px;
   --fs-5: 32px;
+  --fs-6: 64px;
   --gap-0: 0.25rem;
   --gap-1: 0.5rem;
   --gap-2: 0.75rem;
@@ -30,12 +31,14 @@
   --gap-11: 3rem;
   --gap-sm: 4.25rem;
   --gap-md: 6rem;
+  --gap-lg: 12rem;
 }
 
 * {
   box-sizing: border-box;
 }
 
+p,
 h1,
 h2,
 h3,
