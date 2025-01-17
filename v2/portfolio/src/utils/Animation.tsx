@@ -6,6 +6,7 @@ import {
 	AnimateFadeInProps,
 	AnimateRotateFadeProps,
 	MotionProperty,
+	MaskProps,
 } from "./types";
 
 function load_width(width: string | null | undefined) {
@@ -403,4 +404,119 @@ function AnimateRotateFade({
 	}
 }
 
-export { AnimateFade, AnimateFadeIn, AnimateRotateFade };
+function Mask({
+	classname,
+	delay,
+	amount,
+	direction,
+	duration,
+	additionalInitial,
+	additionalAnimate,
+	additionalTransition,
+	additionalExit,
+	animateOnView,
+	onViewAmount,
+	elementKey,
+	extraStyle,
+}: MaskProps) {
+	// direction should be a choice between vertical or horizontal
+	// amount is the amount moved
+	// delay is the exact number
+
+	let finalOnViewAmount = onViewAmount ? onViewAmount : 0.3;
+	let finalAmount: MotionProperty = amount ? amount : 100;
+	let findalDelay: MotionProperty = delay ? delay : 0;
+
+	const motionRef = useRef(null);
+	const motionInView = useInView(motionRef, {
+		once: true,
+		amount: finalOnViewAmount,
+	});
+
+	let finalX: MotionProperty, finalY: MotionProperty;
+
+	if (direction == "x") {
+		finalX = finalAmount;
+		finalY = 0;
+	} else if (direction == "y") {
+		finalY = finalAmount;
+		finalX = 0;
+	}
+
+	// useEffect hook to track motions
+	useEffect(() => {
+		if (motionInView) {
+			animate(
+				motionRef.current as unknown as {} | {}[],
+				{
+					opacity: 1,
+					x: 0,
+					y: 0,
+					...additionalAnimate,
+				},
+				{
+					delay: findalDelay,
+					duration: duration ? duration : 0.3,
+					type: "tween",
+					ease: "backInOut",
+					...additionalTransition,
+				}
+			);
+		}
+	}, [motionInView]);
+
+	// define fade animation
+	const fade = {
+		initial: {
+			opacity: 0,
+			x: finalX,
+			y: finalY,
+			...additionalInitial,
+		},
+		enter: {
+			opacity: 1,
+			x: 0,
+			y: 0,
+			transition: {
+				delay: delay,
+				duration: duration ? duration : 0.3,
+				type: "tween",
+				ease: "backInOut",
+				...additionalTransition,
+			},
+			...additionalAnimate,
+		},
+		exit: {
+			...additionalExit,
+		},
+	};
+
+	if (animateOnView) {
+		return (
+			<motion.div
+				initial={{
+					opacity: 0,
+					x: finalX,
+					y: finalY,
+					...additionalInitial,
+				}}
+				className={`mask ${classname}`}
+				style={{
+					...extraStyle,
+				}}
+				ref={motionRef}></motion.div>
+		);
+	} else {
+		return (
+			<motion.div
+				className={`mask ${classname}`}
+				style={{
+					...extraStyle,
+				}}
+				{...anim(fade)}
+				ref={motionRef}></motion.div>
+		);
+	}
+}
+
+export { AnimateFade, AnimateFadeIn, AnimateRotateFade, Mask };

@@ -1,0 +1,79 @@
+import "../css/routes/Index.css";
+import "../css/routes/Projects.css";
+import { useNavigate } from "react-router";
+
+function Projects() {
+    const navigator = useNavigate();
+
+    return (
+        <main className="project">
+            <div className="project-main">
+                <div className="project-main__row">
+                    <div>
+                        <div className="flex-col justify-start items-start">
+                            <h3 className="color-teal">RotCAtt-TransUNet++</h3>
+                            <h6 className="color-teal">Research Projects</h6>
+                        </div>
+                        <div>
+                            <h5>General info</h5>
+                            <div>
+                                <div>
+                                    Research Link - <a href="https://github.com/VISEF-ISEF-team/VasculAR" className="external-link">Link Here</a>
+                                </div>
+                                <div>Collaboration @ <b>ISEF Project</b></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>Short Description</h5>
+                            <div>
+                                Designed and developed a novel segmentation model to improve accuracy in cardiovascular scan analysis and disease detection.
+                            </div>
+                        </div>
+                        <div>
+                            <h5>Tech Stack</h5>
+                            <div className="flex-row gap-2">
+                                <div className="card-icon">
+                                    <img
+                                        src="/src/assets/icons/python.svg"
+                                        alt="PyTorch icon"
+                                    />
+                                </div>
+                                <div className="card-icon">
+                                    <img
+                                        src="/src/assets/icons/numpy.svg"
+                                        alt="PyTorch icon"
+                                    />
+                                </div>
+                                <div className="card-icon">
+                                    <img
+                                        src="/src/assets/icons/pytorch.svg"
+                                        alt="PyTorch icon"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            className="button button--small bg-teal transition flex-row items-center justify-center gap-0"
+                            onClick={() =>
+                                navigator("/projects/rot")
+                            }>
+                            <b>
+                                Explore
+                            </b>
+                            <img
+                                src="/src/assets/icons/arrow-up-right.svg"
+                                alt=""
+                                className="icon icon-base"
+                            />
+                        </button>
+                    </div>
+                    <div>
+                        <img src="/src/assets/images/rot/rot-model.png" alt="" className="project-main__row__image"/>
+                    </div>
+                </div>
+            </div>
+        </main>
+    );
+}
+
+export default Projects;

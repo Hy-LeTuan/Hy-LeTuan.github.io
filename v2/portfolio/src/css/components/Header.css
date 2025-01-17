@@ -339,12 +339,17 @@ hr {
 }
 
 .button {
-  dipslay: flex;
+  display: flex;
 }
 .button--no-wrap {
   width: max-content;
   white-space: nowrap;
   font-family: var(--ff-header);
+}
+.button--small {
+  padding: var(--gap-0) var(--gap-3);
+  border-radius: 12px;
+  font-size: var(--fs-1);
 }
 .button--medium {
   padding: var(--gap-2) var(--gap-3);
@@ -424,6 +429,39 @@ hr {
   font-family: var(--ff-body);
 }
 
+/*
+---- mask
+*/
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  z-index: 0;
+}
+
+/*
+---- links
+*/
+.external-link {
+  font-style: italic;
+  color: var(--color-accent-blue);
+  font-weight: bold;
+}
+
+/*
+---- background
+*/
+.bg-teal {
+  background-color: var(--color-accent-teal);
+}
+
+.bg-orange {
+  background-color: var(--color-accent-orange);
+}
+
 .header {
   position: sticky;
   align-items: center;
@@ -431,6 +469,7 @@ hr {
   padding: var(--gap-3) var(--gap-lg);
   font-size: var(--fs-0);
   border-bottom: 1px solid var(--color-primary-light);
+  z-index: 2;
 }
 .header .item {
   display: flex;

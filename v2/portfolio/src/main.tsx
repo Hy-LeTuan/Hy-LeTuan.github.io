@@ -6,6 +6,8 @@ import Header from "./components/Header.tsx";
 import Footer from "./components/Footer.tsx";
 import Index from "./Routes/Index.tsx";
 import About from "./Routes/About.tsx";
+import Contact from "./Routes/Contact.tsx";
+import Projects from "./Routes/Project.tsx";
 
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>
@@ -14,6 +16,8 @@ createRoot(document.getElementById("root")!).render(
 			<Routes>
 				<Route path={"/"} element={<Index />} />
 				<Route path={"/about-me"} element={<About />} />
+				<Route path={"/contact"} element={<Contact />} />
+				<Route path={"/projects"} element={<Projects />} />
 			</Routes>
 			<Footer />
 		</BrowserRouter>

@@ -41,7 +41,7 @@ function Header() {
 				</div>
 			</div>
 			<div className="item--button">
-				<button>Contact me</button>
+				<button onClick={() => navigate("/contact")}>Contact me</button>
 			</div>
 		</nav>
 	);

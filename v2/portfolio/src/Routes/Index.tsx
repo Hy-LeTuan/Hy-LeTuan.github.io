@@ -657,7 +657,7 @@ function Projects() {
 						elementKey={0}
 						extraStyle={{}}
 						animateOnView={true}
-						onViewAmount={0.5}>
+						onViewAmount={0.4}>
 						<h1>Research & Development Projects</h1>
 					</AnimateRotateFade>
 					<AnimateRotateFade
@@ -773,14 +773,14 @@ function Projects() {
 						additionalTransition={{}}
 						additionalInitial={{}}
 						animateOnView={true}
-						onViewAmount={0.5}
+						onViewAmount={0.4}
 						classname={""}
 						extraStyle={{}}
 						elementKey={null}>
 						<div className="flex-col card shadow-teal-md">
 							<img
 								src="/src/assets/images/isef-sim/vr-play.png"
-								alt="RotCAtt-TransUNet++ architecture diagram"
+								alt="ISEF VR cardiaovascular interact simulation"
 							/>
 							<div className="flex-col card-content">
 								<div className="flex-col justify-start items-start w-full">
@@ -851,7 +851,7 @@ function Projects() {
 						additionalTransition={{}}
 						additionalInitial={{}}
 						animateOnView={true}
-						onViewAmount={0.5}
+						onViewAmount={0.4}
 						classname={""}
 						extraStyle={{}}
 						elementKey={null}>
@@ -935,7 +935,7 @@ function Projects() {
 						additionalTransition={{}}
 						additionalInitial={{}}
 						animateOnView={true}
-						onViewAmount={0.5}
+						onViewAmount={0.4}
 						classname={""}
 						extraStyle={{}}
 						elementKey={null}>
